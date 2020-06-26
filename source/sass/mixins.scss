@@ -64,6 +64,17 @@
   font-size: rem(40);
   line-height: rem(49);
   font-weight: 700;
-  letter-spacing: -0.2em;
-  text-transform: uppercase;
+  color: $blue;
+}
+
+@mixin max-desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin max-tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
 }

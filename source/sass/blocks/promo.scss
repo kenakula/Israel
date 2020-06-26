@@ -2,15 +2,16 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 818px;
+  margin-top: -100px;
+  height: 878px;
   background-color: #debb9a;
-  background-image: url("../../img/header-bg-girl@2x.png"), url("../../img/header-bg-text@2x.png"), url("../../img/header-bg-city@2x.jpg");
+  background-image: url("../../img/header-bg-girl.png"), url("../../img/header-bg-text@2x.png"), url("../../img/header-bg-city@2x.jpg");
   background-repeat: no-repeat;
-  background-position: center -31px, center 129px, center;
+  background-position: center bottom 100%, center 160px, center;
   background-size: cover, 74.5%, cover;
 
   h1 {
-    margin: auto auto 252px;
+    margin: auto auto 281px;
     width: 25.109%;
     font-family: $main-bold;
     font-weight: 700;
@@ -18,10 +19,91 @@
     line-height: rem(29);
     text-align: center;
     color: $white;
-    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   }
 }
 
 .promo__scroll {
+  @include transition;
 
+  position: absolute;
+  left: 50%;
+  bottom: 185px;
+  margin-left: -27px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid $white;
+  background-color: transparent;
+  background-image: url("../../img/mouse.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  outline: none;
+
+  &::before {
+    @include pseudo;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: -11px;
+    margin-right: -11px;
+    margin-bottom: -11px;
+    margin-left: -11px;
+    border: 1px dashed $white;
+    border-radius: inherit;
+  }
+
+  &::after {
+    @include pseudo;
+    @include transition;
+
+    left: 50%;
+    bottom: -70px;
+    width: 1px;
+    height: 60px;
+    background-color: $white;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    background-position: center 20px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@include max-desktop {
+  .promo {
+    margin-top: -119px;
+
+    h1 {
+      width: 38%;
+    }
+  }
+}
+
+@include max-tablet {
+  .promo {
+    height: 591px;
+    margin-top: -54px;
+    background-image: url("../../img/header-bg-girl-mobile@2x.png"), url("../../img/header-bg-text-mobile@2x.png"), url("../../img/header-bg-city@2x.jpg");
+    background-position: center 3px, center 139px, center;
+    background-size: cover, contain, cover;
+
+    h1 {
+      margin-bottom: 237px;
+      width: 90%;
+      font-size: rem(20);
+      line-height: rem(24);
+    }
+  }
+
+  .promo__scroll {
+    bottom: 140px;
+  }
 }

@@ -1,0 +1,159 @@
+.form--modal {
+  padding: 10px 28px;
+
+  label {
+    display: none;
+    cursor: pointer;
+
+    &[for="consent"] {
+      display: block;
+    }
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    position: relative;
+    padding: 19px 40px 18px;
+    width: 93.5%;
+    border: 2px solid $input-stroke;
+    border-radius: 80px;
+    cursor: pointer;
+    outline: none;
+
+    &:focus {
+      border-color: $yellow;
+    }
+
+    &:hover {
+      border-color: rgba($color: $black, $alpha: 0.7);
+    }
+  }
+
+  button[type="submit"] {
+    @include button-reset;
+    @include push-auto;
+    @include transition;
+
+    margin-top: 26px;
+    margin-bottom: 17px;
+    padding: 20px 20px 19px;
+    width: 69%;
+    border-radius: 80px;
+    font-family: $main-medium;
+    font-size: rem(17);
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    color: $white;
+    background: linear-gradient(142.39deg, $yellow 20.46%, $light-yellow 65.31%);
+    cursor: pointer;
+
+    //TODO анимировать
+    &:hover {
+      background: linear-gradient(143.55deg, $yellow -50.3%, $light-yellow 63.1%);
+    }
+
+    &:active {
+      background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, $yellow -50.3%, $light-yellow 63.1%);
+    }
+  }
+}
+
+.form__inner {
+  position: relative;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--consent {
+    label {
+      position: relative;
+      padding-left: 84px;
+      width: 88%;
+      font-size: rem(13);
+      line-height: rem(19);
+      color: rgba($color: $black, $alpha: 0.74);
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+
+      &::before {
+        @include pseudo;
+
+        left: 60px;
+        top: 1px;
+        width: 16px;
+        height: 16px;
+        background-image: url("../../img/checkbox.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      &::after {
+        @include pseudo;
+
+        display: none;
+        top: 4px;
+        left: 65px;
+        width: 7px;
+        height: 8px;
+        border: 2px solid $yellow;
+        border-top: transparent;
+        border-left: transparent;
+        transform: rotate(45deg);
+      }
+    }
+
+    input[type="checkbox"]:checked + label::after {
+      display: block;
+    }
+
+    input[type="checkbox"]:focus + label {
+      opacity: 0.7;
+    }
+  }
+}
+
+@include max-tablet {
+  .form--modal {
+    padding: 10px 0;
+
+    input[type="text"],
+    input[type="tel"] {
+      width: 100%;
+    }
+
+    button[type="submit"] {
+      width: 91.666%;
+      margin-top: 24px;
+    }
+  }
+
+  .form__inner {
+    &--consent {
+      label {
+        padding-left: 37px;
+        width: 100%;
+
+        &::before {
+          top: 0;
+          left: 12px;
+        }
+
+        &::after {
+          top: 3px;
+          left: 16px;
+        }
+      }
+    }
+  }
+}

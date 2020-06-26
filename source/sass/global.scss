@@ -1,6 +1,7 @@
 html {
   height: 100%;
   box-sizing: border-box;
+  background-color: $white;
 }
 
 *,
@@ -36,10 +37,14 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: $black;
-  background-color: #ffffff;
+  background-color: $white;
   overflow-x: hidden;
 }
 
 img {
   display: block;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }

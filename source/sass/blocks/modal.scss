@@ -1,0 +1,113 @@
+//TODO запрет прокрутки под модалкой
+
+.modal {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  padding-top: 123px;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba($color: $modal-bg, $alpha: 0.95);
+  z-index: 1000;
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal__inner {
+  @include push-auto;
+
+  position: relative;
+  padding: 54px 20px 32px;
+  width: 35.13%;
+  border-radius: 8px;
+  background-color: $white;
+  box-shadow: 0 5px 12px rgba($color: $black, $alpha: 0.2);
+
+  h2 {
+    @include title;
+
+    margin-bottom: 18px;
+    padding-left: 29px;
+    font-size: rem(28);
+    line-height: rem(34);
+    letter-spacing: 1px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 23px;
+    padding-left: 28px;
+    padding-right: 54px;
+    font-size: rem(15);
+    line-height: rem(26);
+    opacity: 0.87;
+  }
+
+  br {
+    display: none;
+  }
+}
+
+.modal__close {
+  @include button-reset;
+
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../../img/close-button-img.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@include max-tablet {
+  .modal {
+    padding: 0;
+  }
+
+  .modal__inner {
+    padding: 168px 16px 20px;
+    width: 100%;
+    height: 100vh;
+    box-shadow: none;
+    border-radius: unset;
+
+    h2 {
+      padding-left: 40px;
+      font-size: rem(24);
+      line-height: rem(29);
+      letter-spacing: 0.9px;
+    }
+
+    p {
+      padding: 0;
+      font-size: rem(14);
+      line-height: rem(22);
+      text-align: center;
+    }
+
+    br {
+      display: block;
+    }
+  }
+
+  .modal__close {
+    top: 24px;
+    right: 24px;
+  }
+}

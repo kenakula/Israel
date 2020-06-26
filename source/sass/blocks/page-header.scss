@@ -1,10 +1,8 @@
 .page-header {
   position: relative;
   flex: 0 0 auto;
-  margin-bottom: -50px;
-  padding-top: 33px;
+  padding: 32px 0 20px;
   min-height: 48px;
-  background-color: $white;
   z-index: 100;
 }
 
@@ -12,26 +10,39 @@
   @include push-auto;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 83.894%;
 }
 
 .page-header__phone {
+  @include transition;
+
   font-family: $main-medium;
   font-size: rem(15);
   line-height: rem(18);
   font-weight: 500;
   color: $black;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header__logo {
   padding-right: 16px;
 }
 
+//TODO не совпадает
 .page-header__button {
   @include button-reset;
+  @include transition;
 
   position: relative;
   margin-right: 4px;
@@ -39,7 +50,6 @@
   font-size: rem(14);
   line-height: rem(18);
   font-weight: 500;
-  font-variant: small-caps;
   color: $black;
   text-transform: uppercase;
   text-decoration: dashed;
@@ -53,5 +63,50 @@
     width: 100%;
     height: 100%;
     border-bottom: 2px dashed $black;
+  }
+
+  &:hover {
+    opacity: 0.7;
+
+    &::before {
+      border-bottom-style: solid;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@include max-tablet {
+  .page-header {
+    padding: 20px 0;
+  }
+
+  .page-header__container {
+    align-items: flex-start;
+    width: 94.894%;
+  }
+
+  .page-header__logo {
+    order: -1;
+    padding-left: 8px;
+
+    img {
+      width: 120px;
+      height: 42px;
+    }
+  }
+
+  .page-header__phone {
+    font-size: rem(14);
+    line-height: rem(17);
+  }
+
+  .page-header__button {
+    margin-left: auto;
+    margin-top: -15px;
+    font-size: rem(12);
+    line-height: rem(16);
   }
 }

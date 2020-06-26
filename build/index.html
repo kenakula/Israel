@@ -34,6 +34,36 @@
     </section>
   </main>
 
+  <section class="modal modal--callback">
+    <div class="modal__inner">
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+      <h2>Заказать звонок</h2>
+      <p>
+        Оставьте ваши контактные данные,<br> мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ
+        на
+        ваш вопрос!
+      </p>
+      <form class="modal__form form--modal" action="#">
+        <div class="form__inner form__inner--name">
+          <label for="name">Имя</label>
+          <input type="text" id="name" placeholder="Имя" required="">
+          <span class="form__input-border"></span>
+        </div>
+        <div class="form__inner form__inner--phone">
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" placeholder="Телефон" required="">
+        </div>
+        <button type="submit">Перезвоните мне</button>
+        <div class="form__inner form__inner--consent">
+          <input class="visually-hidden" type="checkbox" id="consent" required="">
+          <label for="consent">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </section>
+
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>

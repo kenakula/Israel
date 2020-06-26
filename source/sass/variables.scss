@@ -1,12 +1,17 @@
 //fonts
+$main-regular: "Fira Sans Regular", "Helvetica", sans-serif;
+$main-medium: "Fira Sans Medium", "Helvetica", sans-serif;
+$main-bold: "Fira Sans Bold", "Helvetica", sans-serif;
+
+$title-main: "Montserrat Bold", "Arial", sans-serif;
+$title-extra: "Raleway Extra Bold", "Arial", sans-serif;
+$title-black: "Raleway Black", "Arial", sans-serif;
 //colors
-$white: #f9fbfd;
-$main-color: #011c40;
-$grey: #d8d8d9;
-$header-bg: #87a7d4;
-$advantages-bg: #e3ecf6;
-$booking-bg: #c5dbf5;
-$promo-bg: #869bc3;
+$white: #ffffff;
+$black: #484848;
+$blue: #1fc0fc;
+$yellow: #ffc341;
+$light-yellow: #ffd701;
 //widths
 $mobile: 320px;
 $tablet: 767px;
@@ -14,5 +19,5 @@ $desktop: 1023px;
 //resolution
 $retina: 1.5dppx;
 //transition
-$trans-speed: 0.2s;
+$trans-speed: 0.3s;
 $trans-curve: ease-in;

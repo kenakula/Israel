@@ -31,9 +31,11 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: $main-regular;
   font-size: 1rem;
   line-height: 24px;
   font-weight: 400;
+  color: $black;
   background-color: #ffffff;
   overflow-x: hidden;
 }

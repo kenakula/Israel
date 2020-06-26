@@ -1,0 +1,27 @@
+.promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 818px;
+  background-color: #debb9a;
+  background-image: url("../../img/header-bg-girl@2x.png"), url("../../img/header-bg-text@2x.png"), url("../../img/header-bg-city@2x.jpg");
+  background-repeat: no-repeat;
+  background-position: center -31px, center 129px, center;
+  background-size: cover, 74.5%, cover;
+
+  h1 {
+    margin: auto auto 252px;
+    width: 25.109%;
+    font-family: $main-bold;
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: rem(29);
+    text-align: center;
+    color: $white;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.promo__scroll {
+
+}

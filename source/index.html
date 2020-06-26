@@ -8,6 +8,8 @@
   <meta name="keywords"
     content="Учёба, эмиграция, путешествие, Израиль, туры, экскурсии, походы, поломничество, masaisrael">
   <title>Israel</title>
+  <link rel="preload" href="fonts/fira-sans-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserratbold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -15,7 +17,26 @@
   <div style="display: none">
     <include src="build/img/sprite.svg"></include>
   </div>
+  <header class="page-header">
+    <div class="page-header__container container">
+      <a href="tel:+97226216581" class="page-header__phone">+ (972) 2 – 621 – 6581</a>
+      <a class="page-header__logo">
+        <img src="img/header-logo.svg" width="137" height="48" alt="логотип сайта">
+      </a>
+      <button class="page-header__button" type="button">Заказать звонок</button>
+    </div>
+  </header>
+  <main class="page-main">
+    <section class="promo">
+      <h1>Учёба, путешествие и карьера для еврейской молодёжи</h1>
+      <button class="promo__scroll" type="button">
+        <span class="visually-hidden">Прокрутить вниз</span>
+      </button>
+    </section>
+  </main>
 
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

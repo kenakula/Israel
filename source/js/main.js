@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var SCROLL_Y = 800;
+  var SCROLL_Y = 870;
   var SCROLL_X = 0;
   var SCROLL_BEHAVIOUR = 'smooth';
 

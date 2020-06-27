@@ -1,0 +1,21 @@
+.programms {
+  padding: 48px 0;
+  background-image: url("../../img/programms-bg@2x.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50%;
+}
+
+.programms__container {
+  @include push-auto;
+
+  width: 69.253%;
+
+  h2 {
+    @include title;
+
+    margin-bottom: 66px;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+  }
+}

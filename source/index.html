@@ -9,7 +9,7 @@
     content="Учёба, эмиграция, путешествие, Израиль, туры, экскурсии, походы, поломничество, masaisrael">
   <title>Israel</title>
   <link rel="preload" href="fonts/fira-sans-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/montserratbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -17,6 +17,7 @@
   <div style="display: none">
     <include src="build/img/sprite.svg"></include>
   </div>
+  <!-- header -->
   <header class="page-header">
     <div class="page-header__container container">
       <a href="tel:+97226216581" class="page-header__phone">+ (972) 2 – 621 – 6581</a>
@@ -27,17 +28,19 @@
     </div>
   </header>
   <main class="page-main">
+    <!-- promo -->
     <section class="promo">
       <h1>Учёба, путешествие и карьера для еврейской молодёжи</h1>
       <button class="promo__scroll" type="button">
         <span class="visually-hidden">Прокрутить вниз</span>
       </button>
     </section>
+    <!-- about -->
     <section class="about">
       <div class="about__container">
         <h2>О программе</h2>
         <p>
-          «Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. &nbsp;&nbsp;Более 250 учебных
+          «Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных
           программ (60
           на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до
           8400$.
@@ -47,6 +50,103 @@
           <button class="about__video-control" type="button">
             <span class="visually-hidden">Воспроизвести видео</span>
           </button>
+        </div>
+      </div>
+    </section>
+    <!-- programms -->
+    <section class="programms">
+      <div class="programms__container">
+        <h2>Программы</h2>
+        <div class="programms__tabs tabs">
+          <ul class="tabs__list">
+            <li class="tabs__item tabs__item--common" data-tab="0">
+              <span class="tabs__icon tabs__icon--common" aria-label="иконка"></span>
+              общие
+            </li>
+
+            <li class="tabs__item tabs__item--study tabs__item--active" data-tab="1">
+              <span class="tabs__icon tabs__icon--study" aria-label="иконка"></span>
+              академические
+            </li>
+
+            <li class="tabs__item tabs__item--internship" data-tab="2">
+              <span class="tabs__icon tabs__icon--internship" aria-label="иконка"></span>
+              стажировки
+            </li>
+
+            <li class="tabs__item  tabs__item--volunteer" data-tab="3">
+              <span class="tabs__icon tabs__icon--volunteer" aria-label="иконка"></span>
+              волонтёрство
+            </li>
+
+            <li class="tabs__item tabs__item--religion" data-tab="4">
+              <span class="tabs__icon tabs__icon--religion" aria-label="иконка"></span>
+              религиозные
+            </li>
+          </ul>
+          <ul class="tabs__contents">
+            <li class="tabs__description tabs__description--common">
+              <h3>Общие</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum iusto odit quo enim quas repudiandae
+                cumque odio. Incidunt, quos. Necessitatibus excepturi obcaecati doloremque dolorem totam maxime ab hic
+                beatae! Exercitationem blanditiis sit velit quos unde non quas pariatur quo nihil nemo culpa, iure
+                laborum cupiditate.
+              </p>
+            </li>
+
+            <li class="tabs__description tabs__description--academic tabs__description--active">
+              <h3>Академические</h3>
+              <p>
+                Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем
+                жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также
+                академический центр, живая лаборатория идей и творческого исследования.
+              </p>
+              <p>
+                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной
+                религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете
+                изучить все это в удивительной университетской среде.
+              </p>
+            </li>
+
+            <li class="tabs__description tabs__description--work">
+              <h3>Стажировки</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum iusto odit quo enim quas repudiandae
+                cumque odio. Incidunt, quos. Necessitatibus excepturi obcaecati doloremque dolorem totam maxime ab hic
+                beatae! Exercitationem blanditiis sit velit quos unde non quas pariatur quo nihil nemo culpa, iure
+                laborum cupiditate.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolorum vitae molestiae, ad mollitia sunt
+                iste magni libero delectus labore rerum numquam porro iure quis. Recusandae ea dicta ut facere.
+              </p>
+            </li>
+
+            <li class="tabs__description tabs__description--volunteer">
+              <h3>Волонтёрство</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum iusto odit quo enim quas repudiandae
+                cumque odio. Incidunt, quos. Necessitatibus excepturi obcaecati doloremque dolorem totam maxime ab hic
+                beatae! Exercitationem blanditiis sit velit quos unde non quas pariatur quo nihil nemo culpa, iure
+                laborum cupiditate.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolorum vitae molestiae, ad mollitia sunt
+                iste magni libero delectus labore rerum numquam porro iure quis. Recusandae ea dicta ut facere.
+              </p>
+            </li>
+
+            <li class="tabs__description tabs__description--religion">
+              <h3>Религиозные</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem eaque provident placeat atque itaque
+                eius officia, quibusdam quis maxime temporibus ea delectus dolor quas rem ut consequuntur aliquam totam
+                facere. Ad impedit laudantium laboriosam perspiciatis, vitae adipisci, ullam voluptates soluta
+                accusantium harum pariatur atque cupiditate distinctio?
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

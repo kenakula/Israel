@@ -15,6 +15,10 @@
   var form = document.querySelector('.modal__form');
   var telInput = form.querySelector('.form__inner--phone input[type="tel"]');
 
+  var tabsContainer = document.querySelector('.tabs');
+  var tabButtons = tabsContainer.querySelectorAll('.tabs__item');
+  var tabContents = tabsContainer.querySelectorAll('.tabs__description');
+
   document.body.classList.remove('no-js');
 
 
@@ -53,6 +57,19 @@
       form.reset();
     }
   };
+
+  // табы
+
+  var onTabButtonClickContentShow = function (evt) {
+    var activeTabIndex = window.vendor.getActiveTab(tabsContainer).dataset.tab;
+    var newTabIndex = evt.currentTarget.dataset.tab;
+
+    window.vendor.setNewTab(activeTabIndex, newTabIndex, tabButtons, tabContents);
+  };
+
+  tabButtons.forEach(function (it) {
+    it.addEventListener('click', onTabButtonClickContentShow);
+  });
 
   orderButton.addEventListener('click', onOrderButtonClickShowModal);
   scrollButton.addEventListener('click', onScrollButtonClickDocumentScroll);

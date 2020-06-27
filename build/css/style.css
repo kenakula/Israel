@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "Montserrat Bold";
-  src: url("../fonts/montserratbold.woff2") format("woff2"), url("../fonts/montserratbold.woff2") format("woff");
+  src: url("../fonts/montserrat-700.woff2") format("woff2"), url("../fonts/montserrat-700.woff") format("woff");
   font-weight: 700;
   font-display: swap; }
 
@@ -848,7 +848,12 @@ img {
       left: 16px; } }
 
 .about {
-  padding: 17px 0; }
+  margin-bottom: 135px;
+  padding: 17px 0;
+  background-image: url("../../img/about-watercolor@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 .about__container {
   margin-left: auto;
@@ -862,7 +867,7 @@ img {
     font-weight: 700;
     color: #1fc0fc;
     margin-bottom: 25px;
-    letter-spacing: 2.5px;
+    letter-spacing: -0.8px;
     text-transform: uppercase;
     text-align: center; }
   .about__container p {
@@ -876,6 +881,10 @@ img {
   position: relative; }
   .about__video img {
     position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 224px;
+    max-width: 100%;
     z-index: -10; }
 
 .about__video-control {
@@ -888,7 +897,7 @@ img {
   transition: all 0.3s ease-in;
   position: absolute;
   left: 50%;
-  top: 195px;
+  top: 42.5%;
   margin-left: -32px;
   width: 64px;
   height: 64px;
@@ -917,5 +926,205 @@ img {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.32);
     z-index: -1; }
+
+@media (max-width: 767px) {
+  .about {
+    padding: 13px 0; }
+  .about__container {
+    width: 100%; }
+    .about__container h2 {
+      font-size: 2rem;
+      line-height: 2.4375rem; }
+    .about__container p {
+      width: 89.5%;
+      font-size: 1rem;
+      line-height: 1.625rem;
+      text-align: left; }
+    .about__container img {
+      height: initial;
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .about__video-control {
+    top: 41.5%;
+    margin-left: -26px;
+    width: 53.33px;
+    height: 53.33px;
+    background-position: 21px center;
+    background-size: 24%; }
+    .about__video-control::before {
+      top: -14px;
+      margin-left: -41px;
+      width: 80px;
+      height: 80px; } }
+
+.programms {
+  padding: 48px 0;
+  background-image: url("../../img/programms-bg@2x.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50%; }
+
+.programms__container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 69.253%; }
+  .programms__container h2 {
+    margin: 0;
+    font-family: "Montserrat Bold", "Arial", sans-serif;
+    font-size: 2.5rem;
+    line-height: 3.0625rem;
+    font-weight: 700;
+    color: #1fc0fc;
+    margin-bottom: 66px;
+    letter-spacing: -0.8px;
+    text-transform: uppercase; }
+
+.tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.tabs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.tabs__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4px;
+  padding-left: 72px;
+  padding-right: 30px;
+  width: 228px;
+  min-height: 68px;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  text-transform: capitalize;
+  cursor: pointer; }
+  .tabs__item:not(.tabs__item--active):hover {
+    color: #ffd701; }
+  .tabs__item:last-child {
+    margin-bottom: 0; }
+  .tabs__item--active {
+    color: #ffffff;
+    font-family: "Fira Sans Medium", "Helvetica", sans-serif;
+    font-weight: 500;
+    font-size: 1.1875rem;
+    line-height: 0.625rem;
+    letter-spacing: 0.8px;
+    text-transform: none;
+    font-variant: small-caps;
+    background: linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
+    cursor: default; }
+    .tabs__item--active::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 30px 34px 0;
+      border-color: transparent #ffffff transparent transparent;
+      position: absolute;
+      top: 0;
+      right: 0; }
+    .tabs__item--active::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 34px 30px;
+      border-color: transparent transparent #ffffff transparent;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+
+.tabs__icon {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-image: url("../../img/icon-star.png");
+  background-repeat: no-repeat;
+  background-position: center; }
+  .tabs__icon--study {
+    background-image: url("../../img/icon-study.png"); }
+  .tabs__icon--internship {
+    background-image: url("../../img/icon-internship.png"); }
+  .tabs__icon--volunteer {
+    background-image: url("../../img/icon-volunteer.png"); }
+  .tabs__icon--religion {
+    background-image: url("../../img/icon-menora.png"); }
+
+.tabs__item--active .tabs__icon {
+  background-image: url("../../img/icon-star-active.png"); }
+  .tabs__item--active .tabs__icon--study {
+    background-image: url("../../img/icon-study-active.png"); }
+  .tabs__item--active .tabs__icon--internship {
+    background-image: url("../../img/icon-internship-active.png"); }
+  .tabs__item--active .tabs__icon--volunteer {
+    background-image: url("../../img/icon-volunteer-active.png"); }
+  .tabs__item--active .tabs__icon--religion {
+    background-image: url("../../img/icon-menora-active.png"); }
+
+.tabs__item:not(.tabs__item--active):focus .tabs__icon,
+.tabs__item:not(.tabs__item--active):hover .tabs__icon {
+  background-image: url("../../img/icon-star-hover.png"); }
+  .tabs__item:not(.tabs__item--active):focus .tabs__icon--study,
+  .tabs__item:not(.tabs__item--active):hover .tabs__icon--study {
+    background-image: url("../../img/icon-study-hover.png"); }
+  .tabs__item:not(.tabs__item--active):focus .tabs__icon--internship,
+  .tabs__item:not(.tabs__item--active):hover .tabs__icon--internship {
+    background-image: url("../../img/icon-internship-hover.png"); }
+  .tabs__item:not(.tabs__item--active):focus .tabs__icon--volunteer,
+  .tabs__item:not(.tabs__item--active):hover .tabs__icon--volunteer {
+    background-image: url("../../img/icon-volunteer-hover.png"); }
+  .tabs__item:not(.tabs__item--active):focus .tabs__icon--religion,
+  .tabs__item:not(.tabs__item--active):hover .tabs__icon--religion {
+    background-image: url("../../img/icon-menora-hover.png"); }
+
+.tabs__contents {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.tabs__description {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  display: none;
+  padding-top: 16px;
+  padding-left: 64px; }
+  .tabs__description--active {
+    display: block; }
+  .tabs__description h3 {
+    margin: 0;
+    margin-bottom: 24px;
+    font-family: "Montserrat Bold", "Arial", sans-serif;
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: #1fc0fc; }
+  .tabs__description p {
+    margin: 0;
+    margin-bottom: 16px;
+    width: 84.5%;
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+    opacity: 0.87; }
+    .tabs__description p:last-child {
+      margin-bottom: 0;
+      width: 79%; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,10 @@
 .about {
+  margin-bottom: 135px;
   padding: 17px 0;
+  background-image: url("../../img/about-watercolor@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .about__container {
@@ -11,7 +16,7 @@
     @include title;
 
     margin-bottom: 25px;
-    letter-spacing: 2.5px;
+    letter-spacing: -0.8px;
     text-transform: uppercase;
     text-align: center;
   }
@@ -30,6 +35,10 @@
 
   img {
     position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 224px;
+    max-width: 100%;
     z-index: -10;
   }
 }
@@ -40,7 +49,7 @@
 
   position: absolute;
   left: 50%;
-  top: 195px;
+  top: 42.5%;
   margin-left: -32px;
   width: 64px;
   height: 64px;
@@ -71,5 +80,49 @@
     border-radius: 50%;
     background-color: rgba($color: $white, $alpha: 0.32);
     z-index: -1;
+  }
+}
+
+@include max-tablet {
+  .about {
+    padding: 13px 0;
+  }
+
+  .about__container {
+    width: 100%;
+
+    h2 {
+      font-size: rem(32);
+      line-height: rem(39);
+    }
+
+    p {
+      width: 89.5%;
+      font-size: rem(16);
+      line-height: rem(26);
+      text-align: left;
+    }
+    // TODO поправить изображение
+    img {
+      height: initial;
+      object-fit: cover;
+    }
+  }
+
+  .about__video-control {
+    top: 41.5%;
+    margin-left: -26px;
+    width: 53.33px;
+    height: 53.33px;
+    background-position: 21px center;
+    background-size: 24%;
+
+
+    &::before {
+      top: -14px;
+      margin-left: -41px;
+      width: 80px;
+      height: 80px;
+    }
   }
 }

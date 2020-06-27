@@ -1,0 +1,182 @@
+.tabs {
+  display: flex;
+}
+
+.tabs__list {
+  @include list-reset;
+}
+
+.tabs__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  padding-left: 72px;
+  padding-right: 30px;
+  width: 228px;
+  min-height: 68px;
+  font-size: rem(15);
+  line-height: rem(18);
+  text-transform: capitalize;
+  cursor: pointer;
+
+  //TODO градиент текста только для webkit
+
+  &:not(.tabs__item--active):hover {
+    color: $light-yellow;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--active {
+    color: $white;
+    font-family: $main-medium;
+    font-weight: 500;
+    font-size: rem(19);
+    line-height: rem(10);
+    letter-spacing: 0.8px;
+    text-transform: none;
+    font-variant: small-caps;
+    background: linear-gradient(138.15deg, $yellow 20.46%, $light-yellow 65.31%);
+    cursor: default;
+
+    &::before {
+      @include triangle(topright, 30px, 34px, $white);
+
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &::after {
+      @include triangle(bottomright, 34px, 30px, $white);
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+// неактивные иконки табов
+
+.tabs__icon {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-image: url("../../img/icon-star.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--study {
+    background-image: url("../../img/icon-study.png");
+  }
+
+  &--internship {
+    background-image: url("../../img/icon-internship.png");
+  }
+
+  &--volunteer {
+    background-image: url("../../img/icon-volunteer.png");
+  }
+
+  &--religion {
+    background-image: url("../../img/icon-menora.png");
+  }
+}
+
+// иконки активного таба
+
+.tabs__item--active .tabs__icon {
+  background-image: url("../../img/icon-star-active.png");
+
+  &--study {
+    background-image: url("../../img/icon-study-active.png");
+  }
+
+  &--internship {
+    background-image: url("../../img/icon-internship-active.png");
+  }
+
+  &--volunteer {
+    background-image: url("../../img/icon-volunteer-active.png");
+  }
+
+  &--religion {
+    background-image: url("../../img/icon-menora-active.png");
+  }
+}
+
+// иконки при ховере
+
+.tabs__item:not(.tabs__item--active):focus .tabs__icon,
+.tabs__item:not(.tabs__item--active):hover .tabs__icon {
+  background-image: url("../../img/icon-star-hover.png");
+
+  &--study {
+    background-image: url("../../img/icon-study-hover.png");
+  }
+
+  &--internship {
+    background-image: url("../../img/icon-internship-hover.png");
+  }
+
+  &--volunteer {
+    background-image: url("../../img/icon-volunteer-hover.png");
+  }
+
+  &--religion {
+    background-image: url("../../img/icon-menora-hover.png");
+  }
+}
+
+// содержимое
+
+.tabs__contents {
+  @include list-reset;
+
+  position: relative;
+  flex-grow: 1;
+}
+
+.tabs__description {
+  @include transition;
+
+  display: none;
+  padding-top: 16px;
+  padding-left: 64px;
+
+  &--active {
+    display: block;
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 24px;
+    font-family: $title-main;
+    font-size: rem(28);
+    line-height: rem(34);
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: $blue;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 16px;
+    width: 84.5%;
+    font-size: rem(15);
+    line-height: rem(26);
+    opacity: 0.87;
+
+    &:last-child {
+      margin-bottom: 0;
+      width: 79%;
+    }
+  }
+}

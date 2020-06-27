@@ -4,6 +4,18 @@
   var TEL_REG_EXP = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
   var ESC_KEY = 'Escape';
 
+  // forEach polyfill for IE
+  if ('NodeList' in window && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function (callback, thisArg) {
+      thisArg = thisArg || window;
+      for (var i = 0; i < this.length; i++) {
+        callback.call(thisArg, this[i], i, this);
+      }
+    };
+  }
+  // end of forEach polyfill
+
+  // форма
 
   var resetInputError = function (input) {
     if (input.parentElement.classList.contains('form__inner--error')) {
@@ -70,10 +82,29 @@
     }
   };
 
+  // табы
+
+  var getActiveTab = function (container) {
+    return container.querySelector('.tabs__item--active');
+  };
+
+  var setNewTab = function (currentIndex, newIndex, tabs, contents) {
+    var currentTab = tabs[currentIndex];
+    var currentContent = contents[currentIndex];
+
+    currentTab.classList.remove('tabs__item--active');
+    tabs[newIndex].classList.add('tabs__item--active');
+
+    currentContent.classList.remove('tabs__description--active');
+    contents[newIndex].classList.add('tabs__description--active');
+  };
+
   window.vendor = {
     showModal: showModal,
     closeModal: closeModal,
     validateTelNumber: validateTelNumber,
     resetInputError: resetInputError,
+    getActiveTab: getActiveTab,
+    setNewTab: setNewTab,
   };
 })();

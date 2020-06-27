@@ -365,6 +365,27 @@ img {
 .no-scroll {
   overflow-y: hidden; }
 
+.button {
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  padding: 16px 20px 17px;
+  border-radius: 80px;
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(142.39deg, #ffc341 20.46%, #ffd701 65.31%);
+  cursor: pointer; }
+  .button:hover {
+    background: linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%); }
+  .button:active {
+    background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%); }
+
 .page-header {
   position: relative;
   -webkit-box-flex: 0;
@@ -609,6 +630,36 @@ img {
     opacity: 0.87; }
   .modal__inner br {
     display: none; }
+  .modal__inner--success {
+    padding-top: 215px;
+    padding-bottom: 112px; }
+    .modal__inner--success h2 {
+      padding: 0;
+      text-align: center; }
+    .modal__inner--success p {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 31px;
+      padding: 0;
+      width: 78%;
+      text-align: center; }
+    .modal__inner--success .modal__button {
+      margin-left: auto;
+      margin-right: auto;
+      width: 60%; }
+    .modal__inner--success::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 118px;
+      left: 50%;
+      margin-left: -34px;
+      width: 71px;
+      height: 67px;
+      background-image: url("../../img/ok-checkmark.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
 
 .modal__close {
   display: block;
@@ -653,6 +704,16 @@ img {
       text-align: center; }
     .modal__inner br {
       display: block; }
+    .modal__inner--success {
+      padding-top: 295px; }
+      .modal__inner--success h2 {
+        padding: 0; }
+      .modal__inner--success p {
+        width: 95%; }
+      .modal__inner--success .modal__button {
+        width: 92%; }
+      .modal__inner--success::before {
+        top: 198px; }
   .modal__close {
     top: 24px;
     right: 24px; } }
@@ -713,6 +774,9 @@ img {
   margin-bottom: 10px; }
   .form__inner:last-child {
     margin-bottom: 0; }
+  .form__inner--error input[type="text"],
+  .form__inner--error input[type="tel"] {
+    border-color: #ff0000; }
   .form__inner--consent label {
     position: relative;
     padding-left: 84px;
@@ -754,6 +818,15 @@ img {
     display: block; }
   .form__inner--consent input[type="checkbox"]:focus + label {
     opacity: 0.7; }
+  .form__inner span {
+    display: none; }
+  .form__inner--error span {
+    display: block;
+    font-size: 0.8125rem;
+    line-height: 1.1875rem;
+    color: #ff0000;
+    opacity: 0.75;
+    text-align: center; }
 
 @media (max-width: 767px) {
   .form--modal {

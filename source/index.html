@@ -49,12 +49,13 @@
       <form class="modal__form form--modal" action="#">
         <div class="form__inner form__inner--name">
           <label for="name">Имя</label>
-          <input type="text" id="name" placeholder="Имя" required>
-          <span class="form__input-border"></span>
+          <input type="text" id="name" min="2" max="20" placeholder="Имя" required>
+          <span>Ошибка: неверный формат</span>
         </div>
         <div class="form__inner form__inner--phone">
           <label for="phone">Телефон</label>
           <input type="tel" id="phone" placeholder="Телефон" required>
+          <span>Ошибка: неверный формат</span>
         </div>
         <button type="submit">Перезвоните мне</button>
         <div class="form__inner form__inner--consent">
@@ -62,6 +63,18 @@
           <label for="consent">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
         </div>
       </form>
+    </div>
+  </section>
+  <section class="modal modal--success">
+    <div class="modal__inner modal__inner--success">
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+      <h2>Заявка принята</h2>
+      <p>
+        Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
+      </p>
+      <button class="modal__button button">Понятно</button>
     </div>
   </section>
 

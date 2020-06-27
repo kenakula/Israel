@@ -50,6 +50,45 @@
   br {
     display: none;
   }
+
+  &--success {
+    padding-top: 215px;
+    padding-bottom: 112px;
+
+    h2 {
+      padding: 0;
+      text-align: center;
+    }
+
+    p {
+      @include push-auto;
+
+      margin-bottom: 31px;
+      padding: 0;
+      width: 78%;
+      text-align: center;
+    }
+
+    .modal__button {
+      @include push-auto;
+
+      width: 60%;
+    }
+
+    &::before {
+      @include pseudo;
+
+      top: 118px;
+      left: 50%;
+      margin-left: -34px;
+      width: 71px;
+      height: 67px;
+      background-image: url("../../img/ok-checkmark.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
 }
 
 .modal__close {
@@ -103,6 +142,26 @@
 
     br {
       display: block;
+    }
+
+    &--success {
+      padding-top: 295px;
+
+      h2 {
+        padding: 0;
+      }
+
+      p {
+        width: 95%;
+      }
+
+      .modal__button {
+        width: 92%;
+      }
+
+      &::before {
+        top: 198px;
+      }
     }
   }
 

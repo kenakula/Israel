@@ -1,41 +1,65 @@
 'use strict';
 
 (function () {
-  var ESC_KEY = 'Escape';
+  var SCROLL_Y = 800;
+  var SCROLL_X = 0;
+  var SCROLL_BEHAVIOUR = 'smooth';
 
   var orderButton = document.querySelector('.page-header__button');
   var orderModal = document.querySelector('.modal--callback');
-  var modalInner = orderModal.querySelector('.modal__inner');
-  var closeButton = orderModal.querySelector('.modal__close');
+  var successModal = document.querySelector('.modal--success');
+  var scrollButton = document.querySelector('.promo__scroll');
+
+  var errors = {};
+
+  var form = document.querySelector('.modal__form');
+  var telInput = form.querySelector('.form__inner--phone input[type="tel"]');
 
   document.body.classList.remove('no-js');
 
-  var onOverlayClickCloseModal = function (evt) {
-    if (evt.target === orderModal && evt.target !== modalInner) {
-      window.vendor.closeModal(orderModal);
-      document.removeEventListener('keydown', onEscButtonPressCloseModal);
-    }
+
+  // скролл
+  var onScrollButtonClickDocumentScroll = function () {
+    window.scrollBy({
+      top: SCROLL_Y,
+      left: SCROLL_X,
+      behavior: SCROLL_BEHAVIOUR,
+    });
   };
 
-  var onEscButtonPressCloseModal = function (evt) {
-    if (evt.key === ESC_KEY) {
-      window.vendor.closeModal(orderModal);
-      document.removeEventListener('keydown', onEscButtonPressCloseModal);
-    }
-  };
+  // модалки
 
   var onOrderButtonClickShowModal = function () {
     window.vendor.showModal(orderModal);
-    document.addEventListener('keydown', onEscButtonPressCloseModal);
   };
 
-  var onCloseButtonClickCloseModal = function () {
-    window.vendor.closeModal(orderModal);
-    document.removeEventListener('keydown', onEscButtonPressCloseModal);
+  // валидация
+
+  var onTelInputChangeValidateValue = function () {
+    window.vendor.validateTelNumber(telInput, errors);
   };
 
-  orderModal.addEventListener('click', onOverlayClickCloseModal);
+  var onTelInputFocusResetValue = function () {
+    window.vendor.resetInputError(telInput);
+  };
+
+  var onFormSubmit = function (evt) {
+    if (errors.tel) {
+      evt.preventDefault();
+    } else {
+      evt.preventDefault();
+      window.vendor.closeModal(orderModal);
+      window.vendor.showModal(successModal);
+      form.reset();
+    }
+  };
+
   orderButton.addEventListener('click', onOrderButtonClickShowModal);
-  closeButton.addEventListener('click', onCloseButtonClickCloseModal);
+  scrollButton.addEventListener('click', onScrollButtonClickDocumentScroll);
+
+  telInput.addEventListener('change', onTelInputChangeValidateValue);
+  telInput.addEventListener('focus', onTelInputFocusResetValue);
+
+  form.addEventListener('submit', onFormSubmit);
 
 })();

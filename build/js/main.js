@@ -16,6 +16,7 @@
   var telInput = form.querySelector('.form__inner--phone input[type="tel"]');
 
   var tabsContainer = document.querySelector('.tabs');
+  var tabsList = tabsContainer.querySelector('.tabs__list');
   var tabButtons = tabsContainer.querySelectorAll('.tabs__item');
   var tabContents = tabsContainer.querySelectorAll('.tabs__description');
 
@@ -60,6 +61,8 @@
 
   // табы
 
+  // TODO drag
+
   var onTabButtonClickContentShow = function (evt) {
     var activeTabIndex = window.vendor.getActiveTab(tabsContainer).dataset.tab;
     var newTabIndex = evt.currentTarget.dataset.tab;
@@ -67,8 +70,22 @@
     window.vendor.setNewTab(activeTabIndex, newTabIndex, tabButtons, tabContents);
   };
 
+  // var getTabsDimensions = function () {
+  //   var tabs = {};
+
+  //   return tabs;
+  // };
+
+  // console.log(getTabsDimensions());
+
+  // var onTabButtonClickCenterTab = function (evt) {
+  //   var shift;
+  //   tabsList.style.left = shift + 'px';
+  // };
+
   tabButtons.forEach(function (it) {
     it.addEventListener('click', onTabButtonClickContentShow);
+    // it.addEventListener('click', onTabButtonClickCenterTab);
   });
 
   orderButton.addEventListener('click', onOrderButtonClickShowModal);

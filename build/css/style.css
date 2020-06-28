@@ -929,6 +929,7 @@ img {
 
 @media (max-width: 767px) {
   .about {
+    margin-bottom: 19px;
     padding: 13px 0; }
   .about__container {
     width: 100%; }
@@ -978,6 +979,21 @@ img {
     margin-bottom: 66px;
     letter-spacing: -0.8px;
     text-transform: uppercase; }
+
+@media (max-width: 1023px) {
+  .programms__container h2 {
+    font-size: 2rem;
+    line-height: 2.4375rem;
+    text-align: center; } }
+
+@media (max-width: 767px) {
+  .programms {
+    background-position: right -24px top 166px;
+    background-size: 100%; }
+  .programms__container {
+    width: 100%; }
+    .programms__container h2 {
+      margin-bottom: 15px; } }
 
 .tabs {
   display: -webkit-box;
@@ -1100,8 +1116,6 @@ img {
           flex-grow: 1; }
 
 .tabs__description {
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
   display: none;
   padding-top: 16px;
   padding-left: 64px; }
@@ -1126,5 +1140,64 @@ img {
     .tabs__description p:last-child {
       margin-bottom: 0;
       width: 79%; }
+  .tabs__description br {
+    display: none; }
+
+@media (max-width: 1023px) {
+  .tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .tabs__inner {
+    position: relative;
+    overflow: hidden; }
+  .tabs__list {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .tabs__item {
+    margin-bottom: 0;
+    padding-left: 61px;
+    padding-right: 22px;
+    width: auto;
+    min-height: 48px;
+    border-radius: 60.67px; }
+    .tabs__item--active::before, .tabs__item--active::after {
+      display: none; }
+  .tabs__icon {
+    top: 6px; } }
+
+@media (max-width: 767px) {
+  .tabs__inner {
+    margin-bottom: 16px; }
+  .tabs__list {
+    left: -46px; }
+  .tabs__description {
+    padding-left: 16px;
+    padding-right: 19px; }
+    .tabs__description h3 {
+      margin-bottom: 18px;
+      font-size: 1.5rem;
+      line-height: 1.8125rem; }
+    .tabs__description p {
+      margin-bottom: 14px;
+      width: 100%;
+      font-size: 0.875rem;
+      line-height: 1.375rem; }
+      .tabs__description p:last-child {
+        width: 100%; }
+    .tabs__description br {
+      display: block; }
+  .tabs__item {
+    padding-left: 51px;
+    padding-right: 17px; }
+  .tabs__icon {
+    top: 8px;
+    left: 13px;
+    width: 30px;
+    height: 30px;
+    background-size: contain; } }
 
 /*# sourceMappingURL=style.css.map */

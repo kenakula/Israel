@@ -19,3 +19,28 @@
     text-transform: uppercase;
   }
 }
+
+@include max-desktop {
+  .programms__container {
+    h2 {
+      font-size: rem(32);
+      line-height: rem(39);
+      text-align: center;
+    }
+  }
+}
+
+@include max-tablet {
+  .programms {
+    background-position: right -24px top 166px;
+    background-size: 100%;
+  }
+
+  .programms__container {
+    width: 100%;
+
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
+}

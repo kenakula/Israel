@@ -69,46 +69,46 @@
   display: block;
   width: 36px;
   height: 36px;
-  background-image: url("../../img/icon-star.png");
+  background-image: url("../img/icon-star.png");
   background-repeat: no-repeat;
   background-position: center;
 
   &--study {
-    background-image: url("../../img/icon-study.png");
+    background-image: url("../img/icon-study.png");
   }
 
   &--internship {
-    background-image: url("../../img/icon-internship.png");
+    background-image: url("../img/icon-internship.png");
   }
 
   &--volunteer {
-    background-image: url("../../img/icon-volunteer.png");
+    background-image: url("../img/icon-volunteer.png");
   }
 
   &--religion {
-    background-image: url("../../img/icon-menora.png");
+    background-image: url("../img/icon-menora.png");
   }
 }
 
 // иконки активного таба
 
 .tabs__item--active .tabs__icon {
-  background-image: url("../../img/icon-star-active.png");
+  background-image: url("../img/icon-star-active.png");
 
   &--study {
-    background-image: url("../../img/icon-study-active.png");
+    background-image: url("../img/icon-study-active.png");
   }
 
   &--internship {
-    background-image: url("../../img/icon-internship-active.png");
+    background-image: url("../img/icon-internship-active.png");
   }
 
   &--volunteer {
-    background-image: url("../../img/icon-volunteer-active.png");
+    background-image: url("../img/icon-volunteer-active.png");
   }
 
   &--religion {
-    background-image: url("../../img/icon-menora-active.png");
+    background-image: url("../img/icon-menora-active.png");
   }
 }
 
@@ -116,22 +116,22 @@
 
 .tabs__item:not(.tabs__item--active):focus .tabs__icon,
 .tabs__item:not(.tabs__item--active):hover .tabs__icon {
-  background-image: url("../../img/icon-star-hover.png");
+  background-image: url("../img/icon-star-hover.png");
 
   &--study {
-    background-image: url("../../img/icon-study-hover.png");
+    background-image: url("../img/icon-study-hover.png");
   }
 
   &--internship {
-    background-image: url("../../img/icon-internship-hover.png");
+    background-image: url("../img/icon-internship-hover.png");
   }
 
   &--volunteer {
-    background-image: url("../../img/icon-volunteer-hover.png");
+    background-image: url("../img/icon-volunteer-hover.png");
   }
 
   &--religion {
-    background-image: url("../../img/icon-menora-hover.png");
+    background-image: url("../img/icon-menora-hover.png");
   }
 }
 

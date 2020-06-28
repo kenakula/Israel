@@ -3,11 +3,13 @@
 
   padding: 16px 20px 17px;
   border-radius: 80px;
-  font-size: rem(15);
+  font-family: $main-medium;
+  font-variant: small-caps;
+  font-weight: 500;
+  font-size: rem(21);
   line-height: rem(26);
   text-align: center;
   color: $white;
-  text-transform: uppercase;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   background: linear-gradient(142.39deg, $yellow 20.46%, $light-yellow 65.31%);
   cursor: pointer;

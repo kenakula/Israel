@@ -5,7 +5,7 @@
   margin-top: -100px;
   height: 878px;
   background-color: #debb9a;
-  background-image: url("../../img/header-bg-girl.png"), url("../../img/header-bg-text@2x.png"), url("../../img/header-bg-city@2x.jpg");
+  background-image: url("../img/header-bg-girl.png"), url("../img/header-bg-text@2x.png"), url("../img/header-bg-city@2x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom 100%, center 160px, center;
   background-size: cover, 74.5%, cover;
@@ -35,7 +35,7 @@
   border-radius: 50%;
   border: 1px solid $white;
   background-color: transparent;
-  background-image: url("../../img/mouse.svg");
+  background-image: url("../img/mouse.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -91,7 +91,7 @@
   .promo {
     height: 591px;
     margin-top: -54px;
-    background-image: url("../../img/header-bg-girl-mobile@2x.png"), url("../../img/header-bg-text-mobile@2x.png"), url("../../img/header-bg-city@2x.jpg");
+    background-image: url("../img/header-bg-girl-mobile@2x.png"), url("../img/header-bg-text-mobile@2x.png"), url("../img/header-bg-city@2x.jpg");
     background-position: center 3px, center 139px, center;
     background-size: cover, contain, cover;
 

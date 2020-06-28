@@ -16,6 +16,7 @@
   var telInput = form.querySelector('.form__inner--phone input[type="tel"]');
 
   var tabsContainer = document.querySelector('.tabs');
+  var tabsInner = tabsContainer.querySelector('.tabs__inner');
   var tabsList = tabsContainer.querySelector('.tabs__list');
   var tabButtons = tabsContainer.querySelectorAll('.tabs__item');
   var tabContents = tabsContainer.querySelectorAll('.tabs__description');
@@ -61,7 +62,54 @@
 
   // табы
 
-  // TODO drag
+  // проверка на тач-устройство
+  var isTouchCapable = 'ontouchstart' in window ||
+    window.DocumentTouch && document instanceof window.DocumentTouch ||
+    navigator.maxTouchPoints > 0 ||
+    window.navigator.msMaxTouchPoints > 0;
+
+  // drag'n'drop для мыши. При ширине меньше 1024px некоторые элементы списка скрываются, список получает позиционирование relative, на бОльших ширинах drag'n'drop не работает, все элементы видны.
+
+  tabsList.addEventListener('mousedown', function (evt) {
+    evt.preventDefault();
+    var shiftX = evt.clientX - tabsList.getBoundingClientRect().left;
+
+    var onMouseMoove = function (mooveEvt) {
+      var newLeft = mooveEvt.clientX - shiftX - tabsInner.getBoundingClientRect().left;
+      tabsList.style.left = newLeft + 'px';
+    };
+
+    var onMouseUp = function () {
+      document.removeEventListener('mouseup', onMouseUp);
+      document.removeEventListener('mousemove', onMouseMoove);
+    };
+
+    document.addEventListener('mousemove', onMouseMoove);
+    document.addEventListener('mouseup', onMouseUp);
+  });
+
+  if (isTouchCapable) {
+    tabsList.addEventListener('touchstart', function (touchEvt) {
+
+      touchEvt.preventDefault();
+      var shiftX = touchEvt.touches[0].clientX - tabsList.getBoundingClientRect().left;
+
+      var onMouseMoove = function (moveTouchEvt) {
+        var newLeft = moveTouchEvt.touches[0].clientX - shiftX - tabsInner.getBoundingClientRect().left;
+        tabsList.style.left = newLeft + 'px';
+      };
+
+      var onMouseUp = function () {
+        document.removeEventListener('touchend', onMouseUp);
+        document.removeEventListener('touchmove', onMouseMoove);
+      };
+
+      document.addEventListener('touchmove', onMouseMoove);
+      document.addEventListener('touchend', onMouseUp);
+    });
+  }
+
+  // TODO tab centering
 
   var onTabButtonClickContentShow = function (evt) {
     var activeTabIndex = window.vendor.getActiveTab(tabsContainer).dataset.tab;
@@ -70,22 +118,8 @@
     window.vendor.setNewTab(activeTabIndex, newTabIndex, tabButtons, tabContents);
   };
 
-  // var getTabsDimensions = function () {
-  //   var tabs = {};
-
-  //   return tabs;
-  // };
-
-  // console.log(getTabsDimensions());
-
-  // var onTabButtonClickCenterTab = function (evt) {
-  //   var shift;
-  //   tabsList.style.left = shift + 'px';
-  // };
-
   tabButtons.forEach(function (it) {
     it.addEventListener('click', onTabButtonClickContentShow);
-    // it.addEventListener('click', onTabButtonClickCenterTab);
   });
 
   orderButton.addEventListener('click', onOrderButtonClickShowModal);

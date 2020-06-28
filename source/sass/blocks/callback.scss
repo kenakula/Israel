@@ -1,0 +1,76 @@
+.callback {
+  padding-top: 177px;
+  padding-bottom: 157px;
+  background-image: url("../img/girl-flag@2x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right 5px top -28px;
+
+  h2 {
+    @include title;
+
+    margin-bottom: 25px;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 63px;
+    width: 85%;
+    font-size: rem(17);
+    line-height: rem(29);
+    opacity: 0.87;
+  }
+}
+
+.callback__container {
+  margin-left: 15.373%;
+  width: 34.9%;
+
+  button[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 216px;
+  }
+}
+
+@include max-tablet {
+  .callback {
+    padding: 32px 0 317px;
+    background-size: 132%;
+    background-position: center bottom 10px;
+
+    h2 {
+      margin-bottom: 24px;
+      padding-left: 7px;
+      font-size: rem(32);
+      line-height: rem(39);
+    }
+
+    p {
+      margin-bottom: 23px;
+      width: 100%;
+      font-size: rem(16);
+      line-height: rem(26);
+    }
+  }
+
+  .callback__container {
+    @include push-auto;
+
+    width: 89.375%;
+
+    button[type="submit"] {
+      @include push-auto;
+
+      position: relative;
+      width: 264px;
+    }
+  }
+
+}
+
+

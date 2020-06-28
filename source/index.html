@@ -55,7 +55,7 @@
     </section>
     <!-- programms -->
     <section class="programms">
-      <div class="programms__container">
+      <div class="programms__container container">
         <h2>Программы</h2>
         <div class="programms__tabs tabs">
           <div class="tabs__inner">
@@ -152,6 +152,23 @@
         </div>
       </div>
     </section>
+    <!-- callback -->
+    <section class="callback">
+      <div class="callback__container">
+        <h2>Хочу поехать!</h2>
+        <p>
+          Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!
+        </p>
+        <form action="#" class="form form--callback callback__form">
+          <div class="form__inner form__inner--callback">
+            <input type="tel" id="phoneCallback" placeholder="Телефон">
+            <label for="phoneCallback" class="visually-hidden"></label>
+
+            <button class="callback__button button" type="submit">перезвоните мне</button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 
   <section class="modal modal--callback">
@@ -165,7 +182,7 @@
         на
         ваш вопрос!
       </p>
-      <form class="modal__form form--modal" action="#">
+      <form class="modal__form form form--modal" action="#">
         <div class="form__inner form__inner--name">
           <label for="name">Имя</label>
           <input type="text" id="name" min="2" max="20" placeholder="Имя" required>

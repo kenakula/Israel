@@ -1,10 +1,10 @@
 .callback {
   padding-top: 177px;
   padding-bottom: 157px;
-  background-image: url("../img/girl-flag@2x.png");
+  background-image: url("../img/girl-flag@2x.png"), url("../../img/wantto-bg@2x.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right 5px top -28px;
+  background-size: contain, 11%;
+  background-position: right 5px top -28px, top 100px left;
 
   h2 {
     @include title;
@@ -33,6 +33,7 @@
     top: 0;
     right: 0;
     margin: 0;
+    padding: 18px 20px 20px;
     width: 216px;
   }
 }
@@ -40,8 +41,8 @@
 @include max-tablet {
   .callback {
     padding: 32px 0 317px;
-    background-size: 132%;
-    background-position: center bottom 10px;
+    background-size: 132%, 34%;
+    background-position: center bottom 10px, left -7px top -19px;
 
     h2 {
       margin-bottom: 24px;

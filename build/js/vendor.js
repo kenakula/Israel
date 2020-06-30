@@ -102,8 +102,8 @@
   // -------------------------------------- слайдер
 
   var changeSlide = function (slides, bullets, newIndex) {
-    slides[newIndex].classList.add('gallery__img--active');
-    bullets[newIndex].classList.add('gallery__bullet--active');
+    slides[newIndex].classList.add('cards__img--active');
+    bullets[newIndex].classList.add('cards__bullet--active');
   };
 
   window.vendor = {

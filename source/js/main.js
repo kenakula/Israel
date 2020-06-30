@@ -21,9 +21,9 @@
   var tabButtons = tabsContainer.querySelectorAll('.tabs__item');
   var tabContents = tabsContainer.querySelectorAll('.tabs__description');
 
-  var israelSlidesContainer = document.querySelector('.gallery');
-  var israelSlides = israelSlidesContainer.querySelectorAll('.gallery__img');
-  var israelSlidesBullets = israelSlidesContainer.querySelectorAll('.gallery__bullet');
+  var israelSlidesContainer = document.querySelector('.cards');
+  var israelSlides = israelSlidesContainer.querySelectorAll('.cards__img');
+  var israelSlidesBullets = israelSlidesContainer.querySelectorAll('.cards__bullet');
 
   document.body.classList.remove('no-js');
 
@@ -128,19 +128,19 @@
   // israel
 
   var getActiveSlide = function (container) {
-    return container.querySelector('.gallery__img--active');
+    return container.querySelector('.cards__img--active');
   };
 
   var getActiveBullet = function (container) {
-    return container.querySelector('.gallery__bullet--active');
+    return container.querySelector('.cards__bullet--active');
   };
 
   var onBulletClickChangeIsraelSlide = function (evt) {
     var activeSlide = getActiveSlide(israelSlidesContainer);
     var activeBullet = getActiveBullet(israelSlidesContainer);
 
-    activeBullet.classList.remove('gallery__bullet--active');
-    activeSlide.classList.remove('gallery__img--active');
+    activeBullet.classList.remove('cards__bullet--active');
+    activeSlide.classList.remove('cards__img--active');
 
     var newIndex = evt.target.dataset.index;
 

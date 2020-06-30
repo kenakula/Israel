@@ -61,6 +61,8 @@
   padding-right: 70px;
   counter-reset: howto-list;
 
+
+  //TODO сделать для каждого элемента
   &::before {
     content: "";
     position: absolute;

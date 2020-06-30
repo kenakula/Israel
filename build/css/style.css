@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Fira Sans Medium";
-  src: url("../fonts/fira-sans-500.woff2") format("woff2"), url("../fonts/fira-sans-500.woff") format("woff");
+  src: url("../fonts/fira-sans-medium.woff2") format("woff2"), url("../fonts/fira-sans-500.woff") format("woff");
   font-weight: 500;
   font-display: swap; }
 
@@ -18,19 +18,19 @@
 
 @font-face {
   font-family: "Montserrat Bold";
-  src: url("../fonts/montserrat-700.woff2") format("woff2"), url("../fonts/montserrat-700.woff") format("woff");
+  src: url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-700.woff") format("woff");
   font-weight: 700;
   font-display: swap; }
 
 @font-face {
   font-family: "Raleway Extra Bold";
-  src: url("../fonts/ralewayextrabold.woff2") format("woff2"), url("../fonts/ralewayextrabold.woff") format("woff");
+  src: url("../fonts/raleway-extrabold.woff2") format("woff2"), url("../fonts/ralewayextrabold.woff") format("woff");
   font-weight: 800;
   font-display: swap; }
 
 @font-face {
   font-family: "Raleway Black";
-  src: url("../fonts/ralewayblack.woff2") format("woff2"), url("../fonts/ralewayblack.woff") format("woff");
+  src: url("../fonts/raleway-black.woff2") format("woff2"), url("../fonts/ralewayblack.woff") format("woff");
   font-weight: 800;
   font-display: swap; }
 
@@ -1427,5 +1427,87 @@ img {
     .howto__item::before {
       top: 15px;
       left: -8px; } }
+
+.features {
+  padding: 51px 110px 110px 104px;
+  background-image: url("../../img/israel-life-watercolor@2x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .features h2 {
+    margin: 0;
+    font-family: "Montserrat Bold", "Arial", sans-serif;
+    font-size: 2.5rem;
+    line-height: 3.0625rem;
+    font-weight: 700;
+    color: #1fc0fc;
+    margin-bottom: 24px;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+    text-align: center; }
+  .features p {
+    margin: 0 auto;
+    padding-right: 2px;
+    width: 62%;
+    font-size: 1.0625rem;
+    line-height: 1.8125rem;
+    text-align: right; }
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.gallery__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: 15px;
+  min-height: 732px;
+  min-width: 41.840%;
+  border: 1px solid black; }
+  .gallery__inner:first-child .gallery__img {
+    margin-right: 0; }
+  .gallery__inner:last-child {
+    margin-right: 0; }
+
+.gallery__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 30px;
+  margin-top: 30px;
+  border: 1px solid red;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .gallery__img:nth-child(2n) {
+    margin-right: 0; }
+  .gallery__img span {
+    display: block;
+    width: 87.591%;
+    font-family: "Raleway Extra Bold", "Arial", sans-serif;
+    font-weight: 800;
+    font-size: 1.3125rem;
+    line-height: 1.5625rem;
+    color: #ffffff; }
+  .gallery__img--history {
+    background-image: url("../../img/israel-life-1@2x.png"); }
+  .gallery__img--language {
+    background-image: url("../../img/israel-life-2@2x.png"); }
+  .gallery__img--profession {
+    background-image: url("../../img/israel-life-3@2x.png"); }
+  .gallery__img--projects {
+    background-image: url("../../img/israel-life-4@2x.png"); }
+  .gallery__img--leadership {
+    background-image: url("../../img/israel-life-5@2x.png"); }
 
 /*# sourceMappingURL=style.css.map */

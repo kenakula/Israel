@@ -21,6 +21,10 @@
   var tabButtons = tabsContainer.querySelectorAll('.tabs__item');
   var tabContents = tabsContainer.querySelectorAll('.tabs__description');
 
+  var israelSlidesContainer = document.querySelector('.gallery');
+  var israelSlides = israelSlidesContainer.querySelectorAll('.gallery__img');
+  var israelSlidesBullets = israelSlidesContainer.querySelectorAll('.gallery__bullet');
+
   document.body.classList.remove('no-js');
 
 
@@ -33,15 +37,15 @@
     });
   };
 
-  // модалки
+  // -------------------------------------- модалки
 
   var onOrderButtonClickShowModal = function () {
     window.vendor.showModal(orderModal);
   };
 
-  // валидация
+  // -------------------------------------- валидация
 
-  // сделай валидацию поля имени
+  // TODO сделай валидацию поля имени
 
   var onTelInputChangeValidateValue = function () {
     window.vendor.validateTelNumber(telInput, errors);
@@ -62,7 +66,7 @@
     }
   };
 
-  // табы
+  // -------------------------------------- табы
 
   // проверка на тач-устройство
   var isTouchCapable = 'ontouchstart' in window ||
@@ -111,14 +115,50 @@
     });
   }
 
-  // TODO tab centering
-
   var onTabButtonClickContentShow = function (evt) {
     var activeTabIndex = window.vendor.getActiveTab(tabsContainer).dataset.tab;
     var newTabIndex = evt.currentTarget.dataset.tab;
 
     window.vendor.setNewTab(activeTabIndex, newTabIndex, tabButtons, tabContents);
   };
+
+  // TODO tab centering
+
+  // -------------------------------------- слайдер
+
+  // israel
+
+  var getActiveSlide = function (container) {
+    return container.querySelector('.gallery__img--active');
+  };
+
+  var getActiveBullet = function (container) {
+    return container.querySelector('.gallery__bullet--active');
+  };
+
+  var changeSlide = function (slides, bullets, newIndex) {
+    slides[newIndex].classList.add('gallery__img--active');
+    bullets[newIndex].classList.add('gallery__bullet--active');
+  };
+
+  var onBulletClickChangeIsraelSlide = function (evt) {
+    var activeSlide = getActiveSlide(israelSlidesContainer);
+    var activeBullet = getActiveBullet(israelSlidesContainer);
+
+    activeBullet.classList.remove('gallery__bullet--active');
+    activeSlide.classList.remove('gallery__img--active');
+
+    var newIndex = evt.target.dataset.index;
+
+    changeSlide(israelSlides, israelSlidesBullets, newIndex);
+  };
+
+
+  // -------------------------------------- действия
+
+  israelSlidesBullets.forEach(function (it) {
+    it.addEventListener('click', onBulletClickChangeIsraelSlide);
+  });
 
   tabButtons.forEach(function (it) {
     it.addEventListener('click', onTabButtonClickContentShow);

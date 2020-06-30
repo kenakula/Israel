@@ -1,26 +1,82 @@
 .features {
-  padding: 51px 110px 110px 104px;
-  background-image: url("../../img/israel-life-watercolor@2x.png");
+  padding-top: 55px;
+  padding-bottom: 100px;
+  background-image: url("../../img/israel-life-bg@2x.png"), url("../../img/israel-life-watercolor@2x.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: 6.5%,cover;
+  background-position: right bottom 182px,center;
 
   h2 {
     @include title;
 
-    margin-bottom: 24px;
-    letter-spacing: -0.8px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    width: 60%;
     text-transform: uppercase;
+    letter-spacing: -0.8px;
     text-align: center;
   }
 
   p {
     margin: 0 auto;
-    padding-right: 2px;
-    width: 62%;
+    padding-right: 30px;
+    width: 64.102%;
     font-size: rem(17);
     line-height: rem(29);
     text-align: right;
+    color: rgba($color: $black, $alpha: 0.87);
   }
 }
 
+.features__container {
+  margin-left: 103px;
+  width: 85.651%;
+}
+
+.features__linebreak {
+  display: none;
+}
+
+@include max-desktop {
+  .features {
+    p {
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .features__container {
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+
+@include max-tablet {
+  .features {
+    padding-top: 23px;
+    background: none;
+
+    h2 {
+      width: 100%;
+      font-size: rem(32);
+      line-height: rem(39);
+    }
+
+    p {
+      margin-bottom: 45px;
+      padding-right: 12px;
+      width: 100%;
+      font-size: rem(16);
+      line-height: rem(26);
+      text-align: left;
+    }
+  }
+
+  .features__container {
+    width: 90%;
+  }
+
+  .features__linebreak {
+    display: block;
+  }
+}

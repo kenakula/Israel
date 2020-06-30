@@ -41,6 +41,8 @@
 
   // валидация
 
+  // сделай валидацию поля имени
+
   var onTelInputChangeValidateValue = function () {
     window.vendor.validateTelNumber(telInput, errors);
   };

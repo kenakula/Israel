@@ -63,15 +63,15 @@
 
 
   //TODO сделать для каждого элемента
-  &::before {
-    content: "";
-    position: absolute;
-    left: 3px;
-    top: 36px;
-    height: 220px;
-    width: 4px;
-    border-left: 1px dashed rgba($color: $black, $alpha: 0.2);
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 3px;
+  //   top: 36px;
+  //   height: 220px;
+  //   width: 4px;
+  //   border-left: 1px dashed rgba($color: $black, $alpha: 0.2);
+  // }
 }
 
 .howto__item {
@@ -106,6 +106,18 @@
     color: $yellow;
     background-color: $white;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  &:not(:last-child)::after {
+    @include pseudo;
+
+    top: 25px;
+    left: 3px;
+    height: 80px;
+    width: 2px;
+    border-left: 1px dashed rgba($color: $black, $alpha: 0.2);
+    z-index: 10;
   }
 }
 
@@ -175,13 +187,17 @@
 
   .howto__item {
     min-height: 66px;
-    margin-bottom: 26px;
+    margin-bottom: 27px;
     font-size: rem(14);
     line-height: rem(22);
 
     &::before {
       top: 15px;
       left: -8px;
+    }
+
+    &:not(:last-child)::after {
+      left: 9px;
     }
   }
 }

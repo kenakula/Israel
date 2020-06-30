@@ -15,7 +15,7 @@
   }
   // end of forEach polyfill
 
-  // форма
+  // -------------------------------------- форма
 
   var resetInputError = function (input) {
     if (input.parentElement.classList.contains('form__inner--error')) {
@@ -39,7 +39,7 @@
     }
   };
 
-  // модалки
+  // -------------------------------------- модалки
 
   var onEscButtonPressCloseModal = function (evt, modal) {
     if (evt.key === ESC_KEY) {
@@ -82,7 +82,7 @@
     }
   };
 
-  // табы
+  // -------------------------------------- табы
 
   var getActiveTab = function (container) {
     return container.querySelector('.tabs__item--active');
@@ -99,6 +99,13 @@
     contents[newIndex].classList.add('tabs__description--active');
   };
 
+  // -------------------------------------- слайдер
+
+  var changeSlide = function (slides, bullets, newIndex) {
+    slides[newIndex].classList.add('gallery__img--active');
+    bullets[newIndex].classList.add('gallery__bullet--active');
+  };
+
   window.vendor = {
     showModal: showModal,
     closeModal: closeModal,
@@ -106,5 +113,6 @@
     resetInputError: resetInputError,
     getActiveTab: getActiveTab,
     setNewTab: setNewTab,
+    changeSlide: changeSlide,
   };
 })();

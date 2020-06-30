@@ -27,7 +27,6 @@
 
   document.body.classList.remove('no-js');
 
-
   // скролл
   var onScrollButtonClickDocumentScroll = function () {
     window.scrollBy({
@@ -74,7 +73,7 @@
     navigator.maxTouchPoints > 0 ||
     window.navigator.msMaxTouchPoints > 0;
 
-  // drag'n'drop для мыши. При ширине меньше 1024px некоторые элементы списка скрываются, список получает позиционирование relative, на бОльших ширинах drag'n'drop не работает, все элементы видны.
+  // drag'n'drop
 
   tabsList.addEventListener('mousedown', function (evt) {
     evt.preventDefault();
@@ -136,11 +135,6 @@
     return container.querySelector('.gallery__bullet--active');
   };
 
-  var changeSlide = function (slides, bullets, newIndex) {
-    slides[newIndex].classList.add('gallery__img--active');
-    bullets[newIndex].classList.add('gallery__bullet--active');
-  };
-
   var onBulletClickChangeIsraelSlide = function (evt) {
     var activeSlide = getActiveSlide(israelSlidesContainer);
     var activeBullet = getActiveBullet(israelSlidesContainer);
@@ -150,9 +144,8 @@
 
     var newIndex = evt.target.dataset.index;
 
-    changeSlide(israelSlides, israelSlidesBullets, newIndex);
+    window.vendor.changeSlide(israelSlides, israelSlidesBullets, newIndex);
   };
-
 
   // -------------------------------------- действия
 

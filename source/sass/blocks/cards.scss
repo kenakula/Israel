@@ -1,14 +1,14 @@
-.gallery {
+.cards {
   display: flex;
   margin-top: -20px;
   width: 100%;
 }
 
-.gallery__container {
+.cards__container {
   display: flex;
 }
 
-.gallery__inner {
+.cards__inner {
   display: flex;
   flex-wrap: wrap;
   margin-right: 16px;
@@ -20,18 +20,18 @@
     margin-right: 0;
     padding-top: 68px;
 
-    .gallery__img {
+    .cards__img {
       height: 318px;
     }
   }
 }
 
-.gallery__row {
+.cards__row {
   display: flex;
   width: 100%;
 }
 
-.gallery__img {
+.cards__img {
   display: flex;
   flex-direction: column-reverse;
   padding-bottom: 34px;
@@ -90,16 +90,16 @@
   }
 }
 
-.gallery__controls {
+.cards__controls {
   display: none;
 }
 
 @include max-desktop {
-  .gallery__container {
+  .cards__container {
     flex-direction: column;
   }
 
-  .gallery__inner {
+  .cards__inner {
     margin: 0;
     width: 100%;
 
@@ -108,22 +108,22 @@
     }
   }
 
-  .gallery__row {
+  .cards__row {
     justify-content: center;
   }
 
-  .gallery__img span {
+  .cards__img span {
     font-size: rem(19);
     line-height: rem(23);
   }
 }
 
 @include max-tablet {
-  .gallery {
+  .cards {
     flex-direction: column;
   }
 
-  .gallery__inner {
+  .cards__inner {
     justify-content: center;
     align-items: center;
     min-height: auto;
@@ -133,7 +133,7 @@
     }
   }
 
-  .gallery__img {
+  .cards__img {
     display: none;
     margin: 0;
     padding-left: 0;
@@ -154,7 +154,7 @@
     }
   }
 
-  .gallery__controls {
+  .cards__controls {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,7 +162,7 @@
     min-height: 15px;
   }
 
-  .gallery__bullet {
+  .cards__bullet {
     display: block;
     margin-right: 8px;
     width: 6px;

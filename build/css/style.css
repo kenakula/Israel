@@ -1497,19 +1497,19 @@ img {
   .features__linebreak {
     display: block; } }
 
-.gallery {
+.cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: -20px;
   width: 100%; }
 
-.gallery__container {
+.cards__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
-.gallery__inner {
+.cards__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1518,22 +1518,22 @@ img {
   margin-right: 16px;
   width: 41.41%;
   min-height: 736px; }
-  .gallery__inner:last-child {
+  .cards__inner:last-child {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
     margin-right: 0;
     padding-top: 68px; }
-    .gallery__inner:last-child .gallery__img {
+    .cards__inner:last-child .cards__img {
       height: 318px; }
 
-.gallery__row {
+.cards__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%; }
 
-.gallery__img {
+.cards__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1546,7 +1546,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
-  .gallery__img span {
+  .cards__img span {
     width: 71%;
     font-family: "Raleway Extra Bold", "Arial", sans-serif;
     font-weight: 800;
@@ -1554,63 +1554,63 @@ img {
     line-height: 1.5625rem;
     color: #ffffff;
     text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12); }
-  .gallery__img--history {
+  .cards__img--history {
     width: 100%;
     background-image: url("../../img/israel-life-1@2x.png"); }
-  .gallery__img--language {
+  .cards__img--language {
     margin-right: 27px;
     padding-left: 22px;
     width: 211px;
     background-image: url("../../img/israel-life-2@2x.png"); }
-  .gallery__img--profession {
+  .cards__img--profession {
     padding-left: 31px;
     width: 61.965%;
     background-image: url("../../img/israel-life-3@2x.png"); }
-  .gallery__img--projects {
+  .cards__img--projects {
     margin-top: 28px;
     margin-right: 28px;
     padding-left: 31px;
     padding-bottom: 32px;
     width: 61%;
     background-image: url("../../img/israel-life-4@2x.png"); }
-    .gallery__img--projects span {
+    .cards__img--projects span {
       width: 97%; }
-  .gallery__img--leadership {
+  .cards__img--leadership {
     margin-top: 28px;
     padding-left: 25px;
     padding-bottom: 31px;
     width: 32.661%;
     background-image: url("../../img/israel-life-5@2x.png"); }
 
-.gallery__controls {
+.cards__controls {
   display: none; }
 
 @media (max-width: 1023px) {
-  .gallery__container {
+  .cards__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .gallery__inner {
+  .cards__inner {
     margin: 0;
     width: 100%; }
-    .gallery__inner:last-child {
+    .cards__inner:last-child {
       margin-bottom: 30px; }
-  .gallery__row {
+  .cards__row {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .gallery__img span {
+  .cards__img span {
     font-size: 1.1875rem;
     line-height: 1.4375rem; } }
 
 @media (max-width: 767px) {
-  .gallery {
+  .cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .gallery__inner {
+  .cards__inner {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1618,26 +1618,26 @@ img {
         -ms-flex-align: center;
             align-items: center;
     min-height: auto; }
-    .gallery__inner:last-child {
+    .cards__inner:last-child {
       padding: 0; }
-  .gallery__img {
+  .cards__img {
     display: none;
     margin: 0;
     padding-left: 0;
     padding-bottom: 24px;
     width: 91%;
     min-height: 400px; }
-    .gallery__img--active {
+    .cards__img--active {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-    .gallery__img span {
+    .cards__img span {
       margin: 0 auto;
       width: 90%;
       font-size: 1.125rem;
       line-height: 1.3125rem;
       text-align: center; }
-  .gallery__controls {
+  .cards__controls {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1649,7 +1649,7 @@ img {
             align-items: center;
     margin-top: 20px;
     min-height: 15px; }
-  .gallery__bullet {
+  .cards__bullet {
     display: block;
     margin-right: 8px;
     width: 6px;
@@ -1657,9 +1657,9 @@ img {
     border-radius: 50%;
     background-color: rgba(72, 72, 72, 0.2);
     cursor: pointer; }
-    .gallery__bullet:last-child {
+    .cards__bullet:last-child {
       margin-right: 0; }
-    .gallery__bullet--active {
+    .cards__bullet--active {
       width: 8px;
       height: 8px;
       background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); } }

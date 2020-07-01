@@ -14,12 +14,18 @@
     }
   }
 
-  // TODO стилизуй плейсхолдеры
-
   input[type="text"],
   input[type="tel"] {
+    @include placeholder {
+      font-family: $main-medium;
+      font-weight: 500;
+      font-variant: small-caps;
+      font-size: rem(17);
+      line-height: rem(20);
+    }
+
     position: relative;
-    padding: 19px 40px 18px;
+    padding: 19px 38px 18px;
     width: 93.5%;
     border: 2px solid $input-stroke;
     border-radius: 80px;
@@ -42,7 +48,7 @@
 
     margin-top: 26px;
     margin-bottom: 17px;
-    padding: 20px 20px 19px;
+    padding: 19px 20px 20px;
     width: 69%;
     border-radius: 80px;
     font-family: $main-medium;

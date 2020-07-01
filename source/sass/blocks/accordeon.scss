@@ -57,6 +57,7 @@
 
   &--active {
     padding-bottom: 0;
+
     h3 {
       padding-bottom: 25px;
     }
@@ -70,7 +71,6 @@
     .accordeon__button {
       transform: rotate(180deg);
     }
-
   }
 
   &--narrow {

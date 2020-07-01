@@ -114,6 +114,12 @@
   }
 }
 
+@include max-desktop {
+  .modal__inner {
+    width: 70%;
+  }
+}
+
 @include max-tablet {
   .modal {
     padding: 0;

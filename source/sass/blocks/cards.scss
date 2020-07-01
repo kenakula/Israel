@@ -47,7 +47,7 @@
     font-size: rem(21);
     line-height: rem(25);
     color: $white;
-    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   }
 
   &--history {
@@ -182,9 +182,7 @@
     &--active {
       width: 8px;
       height: 8px;
-      background: linear-gradient(108.42deg, $yellow 20.46%, $light-yellow 65.31%);;
+      background: linear-gradient(108.42deg, $yellow 20.46%, $light-yellow 65.31%);
     }
   }
 }
-
-

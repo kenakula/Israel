@@ -671,6 +671,87 @@
         </div>
       </div>
     </section>
+    <!-- contacts -->
+    <section class="contacts">
+      <div class="contacts__container">
+        <h2>Узнать подробности</h2>
+        <div class="contacts__inner contacts__inner--curator">
+          <p>
+            Ваш город: <span class="contacts__hometown">новосибирск</span>
+          </p>
+          <div class="contacts__curator curator">
+            <div class="curator__avatar">
+              <picture>
+                <img src="img/curator-avatar@2x.png" width="112" height="112" alt="аватарка куратора">
+              </picture>
+            </div>
+            <div class="curator__contacts">
+              <p>
+                Ваш куратор: <span>Анна Горелик</span>
+              </p>
+              <address>Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</address>
+              <div class="curator__socials socials">
+                <ul class="socials__list">
+                  <li class="socials__item socials__item--fb">
+                    <a href="#" class="socials__link">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="socials__item socials__item--watsapp">
+                    <a href="#" class="socials__link">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-watsapp"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="socials__item socials__item--tlg">
+                    <a href="#" class="socials__link">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-tlg"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              Куратор является опытным специалистом агентства Сохнут<br> и знает о проекте «Маса» всё! Свяжитесь с
+              куратором,<br> узнайте подробнее о программах и выберите свою !
+            </p>
+          </div>
+        </div>
+        <div class="contacts__inner contacts__inner--map">
+          <picture>
+            <img src="img/details-map@2x.png" width="702" height="408" alt="карта центра">
+          </picture>
+        </div>
+        <div class="contacts__inner contacts__inner--form">
+          <form action="#" class="contacts__form form">
+            <p>
+              Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
+            </p>
+            <div class="form__inner form__inner--name">
+              <label for="contactsName">имя</label>
+              <input type="text" id="contactsName" placeholder="Имя" required="">
+              <span>Ошибка: неверный формат</span>
+            </div>
+            <div class="form__inner form__inner--phone">
+              <label for="contactsPhone">телефон</label>
+              <input type="tel" id="contactsPhone" placeholder="Телефон" required="">
+              <span>Ошибка: неверный формат</span>
+            </div>
+            <button type="submit">перезвоните мне</button>
+            <small>
+              Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
+            </small>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <section class="modal modal--callback">

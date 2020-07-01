@@ -67,6 +67,12 @@
   color: $blue;
 }
 
+@mixin max-pre-desktop {
+  @media (max-width: $pre-desktop) {
+    @content;
+  }
+}
+
 @mixin max-desktop {
   @media (max-width: $desktop) {
     @content;
@@ -79,8 +85,8 @@
   }
 }
 
-@mixin triangle($direction, $sizeH, $sizeV, $color){
-  content: '';
+@mixin triangle($direction, $sizeH, $sizeV, $color) {
+  content: "";
   display: block;
   width: 0;
   height: 0;
@@ -91,37 +97,37 @@
     border-color: transparent transparent $color transparent;
   }
 
-  @if $direction == bottom{
+  @if $direction == bottom {
     border-width: $sizeV $sizeH 0 $sizeV;
     border-color: $color transparent transparent transparent;
   }
 
-  @if $direction == left{
+  @if $direction == left {
     border-width: $sizeV $sizeH $sizeV 0;
     border-color: transparent $color transparent transparent;
   }
 
-  @if $direction == right{
+  @if $direction == right {
     border-width: $sizeV 0 $sizeV $sizeH;
     border-color: transparent transparent transparent $color;
   }
 
-  @if $direction == topright{
+  @if $direction == topright {
     border-width: 0 $sizeH $sizeV 0;
     border-color: transparent $color transparent transparent;
   }
 
-  @if $direction == bottomright{
+  @if $direction == bottomright {
     border-width: 0 0 $sizeH $sizeV;
     border-color: transparent transparent $color transparent;
   }
 
-  @if $direction == bottomleft{
+  @if $direction == bottomleft {
     border-width: $sizeH 0 0 $sizeV;
     border-color: transparent transparent transparent $color;
   }
 
-  @if $direction == topleft{
+  @if $direction == topleft {
     border-width: $sizeH $sizeV 0 0;
     border-color: $color transparent transparent transparent;
   }

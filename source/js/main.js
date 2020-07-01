@@ -30,6 +30,12 @@
   var accordeonButtons = accordeon.querySelectorAll('.accordeon__button');
   var accordeonHeaders = accordeon.querySelectorAll('.accordeon__item h3');
 
+  var testimonialsContainer = document.querySelector('.testimonials__container');
+  var testimonials = testimonialsContainer.querySelectorAll('.testimonials__item');
+  var currentPageIndicator = testimonialsContainer.querySelector('#testimonialsCurrent');
+  var totalPagesIndicator = testimonialsContainer.querySelector('#testimonialsTotal');
+  var testimonialsArrows = testimonialsContainer.querySelectorAll('.testimonials__button');
+
   document.body.classList.remove('no-js');
 
   // скролл
@@ -166,7 +172,22 @@
 
   };
 
+  // -------------------------------------- testimonials
+
+  totalPagesIndicator.textContent = testimonials.length;
+
+  var onArrowClickChangeTestimonialSlide = function (evt) {
+    var direction = evt.target.id;
+    var newSlideIndex = window.vendor.getNewSlideIndex(direction, testimonials, testimonialsContainer);
+    window.vendor.changeTestimonialSlide(testimonialsContainer, testimonials, newSlideIndex);
+    window.vendor.changeCurrentPageIndicator(currentPageIndicator, testimonialsContainer);
+  };
+
   // -------------------------------------- действия
+
+  testimonialsArrows.forEach(function (it) {
+    it.addEventListener('click', onArrowClickChangeTestimonialSlide);
+  });
 
   accordeonButtons.forEach(function (it) {
     it.addEventListener('click', onAccordeonButtonClickToggleContent);

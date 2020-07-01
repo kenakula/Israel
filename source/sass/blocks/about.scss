@@ -32,15 +32,13 @@
 
 .about__video {
   position: relative;
-
-  img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 224px;
-    max-width: 100%;
-    z-index: -10;
-  }
+  margin: 0 auto;
+  width: 100%;
+  min-height: 460px;
+  background-image: url("../img/about-video@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .about__video-control {
@@ -103,11 +101,10 @@
       line-height: rem(26);
       text-align: left;
     }
-    // TODO поправить изображение
-    img {
-      height: initial;
-      object-fit: cover;
-    }
+  }
+
+  .about__video {
+    min-height: 224px;
   }
 
   .about__video-control {

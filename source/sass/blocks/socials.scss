@@ -1,0 +1,28 @@
+.socials {
+  width: 104px;
+}
+
+.socials__list {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  fill: $grey;
+
+  svg {
+    fill: inherit;
+  }
+}
+
+@include max-tablet {
+  .socials {
+    margin-left: -4px;
+  }
+}

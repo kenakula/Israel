@@ -118,6 +118,45 @@
     items[newIndex].classList.add('accordeon__item--active');
   };
 
+  // -------------------------------------- testimonials
+
+  var getActiveTestimonialSlide = function (container) {
+    return container.querySelector('.testimonials__item--active');
+  };
+
+  var changeCurrentPageIndicator = function (indicator, slidesContainer) {
+    var currentSlide = getActiveTestimonialSlide(slidesContainer);
+    var currentPage = +currentSlide.dataset.slide + 1;
+    indicator.textContent = currentPage;
+  };
+
+  var getNewSlideIndex = function (direction, slides, container) {
+    var currentSlide = getActiveTestimonialSlide(container);
+    var newIndex;
+
+    switch (direction) {
+      case 'leftButton':
+        newIndex = +currentSlide.dataset.slide - 1;
+        break;
+      default:
+        newIndex = +currentSlide.dataset.slide + 1;
+    }
+
+    if (newIndex < 0) {
+      newIndex = slides.length - 1;
+    } else if (newIndex > slides.length - 1) {
+      newIndex = 0;
+    }
+
+    return newIndex;
+  };
+
+  var changeTestimonialSlide = function (container, slides, newIndex) {
+    var currentSlide = getActiveTestimonialSlide(container);
+    currentSlide.classList.remove('testimonials__item--active');
+    slides[newIndex].classList.add('testimonials__item--active');
+  };
+
   window.vendor = {
     showModal: showModal,
     closeModal: closeModal,
@@ -127,5 +166,8 @@
     setNewTab: setNewTab,
     changeSlide: changeSlide,
     showAccordeonContent: showAccordeonContent,
+    getNewSlideIndex: getNewSlideIndex,
+    changeTestimonialSlide: changeTestimonialSlide,
+    changeCurrentPageIndicator: changeCurrentPageIndicator,
   };
 })();

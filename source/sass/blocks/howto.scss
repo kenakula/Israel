@@ -1,6 +1,6 @@
 .howto {
   padding: 165px 135px 120px 51.1%;
-  background-image: url("../../img/howto-img@2x.png"), url("../../img/howto-watercolor@2x.png"), url("../../img/howto-bg@2x.png");
+  background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.png"), url("../img/howto-bg@2x.png");
   background-repeat: no-repeat;
   background-position: left 13px top 135px, center, right -2px top 342px;
   background-size: 42%, cover, 16%;
@@ -124,7 +124,7 @@
 @include max-desktop {
   .howto {
     padding: 165px 15% 120px;
-    background-image: url("../../img/howto-bg@2x.png");
+    background-image: url("../img/howto-bg@2x.png");
     background-repeat: no-repeat;
     background-position: right -2px top 342px;
     background-size: 16%;

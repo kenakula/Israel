@@ -1211,7 +1211,7 @@ img {
 .callback {
   padding-top: 177px;
   padding-bottom: 157px;
-  background-image: url("../img/girl-flag@2x.png"), url("../../img/wantto-bg@2x.png");
+  background-image: url("../img/girl-flag@2x.png"), url("../img/wantto-bg@2x.png");
   background-repeat: no-repeat;
   background-size: contain, 11%;
   background-position: right 5px top -28px, top 100px left; }
@@ -1271,7 +1271,7 @@ img {
 
 .howto {
   padding: 165px 135px 120px 51.1%;
-  background-image: url("../../img/howto-img@2x.png"), url("../../img/howto-watercolor@2x.png"), url("../../img/howto-bg@2x.png");
+  background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.png"), url("../img/howto-bg@2x.png");
   background-repeat: no-repeat;
   background-position: left 13px top 135px, center, right -2px top 342px;
   background-size: 42%, cover, 16%; }
@@ -1381,7 +1381,7 @@ img {
 @media (max-width: 1023px) {
   .howto {
     padding: 165px 15% 120px;
-    background-image: url("../../img/howto-bg@2x.png");
+    background-image: url("../img/howto-bg@2x.png");
     background-repeat: no-repeat;
     background-position: right -2px top 342px;
     background-size: 16%; } }
@@ -1436,7 +1436,7 @@ img {
 .features {
   padding-top: 55px;
   padding-bottom: 158px;
-  background-image: url("../../img/israel-life-bg@2x.png"), url("../../img/israel-life-watercolor@2x.png");
+  background-image: url("../img/israel-life-bg@2x.png"), url("../img/israel-life-watercolor@2x.png");
   background-repeat: no-repeat;
   background-size: 6.5%,cover;
   background-position: right bottom 182px,center; }
@@ -1557,23 +1557,23 @@ img {
     text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12); }
   .cards__img--history {
     width: 100%;
-    background-image: url("../../img/israel-life-1@2x.png"); }
+    background-image: url("../img/israel-life-1@2x.png"); }
   .cards__img--language {
     margin-right: 27px;
     padding-left: 22px;
     width: 211px;
-    background-image: url("../../img/israel-life-2@2x.png"); }
+    background-image: url("../img/israel-life-2@2x.png"); }
   .cards__img--profession {
     padding-left: 31px;
     width: 61.965%;
-    background-image: url("../../img/israel-life-3@2x.png"); }
+    background-image: url("../img/israel-life-3@2x.png"); }
   .cards__img--projects {
     margin-top: 28px;
     margin-right: 28px;
     padding-left: 31px;
     padding-bottom: 32px;
     width: 61%;
-    background-image: url("../../img/israel-life-4@2x.png"); }
+    background-image: url("../img/israel-life-4@2x.png"); }
     .cards__img--projects span {
       width: 97%; }
   .cards__img--leadership {
@@ -1581,7 +1581,7 @@ img {
     padding-left: 25px;
     padding-bottom: 31px;
     width: 32.661%;
-    background-image: url("../../img/israel-life-5@2x.png"); }
+    background-image: url("../img/israel-life-5@2x.png"); }
 
 .cards__controls {
   display: none; }
@@ -1672,7 +1672,7 @@ img {
   margin-bottom: 136px;
   min-height: 583px;
   background-color: #a48193;
-  background-image: url("../../img/gallery-img@2x.jpg");
+  background-image: url("../img/gallery-img@2x.jpg");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover; }
@@ -1736,7 +1736,7 @@ img {
     background: none; }
   .gallery__inner {
     width: 100%;
-    background-image: url("../../img/gallery-img@2x.jpg");
+    background-image: url("../img/gallery-img@2x.jpg");
     background-repeat: no-repeat;
     background-size: 200%;
     background-position: left -71px top 44px; }
@@ -1765,7 +1765,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 129px;
-  background-image: url("../../img/faq-img@2x.png"), url("../../img/faq-bg@2x.png"), url("../../img/faq-watercolor@2x.png");
+  background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png"), url("../img/faq-watercolor@2x.png");
   background-size: 47%, 11.3%, cover;
   background-position: right top, bottom left, center;
   background-repeat: no-repeat; }
@@ -1786,7 +1786,7 @@ img {
 
 @media (max-width: 1023px) {
   .faq {
-    background-image: url("../../img/faq-bg@2x.png");
+    background-image: url("../img/faq-bg@2x.png");
     background-position: bottom left; }
   .faq__container {
     margin: 0 auto;
@@ -1888,7 +1888,7 @@ img {
   right: 35px;
   width: 19px;
   height: 9px;
-  background-image: url("../../img/blue-arrow-down.svg");
+  background-image: url("../img/blue-arrow-down.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

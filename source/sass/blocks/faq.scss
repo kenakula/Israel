@@ -1,7 +1,7 @@
 .faq {
   display: flex;
   padding-bottom: 129px;
-  background-image: url("../../img/faq-img@2x.png"), url("../../img/faq-bg@2x.png"), url("../../img/faq-watercolor@2x.png");
+  background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png"), url("../img/faq-watercolor@2x.png");
   background-size: 47%, 11.3%, cover;
   background-position: right top, bottom left, center;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@
 
 @include max-desktop {
   .faq{
-    background-image: url("../../img/faq-bg@2x.png");
+    background-image: url("../img/faq-bg@2x.png");
     background-position: bottom left;
   }
 

@@ -1,0 +1,52 @@
+.faq {
+  display: flex;
+  padding-bottom: 129px;
+  background-image: url("../../img/faq-img@2x.png"), url("../../img/faq-bg@2x.png"), url("../../img/faq-watercolor@2x.png");
+  background-size: 47%, 11.3%, cover;
+  background-position: right top, bottom left, center;
+  background-repeat: no-repeat;
+}
+
+.faq__container {
+  margin-left: auto;
+  width: 91.947%;
+
+  h2 {
+    @include title;
+
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: -0.8px;
+  }
+}
+
+@include max-desktop {
+  .faq{
+    background-image: url("../../img/faq-bg@2x.png");
+    background-position: bottom left;
+  }
+
+  .faq__container {
+    margin: 0 auto;
+    width: 80%;
+
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+@include max-tablet {
+  .faq {
+    background-position: bottom 193px left -5px;
+  }
+
+  .faq__container {
+    width: 90%;
+
+    h2 {
+      font-size: rem(32);
+      line-height: rem(39);
+    }
+  }
+}

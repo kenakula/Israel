@@ -1,0 +1,146 @@
+.accordeon {
+  width: 44.585%;
+}
+
+.accordeon__list {
+  @include list-reset;
+
+  counter-reset: faq-list;
+}
+
+.accordeon__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 29px 20px 31px 0;
+  counter-increment: faq-list;
+  border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    @include pseudo(block, absolute, counter(faq-list));
+
+    position: absolute;
+    left: 0;
+    top: 14px;
+    font-family: $main-bold;
+    font-size: rem(28);
+    line-height: rem(48);
+    background: linear-gradient(95.15deg, $yellow 20.46%, $light-yellow 65.31%);
+    background-clip: text;
+    color: transparent;
+  }
+
+  h3 {
+    position: relative;
+    margin: 0;
+    padding-left: 29px;
+    width: 76%;
+    font-size: rem(17);
+    line-height: rem(25);
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  p {
+    display: none;
+    margin: 0;
+    font-size: rem(15);
+    line-height: rem(21);
+    color: rgba($color: $black, $alpha: 0.74);
+  }
+
+  &--active {
+    padding-bottom: 0;
+    h3 {
+      padding-bottom: 25px;
+    }
+
+    p {
+      display: block;
+      width: 89%;
+      padding-bottom: 30px;
+    }
+
+    .accordeon__button {
+      transform: rotate(180deg);
+    }
+
+  }
+
+  &--narrow {
+    padding-bottom: 23px;
+  }
+}
+
+.accordeon__button {
+  @include button-reset;
+  @include pseudo;
+  @include transition;
+
+  top: 37px;
+  right: 35px;
+  width: 19px;
+  height: 9px;
+  background-image: url("../../img/blue-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  outline: none;
+}
+
+@include max-desktop {
+  .accordeon {
+    width: 100%;
+  }
+}
+
+@include max-tablet {
+  .accordeon__item {
+    justify-content: flex-start;
+    margin-bottom: 17px;
+    padding: 21px 25px 14px 0;
+    min-height: 71px;
+
+    &:last-child {
+      h3 {
+        width: 79%;
+      }
+    }
+
+    &::before {
+      top: 6px;
+    }
+
+    h3 {
+      padding-left: 25px;
+      width: 100%;
+      font-size: rem(16);
+      line-height: rem(26);
+    }
+
+    p {
+      padding-bottom: 0;
+      width: 100%;
+      font-size: rem(14);
+      line-height: rem(22);
+    }
+
+    &--active {
+      h3 {
+        padding-bottom: 18px;
+      }
+    }
+  }
+
+  .accordeon__button {
+    top: 30px;
+    right: -2px;
+  }
+}

@@ -1,6 +1,6 @@
 .features {
   padding-top: 55px;
-  padding-bottom: 100px;
+  padding-bottom: 158px;
   background-image: url("../../img/israel-life-bg@2x.png"), url("../../img/israel-life-watercolor@2x.png");
   background-repeat: no-repeat;
   background-size: 6.5%,cover;
@@ -54,6 +54,7 @@
 @include max-tablet {
   .features {
     padding-top: 23px;
+    padding-bottom: 100px;
     background: none;
 
     h2 {

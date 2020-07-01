@@ -123,12 +123,17 @@
     flex-direction: column;
   }
 
+  .cards__container {
+    margin-bottom: 12px;
+  }
+
   .cards__inner {
     justify-content: center;
     align-items: center;
     min-height: auto;
 
     &:last-child {
+      margin: 0;
       padding: 0;
     }
   }
@@ -158,7 +163,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
     min-height: 15px;
   }
 

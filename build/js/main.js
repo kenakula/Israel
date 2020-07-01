@@ -25,6 +25,11 @@
   var israelSlides = israelSlidesContainer.querySelectorAll('.cards__img');
   var israelSlidesBullets = israelSlidesContainer.querySelectorAll('.cards__bullet');
 
+  var accordeon = document.querySelector('.accordeon');
+  var accordeonItems = accordeon.querySelectorAll('.accordeon__item');
+  var accordeonButtons = accordeon.querySelectorAll('.accordeon__button');
+  var accordeonHeaders = accordeon.querySelectorAll('.accordeon__item h3');
+
   document.body.classList.remove('no-js');
 
   // скролл
@@ -147,7 +152,29 @@
     window.vendor.changeSlide(israelSlides, israelSlidesBullets, newIndex);
   };
 
+  // -------------------------------------- accordeon
+
+  var onAccordeonButtonClickToggleContent = function (evt) {
+    var newIndex = evt.target.dataset.content;
+    var elParent = evt.target.parentElement;
+
+    if (elParent.classList.contains('accordeon__item--active')) {
+      elParent.classList.remove('accordeon__item--active');
+    } else {
+      window.vendor.showAccordeonContent(accordeon, accordeonItems, newIndex);
+    }
+
+  };
+
   // -------------------------------------- действия
+
+  accordeonButtons.forEach(function (it) {
+    it.addEventListener('click', onAccordeonButtonClickToggleContent);
+  });
+
+  accordeonHeaders.forEach(function (it) {
+    it.addEventListener('click', onAccordeonButtonClickToggleContent);
+  });
 
   israelSlidesBullets.forEach(function (it) {
     it.addEventListener('click', onBulletClickChangeIsraelSlide);

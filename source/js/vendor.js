@@ -106,6 +106,18 @@
     bullets[newIndex].classList.add('cards__bullet--active');
   };
 
+  // -------------------------------------- accordeon
+
+  var showAccordeonContent = function (container, items, newIndex) {
+    var activeTab = container.querySelector('.accordeon__item--active');
+
+    if (activeTab) {
+      activeTab.classList.remove('accordeon__item--active');
+    }
+
+    items[newIndex].classList.add('accordeon__item--active');
+  };
+
   window.vendor = {
     showModal: showModal,
     closeModal: closeModal,
@@ -114,5 +126,6 @@
     getActiveTab: getActiveTab,
     setNewTab: setNewTab,
     changeSlide: changeSlide,
+    showAccordeonContent: showAccordeonContent,
   };
 })();

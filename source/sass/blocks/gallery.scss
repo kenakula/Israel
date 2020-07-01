@@ -1,0 +1,123 @@
+.gallery {
+  padding: 121px 0 150px;
+  margin-bottom: 136px;
+  min-height: 583px;
+  background-color: #a48193;
+  background-image: url("../../img/gallery-img@2x.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+}
+
+.gallery__inner {
+  margin-left: 58.3%;
+  width: 29.282%;
+
+  h2 {
+    @include title;
+
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    letter-spacing: -0.8px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 49px;
+    padding: 0 5px;
+    font-size: rem(17);
+    line-height: rem(29);
+    color: $white;
+    opacity: 0.87;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  }
+
+  br {
+    display: none;
+  }
+}
+
+.gallery__button {
+  position: relative;
+  padding-left: 51px;
+  width: 230px;
+  fill: $white;
+
+  svg {
+    position: absolute;
+    top: 18px;
+    left: 40px;
+    width: 24px;
+    height: 24px;
+    fill: inherit;
+  }
+}
+
+@include max-desktop {
+  .gallery__inner {
+    margin: 0 auto;
+    width: 60%;
+
+    h2 {
+      margin-bottom: 115px;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .gallery__button {
+    margin: 0 auto;
+  }
+}
+
+@include max-tablet {
+  .gallery {
+    margin-bottom: 60px;
+    padding-top: 51px;
+    padding-bottom: 20px;
+    min-height: auto;
+    background: none;
+  }
+
+  .gallery__inner {
+    width: 100%;
+    // TODO цвет выходит за границы изображения! Текст нечитабелен
+    // background-color: #a48193;
+    background-image: url("../../img/gallery-img@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: left -71px top 44px;
+
+    h2 {
+      margin-bottom: 97px;
+      margin-top: -74px;
+      font-size: rem(40);
+      line-height: rem(49);
+    }
+
+    p {
+      margin: 0 auto;
+      margin-bottom: 56px;
+      padding: 0;
+      width: 86%;
+      font-size: rem(16);
+      line-height: rem(26);
+      text-align: left;
+    }
+
+    br {
+      display: block;
+    }
+  }
+
+  .gallery__button {
+    width: 264px;
+
+    svg {
+      left: 57px;
+    }
+  }
+}

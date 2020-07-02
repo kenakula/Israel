@@ -366,6 +366,11 @@ img {
 .no-scroll {
   overflow-y: hidden; }
 
+.page-main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+
 .button {
   display: block;
   border: 0;
@@ -2483,7 +2488,10 @@ img {
     max-width: 100%; } }
 
 .page-footer {
-  padding-top: 17px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding-top: 24px;
   padding-bottom: 15px;
   border-top: 1px solid rgba(72, 72, 72, 0.2); }
 

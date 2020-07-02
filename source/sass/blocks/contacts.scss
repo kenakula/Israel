@@ -1,6 +1,6 @@
 .contacts {
   display: flex;
-  padding: 50px 0;
+  padding: 50px 0 10px;
   background-image: url("../../img/details-watercolor@2x.png");
   background-size: cover;
   background-position: center;
@@ -206,6 +206,7 @@
 
 @include max-tablet {
   .contacts {
+    margin-bottom: 53px;
     padding-top: 27px;
   }
 

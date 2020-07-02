@@ -36,13 +36,27 @@
   }
 
   &--map {
+    position: relative;
     flex-grow: 1;
     margin-top: -44px;
 
     img {
       height: auto;
       width: 100%;
-      max-width: 100%;
+    }
+
+    &::before {
+      @include pseudo;
+
+      top: 51.3%;
+      left: 73.8%;
+      width: 18px;
+      height: 28px;
+      background-image: url("../../img/map-pin.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: 100;
     }
   }
 
@@ -218,21 +232,25 @@
     }
 
     &--map {
-      position: relative;
       margin-bottom: 44px;
       width: 100%;
+      max-width: 420px;
       min-height: 440px;
       overflow: hidden;
 
-      // TODO позиционирование изображения карты
       img {
-        // position: absolute;
-        // top: 40px;
-        // left: -222px;
-        // height: 420px;
-        // width: auto;
-        // max-width: initial;
-        object-fit: cover;
+        position: absolute;
+        height: auto;
+        width: 659px;
+        left: -223px;
+        top: 39px;
+      }
+
+      &::before {
+        left: 263px;
+        top: 55.6%;
+        width: 26px;
+        height: 40px;
       }
     }
   }

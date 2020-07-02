@@ -2218,14 +2218,27 @@ img {
     width: 44%;
     padding-top: 49px; }
   .contacts__inner--map {
+    position: relative;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
     margin-top: -44px; }
     .contacts__inner--map img {
       height: auto;
-      width: 100%;
-      max-width: 100%; }
+      width: 100%; }
+    .contacts__inner--map::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 51.3%;
+      left: 73.8%;
+      width: 18px;
+      height: 28px;
+      background-image: url("../../img/map-pin.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: 100; }
   .contacts__inner > p {
     position: relative;
     margin: 0;
@@ -2363,14 +2376,22 @@ img {
     .contacts__inner--curator {
       padding-top: 23px; }
     .contacts__inner--map {
-      position: relative;
       margin-bottom: 44px;
       width: 100%;
+      max-width: 420px;
       min-height: 440px;
       overflow: hidden; }
       .contacts__inner--map img {
-        -o-object-fit: cover;
-           object-fit: cover; }
+        position: absolute;
+        height: auto;
+        width: 659px;
+        left: -223px;
+        top: 39px; }
+      .contacts__inner--map::before {
+        left: 263px;
+        top: 55.6%;
+        width: 26px;
+        height: 40px; }
   .contacts__form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

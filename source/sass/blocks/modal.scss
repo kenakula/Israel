@@ -21,7 +21,7 @@
   @include push-auto;
 
   position: relative;
-  padding: 54px 20px 32px;
+  padding: 56px 20px 31px;
   width: 35.13%;
   border-radius: 8px;
   background-color: $white;
@@ -31,16 +31,16 @@
     @include title;
     @include typography(28, 34);
 
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     padding-left: 29px;
-    letter-spacing: 1px;
+    text-transform: none;
   }
 
   p {
     @include typography(15, 26);
 
     margin: 0;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
     padding-left: 28px;
     padding-right: 54px;
     opacity: 0.87;

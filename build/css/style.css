@@ -377,13 +377,13 @@ img {
   margin: 0;
   padding: 0;
   background-color: transparent;
+  font-size: 1.3125rem;
+  line-height: 1.625rem;
   padding: 16px 20px 17px;
   border-radius: 80px;
   font-family: "Fira Sans Medium", "Helvetica", sans-serif;
   font-variant: small-caps;
   font-weight: 500;
-  font-size: 1.3125rem;
-  line-height: 1.625rem;
   text-align: center;
   color: #ffffff;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
@@ -610,7 +610,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  padding: 54px 20px 32px;
+  padding: 56px 20px 31px;
   width: 35.13%;
   border-radius: 8px;
   background-color: #ffffff;
@@ -627,9 +627,9 @@ img {
     color: #1fc0fc;
     font-size: 1.75rem;
     line-height: 2.125rem;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     padding-left: 29px;
-    letter-spacing: 1px; }
+    text-transform: none; }
     @media (max-width: 1023px) {
       .modal__inner h2 {
         font-size: 2rem;
@@ -638,7 +638,7 @@ img {
     font-size: 0.9375rem;
     line-height: 1.625rem;
     margin: 0;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
     padding-left: 28px;
     padding-right: 54px;
     opacity: 0.87; }
@@ -739,6 +739,7 @@ img {
 .form {
   padding: 10px 28px; }
   .form--callback {
+    position: relative;
     padding: 0; }
   .form label {
     display: none;
@@ -749,8 +750,9 @@ img {
   .form input[type="tel"] {
     position: relative;
     padding: 19px 38px 18px;
-    width: 93.5%;
+    width: 100%;
     border: 2px solid #e3e3e3;
+    border: none;
     border-radius: 80px;
     cursor: pointer;
     outline: none; }
@@ -782,12 +784,6 @@ img {
       font-weight: 500;
       font-variant: small-caps;
       opacity: 0.5; }
-    .form input[type="text"]:focus,
-    .form input[type="tel"]:focus {
-      border-color: #ffc341; }
-    .form input[type="text"]:hover,
-    .form input[type="tel"]:hover {
-      border-color: rgba(72, 72, 72, 0.7); }
   .form button[type="submit"] {
     display: block;
     border: 0;
@@ -798,7 +794,7 @@ img {
     margin-right: auto;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
-    margin-top: 26px;
+    margin-top: 24px;
     margin-bottom: 17px;
     padding: 19px 20px 20px;
     width: 69%;
@@ -819,62 +815,68 @@ img {
 
 .form__inner {
   position: relative;
-  margin-bottom: 10px; }
+  margin-bottom: 8px;
+  width: 93.5%; }
   .form__inner:last-child {
     margin-bottom: 0; }
-  .form__inner--error input[type="text"],
-  .form__inner--error input[type="tel"] {
-    border-color: #ff0000; }
-  .form__inner--consent label {
-    position: relative;
-    padding-left: 84px;
-    width: 88%;
-    font-size: 0.8125rem;
-    line-height: 1.1875rem;
-    color: rgba(72, 72, 72, 0.74); }
-    .form__inner--consent label:hover {
+  .form__inner--name, .form__inner--phone {
+    padding: 2px;
+    border-radius: 80px;
+    background-color: #e3e3e3; }
+  .form__inner--callback {
+    padding: 2px;
+    border-radius: 80px;
+    background-color: #e3e3e3; }
+  .form__inner--focused {
+    background: linear-gradient(142.39deg, #ffc341 20.46%, #ffd701 65.31%); }
+  .form__inner--hovered {
+    background-color: rgba(72, 72, 72, 0.4); }
+  .form__inner--error {
+    background-color: #ff0000; }
+  .form__inner--consent {
+    width: 95.5%; }
+    .form__inner--consent label {
+      font-size: 0.8125rem;
+      line-height: 1.1875rem;
+      position: relative;
+      padding-left: 84px;
+      width: 88%;
+      font-size: 0.8125rem;
+      color: rgba(72, 72, 72, 0.74); }
+      .form__inner--consent label:focus, .form__inner--consent label:hover {
+        opacity: 0.7; }
+      .form__inner--consent label:active {
+        opacity: 0.3; }
+      .form__inner--consent label::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 60px;
+        top: 1px;
+        width: 16px;
+        height: 16px;
+        background-image: url("../img/checkbox.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; }
+      .form__inner--consent label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        display: none;
+        top: 4px;
+        left: 65px;
+        width: 7px;
+        height: 8px;
+        border: 2px solid #ffc341;
+        border-top: transparent;
+        border-left: transparent;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+    .form__inner--consent input[type="checkbox"]:checked + label::after {
+      display: block; }
+    .form__inner--consent input[type="checkbox"]:focus + label {
       opacity: 0.7; }
-    .form__inner--consent label:active {
-      opacity: 0.3; }
-    .form__inner--consent label::before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 60px;
-      top: 1px;
-      width: 16px;
-      height: 16px;
-      background-image: url("../img/checkbox.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover; }
-    .form__inner--consent label::after {
-      content: "";
-      display: block;
-      position: absolute;
-      display: none;
-      top: 4px;
-      left: 65px;
-      width: 7px;
-      height: 8px;
-      border: 2px solid #ffc341;
-      border-top: transparent;
-      border-left: transparent;
-      -webkit-transform: rotate(45deg);
-              transform: rotate(45deg); }
-  .form__inner--consent input[type="checkbox"]:checked + label::after {
-    display: block; }
-  .form__inner--consent input[type="checkbox"]:focus + label {
-    opacity: 0.7; }
-  .form__inner span {
-    display: none; }
-  .form__inner--error span {
-    display: block;
-    font-size: 0.8125rem;
-    line-height: 1.1875rem;
-    color: #ff0000;
-    opacity: 0.75;
-    text-align: center; }
 
 @media (max-width: 767px) {
   .form {
@@ -1313,7 +1315,7 @@ img {
     top: 0;
     right: 0;
     margin: 0;
-    padding: 18px 20px 20px;
+    padding: 19px 20px 21px;
     width: 216px; }
 
 @media (max-width: 767px) {
@@ -1511,7 +1513,7 @@ img {
   background-image: url("../img/israel-life-bg@2x.png"), url("../img/israel-life-watercolor@2x.png");
   background-repeat: no-repeat;
   background-size: 6.5%, 100%;
-  background-position: right bottom 243px, 0px 13px; }
+  background-position: right bottom 243px, 0 13px; }
   .features h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
@@ -1521,8 +1523,8 @@ img {
     text-transform: uppercase;
     letter-spacing: -0.8px;
     color: #1fc0fc;
-    margin: 0 auto;
-    margin-bottom: 23px;
+    margin: 0 auto 23px;
+    padding-right: 11px;
     width: 60%;
     text-align: center; }
     @media (max-width: 1023px) {
@@ -2373,7 +2375,7 @@ img {
     font-size: 0.8125rem;
     line-height: 1.1875rem;
     padding-top: 8px;
-    width: 28.980%;
+    width: 28.98%;
     color: rgba(72, 72, 72, 0.5); }
   .contacts__form .form__inner {
     margin: 0;

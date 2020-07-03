@@ -2,6 +2,7 @@
   padding: 10px 28px;
 
   &--callback {
+    position: relative;
     padding: 0;
   }
 
@@ -27,19 +28,12 @@
 
     position: relative;
     padding: 19px 38px 18px;
-    width: 93.5%;
+    width: 100%;
     border: 2px solid $input-stroke;
+    border: none;
     border-radius: 80px;
     cursor: pointer;
     outline: none;
-
-    &:focus {
-      border-color: $yellow;
-    }
-
-    &:hover {
-      border-color: rgba($color: $black, $alpha: 0.7);
-    }
   }
 
   button[type="submit"] {
@@ -47,7 +41,7 @@
     @include push-auto;
     @include transition;
 
-    margin-top: 26px;
+    margin-top: 24px;
     margin-bottom: 17px;
     padding: 19px 20px 20px;
     width: 69%;
@@ -62,7 +56,6 @@
     background: linear-gradient(142.39deg, $yellow 20.46%, $light-yellow 65.31%);
     cursor: pointer;
 
-    //TODO анимировать
     &:hover {
       background: linear-gradient(143.55deg, $yellow -50.3%, $light-yellow 63.1%);
     }
@@ -75,33 +68,50 @@
 
 .form__inner {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  width: 93.5%;
 
   &:last-child {
     margin-bottom: 0;
   }
 
-  &--error input[type="text"],
-  &--error input[type="tel"] {
-    border-color: $input-error;
+  &--name,
+  &--phone {
+    padding: 2px;
+    border-radius: 80px;
+    background-color: $input-stroke;
+  }
+
+  &--callback {
+    padding: 2px;
+    border-radius: 80px;
+    background-color: $input-stroke;
+  }
+
+  &--focused {
+    background: linear-gradient(142.39deg, $yellow 20.46%, $light-yellow 65.31%);
+  }
+
+  &--hovered {
+    background-color: rgba($color: $black, $alpha: 0.4);
+  }
+
+  &--error {
+    background-color: $input-error;
   }
 
   &--consent {
+    width: 95.5%;
+
     label {
+      @include typography(13, 19);
+      @include user-interaction;
+
       position: relative;
       padding-left: 84px;
       width: 88%;
       font-size: rem(13);
-      line-height: rem(19);
       color: rgba($color: $black, $alpha: 0.74);
-
-      &:hover {
-        opacity: 0.7;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
 
       &::before {
         @include pseudo;
@@ -137,21 +147,6 @@
 
     input[type="checkbox"]:focus + label {
       opacity: 0.7;
-    }
-  }
-
-  span {
-    display: none;
-  }
-
-  &--error {
-    span {
-      display: block;
-      font-size: rem(13);
-      line-height: rem(19);
-      color: $input-error;
-      opacity: 0.75;
-      text-align: center;
     }
   }
 }

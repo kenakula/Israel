@@ -3,6 +3,7 @@
 (function () {
   var TEL_REG_EXP = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
   var ESC_KEY = 'Escape';
+  var USER_OBJECT_NAME = 'user';
 
   // forEach polyfill for IE
   if ('NodeList' in window && !NodeList.prototype.forEach) {
@@ -157,6 +158,33 @@
     slides[newIndex].classList.add('testimonials__item--active');
   };
 
+  // ------------- localstorage
+
+  var setLocalStorage = function (key, value, userObj) {
+    userObj[key] = value;
+    localStorage.setItem(USER_OBJECT_NAME, JSON.stringify(userObj));
+  };
+
+  var getLocalStorageValue = function (key) {
+    return JSON.parse(localStorage.getItem(key));
+  };
+
+  var setInputValuesFromLocalStorage = function (telInputs, nameInputs) {
+    var data = getLocalStorageValue(USER_OBJECT_NAME);
+
+    if (data) {
+      telInputs.forEach(function (it) {
+        it.value = data.tel;
+      });
+
+      if (data.name !== undefined) {
+        nameInputs.forEach(function (it) {
+          it.value = data.name;
+        });
+      }
+    }
+  };
+
   window.vendor = {
     showModal: showModal,
     closeModal: closeModal,
@@ -169,5 +197,7 @@
     getNewSlideIndex: getNewSlideIndex,
     changeTestimonialSlide: changeTestimonialSlide,
     changeCurrentPageIndicator: changeCurrentPageIndicator,
+    setInputValuesFromLocalStorage: setInputValuesFromLocalStorage,
+    setLocalStorage: setLocalStorage,
   };
 })();

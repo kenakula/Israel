@@ -1,6 +1,6 @@
 .button {
   @include button-reset;
-  @include typogreaphy(21, 26);
+  @include typography(21, 26);
 
   padding: 16px 20px 17px;
   border-radius: 80px;

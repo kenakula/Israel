@@ -168,9 +168,8 @@
           <div class="form__inner form__inner--callback">
             <input type="tel" id="phoneCallback" placeholder="телефон">
             <label for="phoneCallback" class="visually-hidden"></label>
-
-            <button class="callback__button button" type="submit">перезвоните мне</button>
           </div>
+          <button class="callback__button button" type="submit">перезвоните мне</button>
         </form>
       </div>
     </section>
@@ -743,12 +742,10 @@
             <div class="form__inner form__inner--name">
               <label for="contactsName">имя</label>
               <input type="text" id="contactsName" placeholder="имя" required="">
-              <span>Ошибка: неверный формат</span>
             </div>
             <div class="form__inner form__inner--phone">
               <label for="contactsPhone">телефон</label>
               <input type="tel" id="contactsPhone" placeholder="телефон" required="">
-              <span>Ошибка: неверный формат</span>
             </div>
             <button type="submit">перезвоните мне</button>
             <small>
@@ -806,18 +803,17 @@
         на
         ваш вопрос!
       </p>
+      <!-- TODO прикрутить сообщение об ошибке -->
       <form class="modal__form form form--modal" action="#">
         <div class="form__inner form__inner--name">
           <label for="name">Имя</label>
-          <input type="text" id="name" placeholder="Имя" required="">
-          <span>Ошибка: неверный формат</span>
+          <input type="text" id="name" placeholder="имя" required="">
         </div>
         <div class="form__inner form__inner--phone">
           <label for="phone">Телефон</label>
-          <input type="tel" id="phone" placeholder="Телефон" required="">
-          <span>Ошибка: неверный формат</span>
+          <input type="tel" id="phone" placeholder="телефон" required="">
         </div>
-        <button type="submit">Перезвоните мне</button>
+        <button type="submit">перезвоните мне</button>
         <div class="form__inner form__inner--consent">
           <input class="visually-hidden" type="checkbox" id="consent" required="">
           <label for="consent">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>

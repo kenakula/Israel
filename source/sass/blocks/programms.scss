@@ -7,20 +7,19 @@
 }
 
 .programms__container {
+  margin: 0 auto;
+  width: 69.253%;
+
   h2 {
     @include title;
 
     margin-bottom: 66px;
-    letter-spacing: -0.8px;
-    text-transform: uppercase;
   }
 }
 
 @include max-desktop {
   .programms__container {
     h2 {
-      font-size: rem(32);
-      line-height: rem(39);
       text-align: center;
     }
   }

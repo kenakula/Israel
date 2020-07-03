@@ -1,10 +1,10 @@
 .about {
-  margin-bottom: 135px;
-  padding: 17px 0;
+  margin-bottom: 23px;
+  padding: 17px 0 130px;
   background-image: url("../img/about-watercolor@2x.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: -3px 176px;
+  background-size: 100%;
 }
 
 .about__container {
@@ -16,16 +16,15 @@
     @include title;
 
     margin-bottom: 25px;
-    letter-spacing: -0.8px;
-    text-transform: uppercase;
     text-align: center;
   }
 
   p {
+    // TODO не получается пп
+    @include typography(17, 29);
+
     margin: 0 auto 47px;
     width: 79.5%;
-    font-size: rem(17);
-    line-height: rem(29);
     text-align: center;
   }
 }
@@ -53,18 +52,26 @@
   height: 64px;
   border-radius: 50%;
   background-color: $white;
-  background-image: url("../img/play-button.svg");
-  background-repeat: no-repeat;
-  background-position: 27px center;
   cursor: pointer;
+  z-index: 10;
+  fill: $blue;
+
+  svg {
+    position: absolute;
+    top: 22px;
+    left: 27px;
+    fill: inherit;
+  }
 
   &:hover {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    fill: $blue-hovered;
   }
 
   &:active {
     background-color: #f4f4f4;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    fill: $blue;
   }
 
   &::before {
@@ -83,7 +90,7 @@
 
 @include max-tablet {
   .about {
-    margin-bottom: 19px;
+    margin-bottom: 20px;
     padding: 13px 0;
   }
 
@@ -91,20 +98,21 @@
     width: 100%;
 
     h2 {
-      font-size: rem(32);
-      line-height: rem(39);
+      margin-bottom: 24px;
     }
 
     p {
+      @include typography(16, 26);
+
       width: 89.5%;
-      font-size: rem(16);
-      line-height: rem(26);
       text-align: left;
     }
   }
 
   .about__video {
     min-height: 224px;
+    background-position: -176px -36px;
+    background-size: 181%;
   }
 
   .about__video-control {
@@ -114,6 +122,13 @@
     height: 53.33px;
     background-position: 21px center;
     background-size: 24%;
+
+    svg {
+      top: 19px;
+      left: 22px;
+      width: 12.5px;
+      height: 15.83px;
+    }
 
 
     &::before {

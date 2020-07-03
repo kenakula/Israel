@@ -2,23 +2,21 @@
   padding: 165px 135px 120px 51.1%;
   background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.png"), url("../img/howto-bg@2x.png");
   background-repeat: no-repeat;
-  background-position: left 13px top 135px, center, right -2px top 342px;
-  background-size: 42%, cover, 16%;
+  background-position: left 13px top 135px, 20px -53px, right -2px top 342px;
+  background-size: 42%, 92%, 16%;
 
   h2 {
     @include title;
 
     margin-bottom: 24px;
-    letter-spacing: -0.8px;
-    text-transform: uppercase;
   }
 
   p {
+    @include typography(15, 26);
+
     margin: 0;
     margin-bottom: 32px;
     width: 91%;
-    font-size: rem(15);
-    line-height: rem(26);
     color: rgba($color: $black, $alpha: 0.87);
 
     &:last-of-type {
@@ -42,14 +40,14 @@
   }
 
   em {
+    @include typography(17, 29);
+
     display: block;
     width: 86%;
     margin-bottom: 25px;
     font-family: $main-medium;
     font-weight: 500;
     font-style: normal;
-    font-size: rem(17);
-    line-height: rem(29);
   }
 }
 
@@ -60,29 +58,17 @@
   margin-bottom: 47px;
   padding-right: 70px;
   counter-reset: howto-list;
-
-
-  //TODO сделать для каждого элемента
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   left: 3px;
-  //   top: 36px;
-  //   height: 220px;
-  //   width: 4px;
-  //   border-left: 1px dashed rgba($color: $black, $alpha: 0.2);
-  // }
 }
 
 .howto__item {
+  @include typography(15, 21);
+
   position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 39px;
   padding-left: 44px;
   min-height: 36px;
-  font-size: rem(15);
-  line-height: rem(21);
   opacity: 0.87;
 
   &:last-child {
@@ -90,19 +76,17 @@
   }
 
   &::before {
-    content: counter(howto-list);
+    @include pseudo(flex, absolute, counter(howto-list));
+    @include typography(17, 29);
+
     counter-increment: howto-list;
-    position: absolute;
     top: -1px;
     left: -15px;
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    font-size: rem(17);
-    line-height: rem(29);
     color: $yellow;
     background-color: $white;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
@@ -137,16 +121,14 @@
 
     h2 {
       margin-bottom: 25px;
-      font-size: rem(32);
-      line-height: rem(39);
       text-align: center;
     }
 
     p {
+      @include typography(14, 22);
+
       margin-bottom: 24px;
       width: 100%;
-      font-size: rem(14);
-      line-height: rem(22);
 
       &:last-of-type {
         padding-left: 8px;
@@ -161,10 +143,10 @@
     }
 
     em {
+      @include typography(16, 26);
+
       width: 100%;
       margin-bottom: 8px;
-      font-size: rem(16);
-      line-height: rem(26);
     }
   }
 
@@ -186,10 +168,10 @@
   }
 
   .howto__item {
+    @include typography(14, 22);
+
     min-height: 66px;
     margin-bottom: 27px;
-    font-size: rem(14);
-    line-height: rem(22);
 
     &::before {
       top: 15px;

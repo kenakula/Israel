@@ -2,7 +2,7 @@
   padding: 121px 0 150px;
   margin-bottom: 136px;
   min-height: 583px;
-  background-color: #a48193;
+  background-color: #c2a1b2;
   background-image: url("../img/gallery-img@2x.jpg");
   background-repeat: no-repeat;
   background-position: left center;
@@ -17,16 +17,14 @@
     @include title;
 
     margin-bottom: 22px;
-    text-transform: uppercase;
-    letter-spacing: -0.8px;
   }
 
   p {
+    @include typography(17, 29);
+
     margin: 0;
     margin-bottom: 49px;
     padding: 0 5px;
-    font-size: rem(17);
-    line-height: rem(29);
     color: $white;
     opacity: 0.87;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
@@ -84,28 +82,26 @@
 
   .gallery__inner {
     width: 100%;
-    // TODO цвет выходит за границы изображения! Текст нечитабелен
-    // background-color: #a48193;
-    background-image: url("../img/gallery-img@2x.jpg");
-    background-repeat: no-repeat;
-    background-size: 200%;
-    background-position: left -71px top 44px;
 
     h2 {
-      margin-bottom: 97px;
-      margin-top: -74px;
+      margin-bottom: 25px;
       font-size: rem(40);
       line-height: rem(49);
     }
 
     p {
+      // TODO цвет выходит за границы изображения! Текст нечитабелен
+      @include typography(16, 26);
+
       margin: 0 auto;
-      margin-bottom: 56px;
-      padding: 0;
-      width: 86%;
-      font-size: rem(16);
-      line-height: rem(26);
+      margin-bottom: 7px;
+      padding: 22% 7% 15.5%;
+      width: 100%;
       text-align: left;
+      background-image: url("../img/gallery-img@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: 200%;
+      background-position: left -71px top -32px;
     }
 
     br {

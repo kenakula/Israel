@@ -9,8 +9,6 @@
   h2 {
     @include title;
 
-    text-transform: uppercase;
-    letter-spacing: -0.8px;
     text-align: center;
   }
 }
@@ -46,17 +44,17 @@
   margin-bottom: 31px;
 
   h3 {
+    @include typography(24, 36);
+
     margin: 0;
     margin-bottom: 9px;
     font-family: $main-medium;
-    font-size: rem(24);
-    line-height: rem(36);
   }
 
   p {
+    @include typography(15, 21);
+
     margin: 0;
-    font-size: rem(15);
-    line-height: rem(21);
   }
 
   span {
@@ -69,10 +67,10 @@
   margin-bottom: 17px;
 
   p {
+    @include typography(17, 29);
+
     margin: 0;
     margin-bottom: 17px;
-    font-size: rem(17);
-    line-height: rem(29);
 
     &:last-child {
       margin-bottom: 0;
@@ -87,17 +85,10 @@
   min-height: 105px;
 
   a {
-    font-size: rem(17);
-    line-height: rem(25);
+    @include typography(17, 25);
+    @include user-interaction;
+
     color: $blue;
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
   }
 }
 
@@ -113,9 +104,9 @@
 }
 
 .testimonials__pages {
+  @include typography(17, 25);
+
   margin-right: 24px;
-  font-size: rem(17);
-  line-height: rem(25);
   color: rgba($color: $black, $alpha: 0.5);
 }
 
@@ -153,11 +144,6 @@
     background-image: url("../img/feedback-bg@2x.png");
     background-size: 130%;
     background-position: top 63.5% right -133px;
-
-    h2 {
-      font-size: rem(32);
-      line-height: rem(39);
-    }
   }
 
   .testimonials__container {
@@ -179,8 +165,7 @@
     margin-bottom: 23px;
 
     p {
-      font-size: rem(14);
-      line-height: rem(22);
+      @include typography(14, 22);
     }
 
     span {
@@ -192,8 +177,7 @@
     margin-bottom: 24px;
 
     p {
-      font-size: rem(16);
-      line-height: rem(26);
+      @include typography(16, 26);
     }
   }
 
@@ -202,9 +186,9 @@
     min-height: auto;
 
     a {
+      @include typography(16, 24);
+
       margin-bottom: 22px;
-      font-size: rem(16);
-      line-height: rem(24);
     }
   }
 

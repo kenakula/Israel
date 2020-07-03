@@ -59,11 +59,17 @@
 }
 
 @mixin title {
+  @include typography(40, 49);
+
+  @include max-desktop {
+    @include typography(32, 39);
+  }
+
   margin: 0;
   font-family: $title-main;
-  font-size: rem(40);
-  line-height: rem(49);
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.8px;
   color: $blue;
 }
 
@@ -131,4 +137,20 @@
     border-width: $sizeH $sizeV 0 0;
     border-color: $color transparent transparent transparent;
   }
+}
+
+@mixin user-interaction($hover: 0.7, $active: 0.3) {
+  &:focus,
+  &:hover {
+    opacity: $hover;
+  }
+
+  &:active {
+    opacity: $active;
+  }
+}
+
+@mixin typography($fz, $lh) {
+  font-size: rem($fz);
+  line-height: rem($lh);
 }

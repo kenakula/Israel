@@ -17,11 +17,12 @@
   input[type="text"],
   input[type="tel"] {
     @include placeholder {
+      @include typography(21, 20);
+
       font-family: $main-medium;
       font-weight: 500;
       font-variant: small-caps;
-      font-size: rem(17);
-      line-height: rem(20);
+      opacity: 0.5;
     }
 
     position: relative;

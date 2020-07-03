@@ -57,6 +57,8 @@
 
   // TODO сделай валидацию поля имени
 
+  // TODO localStorage
+
   var onTelInputChangeValidateValue = function () {
     window.vendor.validateTelNumber(telInput, errors);
   };
@@ -83,6 +85,7 @@
     window.DocumentTouch && document instanceof window.DocumentTouch ||
     navigator.maxTouchPoints > 0 ||
     window.navigator.msMaxTouchPoints > 0;
+
 
   // drag'n'drop
 

@@ -13,10 +13,10 @@
   width: 83.894%;
 
   p {
+    @include typography(12, 18);
+
     margin: 0;
     padding-left: 28px;
-    font-size: rem(12);
-    line-height: rem(18);
     color: rgba($color: $black, $alpha: 0.5);
   }
 }

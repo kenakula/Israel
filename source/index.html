@@ -10,6 +10,7 @@
   <title>Israel</title>
   <link rel="preload" href="fonts/fira-sans-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/raleway-extrabold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -19,12 +20,12 @@
   </div>
   <!-- header -->
   <header class="page-header">
-    <div class="page-header__container container">
-      <a href="tel:+97226216581" class="page-header__phone">+ (972) 2 – 621 – 6581</a>
+    <div class="page-header__container">
+      <a href="tel:+97226216581" class="page-header__phone" aria-label="наш номер телефона">+ (972) 2 – 621 – 6581</a>
       <a class="page-header__logo">
-        <img src="img/header-logo.svg" width="137" height="48" alt="логотип сайта">
+        <img src="img/header-logo.svg" width="137" height="48" alt="логотип компании">
       </a>
-      <button class="page-header__button" type="button">Заказать звонок</button>
+      <button class="page-header__button" type="button">заказать звонок</button>
     </div>
   </header>
   <main class="page-main">
@@ -48,13 +49,16 @@
         <div class="about__video">
           <button class="about__video-control" type="button">
             <span class="visually-hidden">Воспроизвести видео</span>
+            <svg width="15" height="19">
+              <use xlink:href="#icon-play"></use>
+            </svg>
           </button>
         </div>
       </div>
     </section>
     <!-- programms -->
     <section class="programms">
-      <div class="programms__container container">
+      <div class="programms__container">
         <h2>Программы</h2>
         <div class="programms__tabs tabs">
           <div class="tabs__inner">
@@ -100,7 +104,8 @@
               <h3>Академические</h3>
               <p>
                 Провести семестр или год за рубежом, знакомясь с различными культурами<br> и идеями, традициями и стилем
-                жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также
+                жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это
+                также
                 академический центр, живая лаборатория идей и творческого исследования.
               </p>
               <p>
@@ -160,7 +165,7 @@
         </p>
         <form action="#" class="form form--callback callback__form">
           <div class="form__inner form__inner--callback">
-            <input type="tel" id="phoneCallback" placeholder="Телефон">
+            <input type="tel" id="phoneCallback" placeholder="телефон">
             <label for="phoneCallback" class="visually-hidden"></label>
 
             <button class="callback__button button" type="submit">перезвоните мне</button>
@@ -693,6 +698,7 @@
                 <ul class="socials__list">
                   <li class="socials__item socials__item--fb">
                     <a href="#" class="socials__link">
+                      <!-- TODO описание интерактивного элемента -->
                       <svg width="24" height="24">
                         <use xlink:href="#icon-fb"></use>
                       </svg>
@@ -735,12 +741,12 @@
             </p>
             <div class="form__inner form__inner--name">
               <label for="contactsName">имя</label>
-              <input type="text" id="contactsName" placeholder="Имя" required>
+              <input type="text" id="contactsName" placeholder="имя" required>
               <span>Ошибка: неверный формат</span>
             </div>
             <div class="form__inner form__inner--phone">
               <label for="contactsPhone">телефон</label>
-              <input type="tel" id="contactsPhone" placeholder="Телефон" required>
+              <input type="tel" id="contactsPhone" placeholder="телефон" required>
               <span>Ошибка: неверный формат</span>
             </div>
             <button type="submit">перезвоните мне</button>

@@ -3,10 +3,10 @@
   flex-wrap: wrap;
 
   & > p {
+    @include typography(17, 29);
+
     margin: 0;
     padding-right: 70px;
-    font-size: rem(17);
-    line-height: rem(29);
     color: rgba($color: $black, $alpha: 0.87);
   }
 
@@ -29,10 +29,10 @@
   max-width: 270px;
 
   p {
+    @include typography(15, 22);
+
     margin: 0;
     margin-bottom: 13px;
-    font-size: rem(15);
-    line-height: rem(22);
     color: $blue;
   }
 
@@ -42,6 +42,8 @@
   }
 
   address {
+    @include typography(13, 19);
+
     margin-bottom: 12px;
     font-style: normal;
     font-size: rem(13);
@@ -58,9 +60,9 @@
 @include max-tablet {
   .curator {
     & > p {
+      @include typography(16, 26);
+
       padding-right: 0;
-      font-size: rem(16);
-      line-height: rem(26);
     }
 
     br {

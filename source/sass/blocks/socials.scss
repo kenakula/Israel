@@ -9,6 +9,8 @@
 }
 
 .socials__link {
+  @include user-interaction;
+
   display: flex;
   justify-content: center;
   align-items: center;

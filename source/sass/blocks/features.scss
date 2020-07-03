@@ -3,26 +3,24 @@
   padding-bottom: 158px;
   background-image: url("../img/israel-life-bg@2x.png"), url("../img/israel-life-watercolor@2x.png");
   background-repeat: no-repeat;
-  background-size: 6.5%, cover;
-  background-position: right bottom 182px, center;
+  background-size: 6.5%, 100%;
+  background-position: right bottom 243px, 0 13px;
 
   h2 {
     @include title;
 
-    margin: 0 auto;
-    margin-bottom: 23px;
+    margin: 0 auto 23px;
+    padding-right: 11px;
     width: 60%;
-    text-transform: uppercase;
-    letter-spacing: -0.8px;
     text-align: center;
   }
 
   p {
+    @include typography(17, 29);
+
     margin: 0 auto;
     padding-right: 30px;
     width: 64.102%;
-    font-size: rem(17);
-    line-height: rem(29);
     text-align: right;
     color: rgba($color: $black, $alpha: 0.87);
   }
@@ -54,21 +52,19 @@
 @include max-tablet {
   .features {
     padding-top: 23px;
-    padding-bottom: 100px;
+    padding-bottom: 27px;
     background: none;
 
     h2 {
       width: 100%;
-      font-size: rem(32);
-      line-height: rem(39);
     }
 
     p {
+      @include typography(16, 26);
+
       margin-bottom: 45px;
       padding-right: 12px;
       width: 100%;
-      font-size: rem(16);
-      line-height: rem(26);
       text-align: left;
     }
   }

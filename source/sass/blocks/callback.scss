@@ -10,16 +10,14 @@
     @include title;
 
     margin-bottom: 25px;
-    letter-spacing: -0.8px;
-    text-transform: uppercase;
   }
 
   p {
+    @include typography(17, 29);
+
     margin: 0;
     margin-bottom: 63px;
     width: 85%;
-    font-size: rem(17);
-    line-height: rem(29);
     opacity: 0.87;
   }
 }
@@ -47,15 +45,13 @@
     h2 {
       margin-bottom: 24px;
       padding-left: 7px;
-      font-size: rem(32);
-      line-height: rem(39);
     }
 
     p {
+      @include typography(16, 26);
+
       margin-bottom: 23px;
       width: 100%;
-      font-size: rem(16);
-      line-height: rem(26);
     }
   }
 

@@ -29,21 +29,20 @@
 
   h2 {
     @include title;
+    @include typography(28, 34);
 
     margin-bottom: 18px;
     padding-left: 29px;
-    font-size: rem(28);
-    line-height: rem(34);
     letter-spacing: 1px;
   }
 
   p {
+    @include typography(15, 26);
+
     margin: 0;
     margin-bottom: 23px;
     padding-left: 28px;
     padding-right: 54px;
-    font-size: rem(15);
-    line-height: rem(26);
     opacity: 0.87;
   }
 
@@ -93,6 +92,7 @@
 
 .modal__close {
   @include button-reset;
+  @include user-interaction;
 
   position: absolute;
   top: 32px;
@@ -104,14 +104,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
-
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 @include max-desktop {
@@ -133,16 +125,16 @@
     border-radius: unset;
 
     h2 {
+      @include typography(24, 29);
+
       padding-left: 40px;
-      font-size: rem(24);
-      line-height: rem(29);
       letter-spacing: 0.9px;
     }
 
     p {
+      @include typography(14, 22);
+
       padding: 0;
-      font-size: rem(14);
-      line-height: rem(22);
       text-align: center;
     }
 

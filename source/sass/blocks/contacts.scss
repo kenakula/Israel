@@ -1,7 +1,7 @@
 .contacts {
   display: flex;
   padding: 50px 0 10px;
-  background-image: url("../../img/details-watercolor@2x.png");
+  background-image: url("../img/details-watercolor@2x.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,8 +17,6 @@
     @include title;
 
     width: 100%;
-    text-transform: uppercase;
-    letter-spacing: -0.8px;
   }
 }
 
@@ -52,7 +50,7 @@
       left: 73.8%;
       width: 18px;
       height: 28px;
-      background-image: url("../../img/map-pin.svg");
+      background-image: url("../img/map-pin.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -61,12 +59,12 @@
   }
 
   & > p {
+    @include typography(15, 22);
+
     position: relative;
     margin: 0;
     margin-bottom: 38px;
     padding-left: 22px;
-    font-size: rem(15);
-    line-height: rem(22);
     color: rgba($color: $black, $alpha: 0.74);
 
     &::before {
@@ -76,7 +74,7 @@
       left: 4px;
       width: 12px;
       height: 18px;
-      background-image: url("../../img/marker.svg");
+      background-image: url("../img/marker.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -101,7 +99,7 @@
     right: -25px;
     width: 16px;
     height: 15px;
-    background-image: url("../../img/blue-arrow-upright.svg");
+    background-image: url("../img/blue-arrow-upright.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -115,13 +113,13 @@
   padding: 0;
 
   p {
+    @include typography(17, 25);
+
     margin: 0;
     margin-right: 3.98%;
     width: 26.114%;
     font-family: $main-medium;
     font-weight: 500;
-    font-size: rem(17);
-    line-height: rem(25);
     color: rgba($color: $black, $alpha: 0.87);
   }
 
@@ -136,10 +134,10 @@
   }
 
   small {
+    @include typography(13, 19);
+
     padding-top: 8px;
-    width: 28.980%;
-    font-size: rem(13);
-    line-height: rem(19);
+    width: 28.98%;
     color: rgba($color: $black, $alpha: 0.5);
   }
 
@@ -213,11 +211,6 @@
   .contacts__container {
     display: block;
     width: 100%;
-
-    h2 {
-      font-size: rem(32);
-      line-height: rem(39);
-    }
   }
 
   .contacts__inner {
@@ -260,11 +253,11 @@
     flex-direction: column;
 
     p {
+      @include typography(16, 24);
+
       order: -2;
       margin-bottom: 12px;
       width: 100%;
-      font-size: rem(16);
-      line-height: rem(24);
       text-align: left;
     }
 

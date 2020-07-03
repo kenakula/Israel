@@ -24,30 +24,31 @@
 
   &::before {
     @include pseudo(block, absolute, counter(faq-list));
+    @include typography(28, 48);
 
     position: absolute;
     left: 0;
     top: 14px;
     font-family: $main-bold;
-    font-size: rem(28);
-    line-height: rem(48);
     background: linear-gradient(95.15deg, $yellow 20.46%, $light-yellow 65.31%);
     background-clip: text;
     color: transparent;
   }
 
   h3 {
+    @include typography(17, 25);
+
     position: relative;
     margin: 0;
     padding-left: 29px;
     width: 76%;
-    font-size: rem(17);
-    line-height: rem(25);
     font-weight: 400;
     cursor: pointer;
   }
 
   p {
+    @include typography(15, 21);
+
     display: none;
     margin: 0;
     font-size: rem(15);
@@ -119,17 +120,17 @@
     }
 
     h3 {
+      @include typography(16, 26);
+
       padding-left: 25px;
       width: 100%;
-      font-size: rem(16);
-      line-height: rem(26);
     }
 
     p {
+      @include typography(14, 22);
+
       padding-bottom: 0;
       width: 100%;
-      font-size: rem(14);
-      line-height: rem(22);
     }
 
     &--active {

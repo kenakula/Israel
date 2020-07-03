@@ -11,14 +11,14 @@
   background-size: cover, 74.5%, cover;
 
   h1 {
+    @include typography(24, 29);
+
     margin: auto auto 281px;
     width: 25.109%;
     font-family: $main-bold;
     font-weight: 700;
-    font-size: rem(24);
-    line-height: rem(29);
-    text-align: center;
     color: $white;
+    text-align: center;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   }
 }
@@ -39,7 +39,6 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  outline: none;
 
   &::before {
     @include pseudo;
@@ -96,10 +95,10 @@
     background-size: cover, contain, cover;
 
     h1 {
+      @include typography(20, 24);
+
       margin-bottom: 237px;
       width: 90%;
-      font-size: rem(20);
-      line-height: rem(24);
     }
   }
 

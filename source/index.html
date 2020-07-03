@@ -37,7 +37,7 @@
       </button>
     </section>
     <!-- about -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__container">
         <h2>О программе</h2>
         <p>
@@ -696,8 +696,7 @@
               <div class="curator__socials socials">
                 <ul class="socials__list">
                   <li class="socials__item socials__item--fb">
-                    <a href="#" class="socials__link">
-                      <!-- TODO описание интерактивного элемента -->
+                    <a href="#" class="socials__link" aria-label="связаться с куратором в фейсбук">
                       <svg width="24" height="24">
                         <use xlink:href="#icon-fb"></use>
                       </svg>
@@ -705,7 +704,7 @@
                   </li>
 
                   <li class="socials__item socials__item--watsapp">
-                    <a href="#" class="socials__link">
+                    <a href="#" class="socials__link" aria-label="связаться с куратором в вотсапп">
                       <svg width="24" height="24">
                         <use xlink:href="#icon-watsapp"></use>
                       </svg>
@@ -713,7 +712,7 @@
                   </li>
 
                   <li class="socials__item socials__item--tlg">
-                    <a href="#" class="socials__link">
+                    <a href="#" class="socials__link" aria-label="связаться с куратором в телеграм">
                       <svg width="24" height="24">
                         <use xlink:href="#icon-tlg"></use>
                       </svg>
@@ -793,7 +792,7 @@
 
   <section class="modal modal--callback">
     <div class="modal__inner">
-      <button class="modal__close" type="button">
+      <button class="modal__close" name="closeButton" type="button">
         <span class="visually-hidden">Закрыть окно</span>
       </button>
       <h2>Заказать звонок</h2>
@@ -822,14 +821,14 @@
   </section>
   <section class="modal modal--success">
     <div class="modal__inner modal__inner--success">
-      <button class="modal__close" type="button">
+      <button class="modal__close" name="closeButton" type="button">
         <span class="visually-hidden">Закрыть окно</span>
       </button>
       <h2>Заявка принята</h2>
       <p>
         Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
       </p>
-      <button class="modal__button button">Понятно</button>
+      <button class="modal__button button" name="closeButton" type="button">Понятно</button>
     </div>
   </section>
 

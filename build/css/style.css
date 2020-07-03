@@ -444,8 +444,8 @@ img {
   background-color: transparent;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  font-size: 1.1875rem;
-  line-height: 1.125rem;
+  font-size: 0.9375rem;
+  line-height: 1.1875rem;
   position: relative;
   margin-right: 7px;
   font-family: "Fira Sans Medium", "Helvetica", sans-serif;

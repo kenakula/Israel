@@ -32,10 +32,11 @@
 }
 
 .page-header__button {
+  // TODO сделай подчеркивание линейным градиентом
   @include button-reset;
   @include transition;
   @include user-interaction;
-  @include typography(19, 18);
+  @include typography(15, 19);
 
   position: relative;
   margin-right: 7px;

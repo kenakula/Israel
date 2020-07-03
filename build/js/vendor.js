@@ -62,10 +62,12 @@
       modal.classList.add('modal--show');
       document.body.classList.add('no-scroll');
 
-      var closeButton = modal.querySelector('.modal__close');
+      var closeButtons = modal.querySelectorAll('button[name="closeButton"]');
 
-      closeButton.addEventListener('click', function () {
-        closeModal(modal);
+      closeButtons.forEach(function (it) {
+        it.addEventListener('click', function () {
+          closeModal(modal);
+        });
       });
       modal.addEventListener('click', function (evt) {
         onOverlayClickCloseModal(evt, modal);

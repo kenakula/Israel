@@ -52,11 +52,10 @@
   // -------------------------------------- скролл
 
   var onScrollButtonClickDocumentScroll = function () {
-    // прокрутит на высоту промоблока
-    var promoHeight = document.querySelector('.promo').clientHeight;
+    var elem = document.querySelector('#about');
 
     window.scrollBy({
-      top: promoHeight,
+      top: elem.getBoundingClientRect().y,
       left: SCROLL_X,
       behavior: SCROLL_BEHAVIOUR,
     });

@@ -2,5 +2,6 @@ root: true
 
 env:
   browser: true
+  jquery: true
 
 extends: "htmlacademy/es5"

@@ -8,8 +8,8 @@
   var SCROLL_BEHAVIOUR = 'smooth';
   var STORAGE_NAME_VALUE = 'name';
   var STORAGE_PHONE_NUMBER = 'tel';
-  // var PHONE_NUMBER_MASK = '+{7} (000) 000 00 00';
   var MIN_NAME_CHARS = 2;
+  var PHONE_NUMBER_MASK = '+7 (999) 999 99 99';
 
   var orderButton = document.querySelector('.page-header__button');
   var orderModal = document.querySelector('.modal--callback');
@@ -37,7 +37,6 @@
   var israelSlidesBullets = israelSlidesContainer.querySelectorAll('.cards__bullet');
 
   var accordeon = document.querySelector('.accordeon');
-  // var accordeonItems = accordeon.querySelectorAll('.accordeon__item');
   var accordeonButtons = accordeon.querySelectorAll('.accordeon__button');
   var accordeonHeaders = accordeon.querySelectorAll('.accordeon__item h3');
 
@@ -95,56 +94,53 @@
   // -------------------------------------- модалки
 
   var closeModal = function (modal) {
-    if (modal.classList.contains('modal--show')) {
-      modal.classList.remove('modal--show');
-      document.body.classList.remove('no-scroll');
-    }
+    $(modal).fadeOut(200);
+    $('body').removeClass('no-scroll');
+    document.removeEventListener('keydown', onEscButtonPressCloseModal);
   };
 
   var onEscButtonPressCloseModal = function (evt, modal) {
     if (evt.key === ESC_KEY) {
       closeModal(modal);
-      document.removeEventListener('keydown', onEscButtonPressCloseModal);
     }
   };
 
   var onOverlayClickCloseModal = function (evt, modal) {
-    var modalInner = modal.querySelector('.modal__inner');
+    var modalInner = $(modal).find('.modal__inner');
     if (evt.target === modal && evt.target !== modalInner) {
       closeModal(modal);
-      document.removeEventListener('keydown', onEscButtonPressCloseModal);
     }
   };
 
   var showModal = function (modal) {
-    if (!modal.classList.contains('modal--show')) {
-      var closeButtons = modal.querySelectorAll('button[name="closeButton"]');
+    var closeButton = $(modal).find('button[name="closeButton"]');
 
-      modal.classList.add('modal--show');
-      document.body.classList.add('no-scroll');
+    $(modal).fadeIn(200);
+    $('body').addClass('no-scroll');
 
-      closeButtons.forEach(function (it) {
-        it.addEventListener('click', function () {
-          closeModal(modal);
-        });
-      });
+    closeButton.click(function () {
+      closeModal(modal);
+    });
 
-      modal.addEventListener('click', function (evt) {
-        onOverlayClickCloseModal(evt, modal);
-      });
+    modal.addEventListener('click', function (evt) {
+      onOverlayClickCloseModal(evt, modal);
+    });
 
-      document.addEventListener('keydown', function (evt) {
-        onEscButtonPressCloseModal(evt, modal);
-      });
-    }
+    document.addEventListener('keydown', function (evt) {
+      onEscButtonPressCloseModal(evt, modal);
+    });
   };
 
   var onOrderButtonClickShowModal = function () {
     showModal(orderModal);
-    orderModal.querySelector('input[type="text"]').focus();
+    $(orderModal).find('input[type="text"]').focus();
   };
 
   // -------------------------------------- формы и валидация
+
+  // маска воода телефона
+
+  $(telInputs).mask(PHONE_NUMBER_MASK);
 
   // сбрасывает стили ошибки
   var resetInputError = function (input) {
@@ -412,7 +408,6 @@
   var onAccordeonButtonClickToggleContent = function (evt) {
     $(evt.target).nextAll('p').slideToggle();
     $(evt.target).parent().toggleClass('accordeon__item--active');
-
   };
 
   // -------------------------------------- действия

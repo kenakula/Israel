@@ -166,8 +166,9 @@
         </p>
         <form action="#" class="form form--callback callback__form">
           <div class="form__inner form__inner--callback">
-            <input type="tel" id="phoneCallback" placeholder="телефон">
+            <input type="tel" id="phoneCallback" placeholder="телефон" required="">
             <label for="phoneCallback" class="visually-hidden"></label>
+            <span>Ошибка: неверный формат</span>
           </div>
           <button class="callback__button button" type="submit">перезвоните мне</button>
         </form>
@@ -741,10 +742,12 @@
             <div class="form__inner form__inner--name">
               <label for="contactsName">имя</label>
               <input type="text" id="contactsName" placeholder="имя" required="">
+              <span>Ошибка: слишком короткое имя</span>
             </div>
             <div class="form__inner form__inner--phone">
               <label for="contactsPhone">телефон</label>
               <input type="tel" id="contactsPhone" placeholder="телефон" required="">
+              <span>Ошибка: неверный формат</span>
             </div>
             <button type="submit">перезвоните мне</button>
             <small>
@@ -802,15 +805,16 @@
         на
         ваш вопрос!
       </p>
-      <!-- TODO прикрутить сообщение об ошибке -->
       <form class="modal__form form form--modal" action="#">
         <div class="form__inner form__inner--name">
           <label for="name">Имя</label>
           <input type="text" id="name" placeholder="имя" required="">
+          <span>Ошибка: слишком короткое имя</span>
         </div>
         <div class="form__inner form__inner--phone">
           <label for="phone">Телефон</label>
           <input type="tel" id="phone" placeholder="телефон" required="">
+          <span>Ошибка: неверный формат</span>
         </div>
         <button type="submit">перезвоните мне</button>
         <div class="form__inner form__inner--consent">

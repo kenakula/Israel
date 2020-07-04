@@ -816,6 +816,16 @@ img {
   position: relative;
   margin-bottom: 8px;
   width: 93.5%; }
+  .form__inner span {
+    font-size: 0.8125rem;
+    line-height: 1.1875rem;
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -19px;
+    text-align: center;
+    color: #ff0000; }
   .form__inner:last-child {
     margin-bottom: 0; }
   .form__inner--name, .form__inner--phone {
@@ -831,7 +841,10 @@ img {
   .form__inner--hovered {
     background-color: rgba(72, 72, 72, 0.4); }
   .form__inner--error {
+    margin-bottom: 20px;
     background-color: #ff0000; }
+    .form__inner--error span {
+      display: block; }
   .form__inner--consent {
     width: 95.5%; }
     .form__inner--consent label {

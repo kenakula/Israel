@@ -70,6 +70,18 @@
   margin-bottom: 8px;
   width: 93.5%;
 
+  span {
+    @include typography(13, 19);
+
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -19px;
+    text-align: center;
+    color: $input-error;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -96,7 +108,12 @@
   }
 
   &--error {
+    margin-bottom: 20px;
     background-color: $input-error;
+
+    span {
+      display: block;
+    }
   }
 
   &--consent {

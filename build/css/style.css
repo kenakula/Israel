@@ -1283,7 +1283,7 @@ img {
   background-image: url("../img/girl-flag@2x.png"), url("../img/wantto-bg@2x.png");
   background-repeat: no-repeat;
   background-size: contain, 11%;
-  background-position: right 5px top -28px, top 100px left; }
+  background-position: right -2px top -35px, top 100px left; }
   .callback h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
@@ -1341,7 +1341,7 @@ img {
       width: 264px; } }
 
 .howto {
-  padding: 165px 135px 120px 51.1%;
+  padding: 156px 135px 120px 51.1%;
   background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.png"), url("../img/howto-bg@2x.png");
   background-repeat: no-repeat;
   background-position: left 13px top 135px, 20px -53px, right -2px top 342px;
@@ -1905,7 +1905,6 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 10px;
-  padding: 29px 20px 31px 0;
   counter-increment: faq-list;
   border-bottom: 1px solid rgba(72, 72, 72, 0.2); }
   .accordeon__item:last-child {
@@ -1929,7 +1928,7 @@ img {
     line-height: 1.5625rem;
     position: relative;
     margin: 0;
-    padding-left: 29px;
+    padding: 29px 20px 31px 29px;
     width: 76%;
     font-weight: 400;
     cursor: pointer; }
@@ -1938,21 +1937,18 @@ img {
     line-height: 1.3125rem;
     display: none;
     margin: 0;
-    font-size: 0.9375rem;
-    line-height: 1.3125rem;
+    margin-top: -5px;
+    padding-bottom: 30px;
+    width: 89%;
     color: rgba(72, 72, 72, 0.74); }
   .accordeon__item--active {
     padding-bottom: 0; }
-    .accordeon__item--active h3 {
-      padding-bottom: 25px; }
     .accordeon__item--active p {
-      display: block;
-      width: 89%;
-      padding-bottom: 30px; }
+      display: block; }
     .accordeon__item--active .accordeon__button {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
-  .accordeon__item--narrow {
+  .accordeon__item--narrow h3 {
     padding-bottom: 23px; }
 
 .accordeon__button {

@@ -14,7 +14,7 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 10px;
-  padding: 29px 20px 31px 0;
+  // padding: 29px 20px 31px 0;
   counter-increment: faq-list;
   border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
 
@@ -40,7 +40,7 @@
 
     position: relative;
     margin: 0;
-    padding-left: 29px;
+    padding: 29px 20px 31px 29px;
     width: 76%;
     font-weight: 400;
     cursor: pointer;
@@ -51,8 +51,9 @@
 
     display: none;
     margin: 0;
-    font-size: rem(15);
-    line-height: rem(21);
+    margin-top: -5px;
+    padding-bottom: 30px;
+    width: 89%;
     color: rgba($color: $black, $alpha: 0.74);
   }
 
@@ -60,13 +61,11 @@
     padding-bottom: 0;
 
     h3 {
-      padding-bottom: 25px;
+      // padding-bottom: 25px;
     }
 
     p {
       display: block;
-      width: 89%;
-      padding-bottom: 30px;
     }
 
     .accordeon__button {
@@ -74,7 +73,7 @@
     }
   }
 
-  &--narrow {
+  &--narrow h3 {
     padding-bottom: 23px;
   }
 }

@@ -37,7 +37,7 @@
   var israelSlidesBullets = israelSlidesContainer.querySelectorAll('.cards__bullet');
 
   var accordeon = document.querySelector('.accordeon');
-  var accordeonItems = accordeon.querySelectorAll('.accordeon__item');
+  // var accordeonItems = accordeon.querySelectorAll('.accordeon__item');
   var accordeonButtons = accordeon.querySelectorAll('.accordeon__button');
   var accordeonHeaders = accordeon.querySelectorAll('.accordeon__item h3');
 
@@ -408,25 +408,10 @@
   // -------------------------------------- accordeon
 
   // разворачивает контент таба
-  var showAccordeonContent = function (container, items, newIndex) {
-    var activeTab = container.querySelector('.accordeon__item--active');
-
-    if (activeTab) {
-      activeTab.classList.remove('accordeon__item--active');
-    }
-
-    items[newIndex].classList.add('accordeon__item--active');
-  };
 
   var onAccordeonButtonClickToggleContent = function (evt) {
-    var newIndex = evt.target.dataset.content;
-    var elParent = evt.target.parentElement;
-
-    if (elParent.classList.contains('accordeon__item--active')) {
-      elParent.classList.remove('accordeon__item--active');
-    } else {
-      showAccordeonContent(accordeon, accordeonItems, newIndex);
-    }
+    $(evt.target).nextAll('p').slideToggle();
+    $(evt.target).parent().toggleClass('accordeon__item--active');
 
   };
 

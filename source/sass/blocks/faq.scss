@@ -1,11 +1,14 @@
 .faq {
-  // TODO bg pp
   display: flex;
   padding-bottom: 129px;
   background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png"), url("../img/faq-watercolor@2x.png");
   background-size: 47%, 11.3%, cover;
   background-position: right top, bottom left, center;
   background-repeat: no-repeat;
+
+  @include max-resolution {
+    background-image: url("../img/faq-img.png"), url("../img/faq-bg.png"), url("../img/faq-watercolor.png");
+  }
 }
 
 .faq__container {
@@ -23,6 +26,10 @@
   .faq {
     background-image: url("../img/faq-bg@2x.png");
     background-position: bottom left;
+
+    @include max-resolution {
+      background-image: url("../img/faq-bg.png");
+    }
   }
 
   .faq__container {
@@ -37,7 +44,7 @@
 
 @include max-tablet {
   .faq {
-    padding-bottom: 54px;
+    padding-bottom: 50px;
     background-position: bottom 117px left -5px;
   }
 

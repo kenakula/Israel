@@ -1,6 +1,6 @@
 .cards {
   display: flex;
-  margin-top: -20px;
+  margin-top: -23px;
   width: 100%;
 }
 
@@ -34,7 +34,7 @@
 .cards__img {
   display: flex;
   flex-direction: column-reverse;
-  padding-bottom: 34px;
+  padding-bottom: 33px;
   padding-left: 41px;
   background-repeat: no-repeat;
   background-position: center;
@@ -53,6 +53,10 @@
   &--history {
     width: 100%;
     background-image: url("../img/israel-life-1@2x.png");
+
+    @include max-resolution {
+      background-image: url("../img/israel-life-1.png");
+    }
   }
 
   &--language {
@@ -60,12 +64,20 @@
     padding-left: 22px;
     width: 211px;
     background-image: url("../img/israel-life-2@2x.png");
+
+    @include max-resolution {
+      background-image: url("../img/israel-life-2.png");
+    }
   }
 
   &--profession {
     padding-left: 31px;
     width: 61.965%;
     background-image: url("../img/israel-life-3@2x.png");
+
+    @include max-resolution {
+      background-image: url("../img/israel-life-3.png");
+    }
   }
 
   &--projects {
@@ -75,6 +87,10 @@
     padding-bottom: 32px;
     width: 61%;
     background-image: url("../img/israel-life-4@2x.png");
+
+    @include max-resolution {
+      background-image: url("../img/israel-life-4.png");
+    }
 
     span {
       width: 97%;
@@ -87,6 +103,10 @@
     padding-bottom: 31px;
     width: 32.661%;
     background-image: url("../img/israel-life-5@2x.png");
+
+    @include max-resolution {
+      background-image: url("../img/israel-life-5.png");
+    }
   }
 }
 

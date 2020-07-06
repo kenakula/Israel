@@ -107,6 +107,10 @@
     background-color: rgba($color: $black, $alpha: 0.4);
   }
 
+  &--valid {
+    background-color: rgba($color: $black, $alpha: 0.5);
+  }
+
   &--error {
     margin-bottom: 20px;
     background-color: $input-error;
@@ -173,10 +177,6 @@
 
     &--callback {
       padding: 0;
-
-      input {
-        margin-bottom: 8px;
-      }
     }
 
     input[type="text"],
@@ -206,6 +206,10 @@
           left: 16px;
         }
       }
+    }
+
+    &--callback {
+      width: 100%;
     }
   }
 }

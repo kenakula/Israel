@@ -5,6 +5,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include max-resolution {
+    background-image: url("..//img/details-watercolor.png");
+  }
 }
 
 .contacts__container {
@@ -206,6 +210,7 @@
   .contacts {
     margin-bottom: 53px;
     padding-top: 27px;
+    background-image: none;
   }
 
   .contacts__container {

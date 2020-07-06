@@ -150,6 +150,9 @@
 }
 
 .tabs__description {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: none;
   padding-top: 16px;
   padding-left: 64px;
@@ -201,6 +204,10 @@
   .tabs__list {
     position: relative;
     display: flex;
+  }
+
+  .tabs__contents {
+    min-height: 407px;
   }
 
   .tabs__item {

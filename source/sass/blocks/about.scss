@@ -5,6 +5,10 @@
   background-repeat: no-repeat;
   background-position: -3px 176px;
   background-size: 100%;
+
+  @include max-resolution {
+    background-image: url("../img/about-watercolor.png");
+  }
 }
 
 .about__container {
@@ -20,12 +24,13 @@
   }
 
   p {
-    // TODO не получается пп
+    // TODO кроссбраузерность
     @include typography(17, 29);
 
     margin: 0 auto 47px;
     width: 79.5%;
-    text-align: center;
+    text-align: right;
+    text-align-last: center;
   }
 }
 
@@ -38,6 +43,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include max-resolution {
+    background-image: url("../img/about-video.png");
+  }
 }
 
 .about__video-control {

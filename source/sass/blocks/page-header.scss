@@ -32,7 +32,6 @@
 }
 
 .page-header__button {
-  // TODO сделай подчеркивание линейным градиентом
   @include button-reset;
   @include transition;
   @include user-interaction;
@@ -56,10 +55,6 @@
     height: 100%;
     border-bottom: 2px dashed $black;
   }
-
-  &:hover::before {
-    border-bottom-style: solid;
-  }
 }
 
 @include max-tablet {
@@ -68,7 +63,6 @@
   }
 
   .page-header__container {
-    align-items: flex-start;
     width: 94.894%;
   }
 
@@ -84,6 +78,8 @@
 
   .page-header__phone {
     @include typography(14, 17);
+
+    margin-top: -23px;
   }
 
   .page-header__button {

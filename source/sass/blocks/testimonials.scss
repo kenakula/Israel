@@ -6,6 +6,10 @@
   background-size: 38%, cover;
   background-position: right 3px top 84px, center;
 
+  @include max-resolution {
+    background-image: url("../img/feedback-bg.png"), url("../img/feedback-watercolor.png");
+  }
+
   h2 {
     @include title;
 
@@ -34,6 +38,10 @@
   background-repeat: no-repeat;
   background-position: left top 7px;
   background-size: 31%;
+
+  @include max-resolution {
+    background-image: url("../img/feedback-img.png");
+  }
 
   &--active {
     display: flex;
@@ -140,10 +148,15 @@
 
 @include max-tablet {
   .testimonials {
+    padding-top: 30px;
     padding-bottom: 30px;
     background-image: url("../img/feedback-bg@2x.png");
     background-size: 130%;
     background-position: top 63.5% right -133px;
+
+    @include max-resolution {
+      background-image: url("../img/feedback-bg.png");
+    }
   }
 
   .testimonials__container {

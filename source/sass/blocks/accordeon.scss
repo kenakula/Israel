@@ -100,7 +100,6 @@
   .accordeon__item {
     justify-content: flex-start;
     margin-bottom: 17px;
-    padding: 21px 25px 14px 0;
     min-height: 71px;
 
     &:last-child {
@@ -116,20 +115,20 @@
     h3 {
       @include typography(16, 26);
 
-      padding-left: 25px;
+      padding: 19px 24px 17px 25px;
       width: 100%;
     }
 
     p {
       @include typography(14, 22);
 
-      padding-bottom: 0;
+      padding-bottom: 16px;
       width: 100%;
     }
 
     &--active {
       h3 {
-        padding-bottom: 18px;
+        padding-bottom: 21px;
       }
     }
   }

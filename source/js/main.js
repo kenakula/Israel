@@ -9,11 +9,10 @@
   var STORAGE_NAME_VALUE = 'name';
   var STORAGE_PHONE_NUMBER = 'tel';
   var MIN_NAME_CHARS = 2;
-  var PHONE_NUMBER_MASK = '+7 (999) 999 99 99';
 
   var orderButton = document.querySelector('.page-header__button');
-  var orderModal = document.querySelector('.modal--callback');
-  var successModal = document.querySelector('.modal--success');
+  var orderModal = $('.modal--callback');
+  var successModal = $('.modal--success');
   var scrollButton = document.querySelector('.promo__scroll');
 
   // объект для ошибок при валидации
@@ -94,7 +93,7 @@
   // -------------------------------------- модалки
 
   var closeModal = function (modal) {
-    $(modal).fadeOut(200);
+    modal.fadeOut(200);
     $('body').removeClass('no-scroll');
     document.removeEventListener('keydown', onEscButtonPressCloseModal);
   };
@@ -102,12 +101,12 @@
   var onEscButtonPressCloseModal = function (evt, modal) {
     if (evt.key === ESC_KEY) {
       closeModal(modal);
+      $(document).unbind();
     }
   };
 
   var onOverlayClickCloseModal = function (evt, modal) {
-    var modalInner = $(modal).find('.modal__inner');
-    if (evt.target === modal && evt.target !== modalInner) {
+    if ($(evt.target).hasClass('modal')) {
       closeModal(modal);
     }
   };
@@ -115,32 +114,28 @@
   var showModal = function (modal) {
     var closeButton = $(modal).find('button[name="closeButton"]');
 
-    $(modal).fadeIn(200);
+    modal.fadeIn(200);
     $('body').addClass('no-scroll');
 
     closeButton.click(function () {
       closeModal(modal);
     });
 
-    modal.addEventListener('click', function (evt) {
+    modal.click(function (evt) {
       onOverlayClickCloseModal(evt, modal);
     });
 
-    document.addEventListener('keydown', function (evt) {
+    $(document).bind('keydown', function (evt) {
       onEscButtonPressCloseModal(evt, modal);
     });
   };
 
   var onOrderButtonClickShowModal = function () {
     showModal(orderModal);
-    $(orderModal).find('input[type="text"]').focus();
+    orderModal.find('input[type="text"]').focus();
   };
 
   // -------------------------------------- формы и валидация
-
-  // маска воода телефона
-
-  $(telInputs).mask(PHONE_NUMBER_MASK);
 
   // сбрасывает стили ошибки
   var resetInputError = function (input) {
@@ -154,6 +149,22 @@
     input.parentElement.classList.add('form__inner--error');
   };
 
+  // устанавливает стили валидного ввода
+  var setValidStyle = function (input) {
+    input.parentElement.classList.add('form__inner--valid');
+  };
+
+  // удалаяет стили валидного ввода
+  var resetValidStyle = function (form) {
+    var inputs = form.querySelectorAll('input');
+
+    inputs.forEach(function (it) {
+      if (it.parentElement.classList.contains('form__inner--valid')) {
+        it.parentElement.classList.remove('form__inner--valid');
+      }
+    });
+  };
+
   // валидация номера телефона
   var validateTelNumber = function (input, errorsObj) {
     var value = input.value;
@@ -163,6 +174,7 @@
       errorsObj.tel = 'wrong tel';
     } else {
       resetInputError(input);
+      setValidStyle(input);
       delete errorsObj.tel;
     }
   };
@@ -176,6 +188,7 @@
       errorsObj.name = 'wrong name';
     } else {
       resetInputError(input);
+      setValidStyle(input);
       delete errorsObj.name;
     }
   };
@@ -207,6 +220,7 @@
       evt.preventDefault();
     } else {
       evt.preventDefault();
+      resetValidStyle(evt.target);
       closeModal(orderModal);
       showModal(successModal);
       setLocalStorage(STORAGE_PHONE_NUMBER, getPhoneInputValue(evt.target), user);
@@ -225,10 +239,26 @@
 
     if (!container.classList.contains('form__inner--focused')) {
       container.classList.add('form__inner--focused');
-    } else {
+    }
+
+    if (evt.type === 'focus' && container.classList.contains('form__inner--error')) {
+      container.classList.remove('form__inner--error');
+    }
+  };
+
+  var onInputBlurChangeOutline = function (evt) {
+    var container = evt.target.parentElement;
+    window.vendor.onInputFocusUpdateMask();
+
+    if (container.classList.contains('form__inner--focused')) {
       container.classList.remove('form__inner--focused');
     }
 
+    if (evt.target.type === 'text' && errors.name !== undefined) {
+      container.classList.add('form__inner--error');
+    } else if (evt.target.type === 'tel' && errors.tel !== undefined) {
+      container.classList.add('form__inner--error');
+    }
   };
 
   var onInputHoverChangeOutline = function (evt) {
@@ -296,14 +326,15 @@
 
   // устанавливает активный таб
   var setNewTab = function (currentIndex, newIndex, tabs, contents) {
-    var currentTab = tabs[currentIndex];
-    var currentContent = contents[currentIndex];
+    var currentTab = $(tabs[currentIndex]);
+    var currentContent = $(contents[currentIndex]);
 
-    currentTab.classList.remove('tabs__item--active');
-    tabs[newIndex].classList.add('tabs__item--active');
+    currentTab.removeClass('tabs__item--active');
+    $(tabs[newIndex]).addClass('tabs__item--active');
 
-    currentContent.classList.remove('tabs__description--active');
-    contents[newIndex].classList.add('tabs__description--active');
+    currentContent.removeClass('tabs__description--active');
+    currentContent.fadeOut();
+    $(contents[newIndex]).fadeIn();
   };
 
   var onTabButtonClickContentShow = function (evt) {
@@ -311,9 +342,19 @@
     var newTabIndex = evt.currentTarget.dataset.tab;
 
     setNewTab(activeTabIndex, newTabIndex, tabButtons, tabContents);
+    centerNewTab(evt);
   };
 
-  // TODO центрирование таба в окне при его выборе
+  var centerNewTab = function (evt) {
+    var activeTab = getActiveTab(tabsContainer); // находит активный (новый) таб
+    var tabHalfWidth = evt.currentTarget.clientWidth / 2; // половина ширины таба
+    var screenHalfWidth = document.documentElement.clientWidth / 2; // половина ширины окна
+    var buttonToListEdge = activeTab.getBoundingClientRect().x - tabsList.getBoundingClientRect().x; // расстояние от таба до края списка
+    var buttonToScreenEdge = buttonToListEdge + tabHalfWidth; // расстояние от таба до края окна
+    var shift = screenHalfWidth - buttonToScreenEdge; // смещение относительно центра окна
+
+    tabsList.style.left = shift + 'px';
+  };
 
   // -------------------------------------- слайдер
 
@@ -450,7 +491,7 @@
 
   formInputs.forEach(function (it) {
     it.addEventListener('focus', onInputFocusBlurChangeOutline);
-    it.addEventListener('blur', onInputFocusBlurChangeOutline);
+    it.addEventListener('blur', onInputBlurChangeOutline);
     it.addEventListener('mouseover', onInputHoverChangeOutline);
     it.addEventListener('mouseout', onInputHoverChangeOutline);
   });

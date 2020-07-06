@@ -91,6 +91,12 @@
   }
 }
 
+@mixin max-resolution {
+  @media (max-resolution: $retina) {
+    @content;
+  }
+}
+
 @mixin triangle($direction, $sizeH, $sizeV, $color) {
   content: "";
   display: block;

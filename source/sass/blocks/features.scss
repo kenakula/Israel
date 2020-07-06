@@ -1,15 +1,19 @@
 .features {
-  padding-top: 55px;
+  padding-top: 57px;
   padding-bottom: 158px;
   background-image: url("../img/israel-life-bg@2x.png"), url("../img/israel-life-watercolor@2x.png");
   background-repeat: no-repeat;
   background-size: 6.5%, 100%;
   background-position: right bottom 243px, 0 13px;
 
+  @include max-resolution {
+    background-image: url("../img/israel-life-bg.png"), url("../img/israel-life-watercolor.png");
+  }
+
   h2 {
     @include title;
 
-    margin: 0 auto 23px;
+    margin: 0 auto 25px;
     padding-right: 11px;
     width: 60%;
     text-align: center;
@@ -57,6 +61,7 @@
 
     h2 {
       width: 100%;
+      padding-right: 0;
     }
 
     p {

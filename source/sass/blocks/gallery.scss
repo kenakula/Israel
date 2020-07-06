@@ -1,4 +1,6 @@
 .gallery {
+  display: flex;
+  flex-direction: row-reverse;
   padding: 121px 0 150px;
   margin-bottom: 136px;
   min-height: 583px;
@@ -7,10 +9,14 @@
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover;
+
+  @include max-resolution {
+    background-image: url("../img/gallery-img.jpg");
+  }
 }
 
 .gallery__inner {
-  margin-left: 58.3%;
+  margin-right: 170px;
   width: 29.282%;
 
   h2 {
@@ -90,7 +96,6 @@
     }
 
     p {
-      // TODO цвет выходит за границы изображения! Текст нечитабелен
       @include typography(16, 26);
 
       margin: 0 auto;
@@ -102,6 +107,10 @@
       background-repeat: no-repeat;
       background-size: 200%;
       background-position: left -71px top -32px;
+
+      @include max-resolution {
+        background-image: url("../img/gallery-img.jpg");
+      }
     }
 
     br {

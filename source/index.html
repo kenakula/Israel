@@ -10,7 +10,6 @@
   <title>Israel</title>
   <link rel="preload" href="fonts/fira-sans-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/raleway-extrabold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -664,7 +663,8 @@
         </ul>
         <div class="testimonials__controls">
           <div class="testimonials__pages">
-            <span id="testimonialsCurrent">3</span> / <span id="testimonialsTotal">6</span>
+            <span id="testimonialsCurrent"><span class="visually-hidden">текущий слайд</span>3</span> / <span
+              id="testimonialsTotal"><span class="visually-hidden">текущий слайд</span>6</span>
           </div>
           <div class="testimonials__arrows">
             <button class="testimonials__button testimonials__button--left" id="leftButton" type="button">Листать
@@ -686,7 +686,10 @@
           <div class="contacts__curator curator">
             <div class="curator__avatar">
               <picture>
-                <img src="img/curator-avatar@2x.jpg" width="112" height="112" alt="аватарка куратора">
+                <source srcset="img/curator-avatar.webp 1x, img/curator-avatar@2x.webp 2x" type="image/webp">
+                <!-- 1x: 112, 2x: 224 -->
+                <img src="img/curator-avatar.jpg" srcset="img/curator-avatar@2x.jpg 2x" width="112" height="112"
+                  alt="аватарка куратора">
               </picture>
             </div>
             <div class="curator__contacts">
@@ -730,7 +733,10 @@
         </div>
         <div class="contacts__inner contacts__inner--map">
           <picture>
-            <img src="img/contacts-map@2x.png" width="702" height="408" alt="карта центра">
+            <source srcset="img/contacts-map.webp 1x, img/contacts-map@2x.webp 2x" type="image/webp">
+            <!-- 1x: 702, 2x: 1404 -->
+            <img src="img/contacts-map.png" srcset="img/contacts-map@2x.png 2x" width="702" height="408"
+              alt="карта центра">
           </picture>
         </div>
         <div class="contacts__inner contacts__inner--form">
@@ -806,13 +812,13 @@
       </p>
       <form class="modal__form form form--modal" action="#">
         <div class="form__inner form__inner--name">
-          <label for="name">Имя</label>
-          <input type="text" id="name" placeholder="имя" required>
+          <label for="modalName">Имя</label>
+          <input type="text" name="name" id="modalName" placeholder="имя" required>
           <span>Ошибка: слишком короткое имя</span>
         </div>
         <div class="form__inner form__inner--phone">
-          <label for="phone">Телефон</label>
-          <input type="tel" id="phone" placeholder="телефон" required>
+          <label for="modalPhone">Телефон</label>
+          <input type="tel" name="tel" id="modalPhone" placeholder="телефон" required>
           <span>Ошибка: неверный формат</span>
         </div>
         <button type="submit">перезвоните мне</button>

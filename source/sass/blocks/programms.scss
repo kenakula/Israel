@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 50%;
+
+  @include max-resolution {
+    background-image: url("../img/programms-bg.png");
+  }
 }
 
 .programms__container {

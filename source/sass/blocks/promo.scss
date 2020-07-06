@@ -5,10 +5,14 @@
   margin-top: -100px;
   height: 878px;
   background-color: #debb9a;
-  background-image: url("../img/header-bg-girl.png"), url("../img/header-bg-text@2x.png"), url("../img/header-bg-city@2x.jpg");
+  background-image: url("../img/header-bg-girl@2x.png"), url("../img/header-bg-text@2x.png"), url("../img/header-bg-city@2x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom 100%, center 160px, center;
   background-size: cover, 74.5%, cover;
+
+  @include max-resolution {
+    background-image: url("../img/header-bg-girl.png"), url("../img/header-bg-text.png"), url("../img/header-bg-city.jpg");
+  }
 
   h1 {
     @include typography(24, 29);
@@ -93,6 +97,10 @@
     background-image: url("../img/header-bg-girl-mobile@2x.png"), url("../img/header-bg-text-mobile@2x.png"), url("../img/header-bg-city@2x.jpg");
     background-position: center 3px, center 139px, center;
     background-size: cover, contain, cover;
+
+    @include max-resolution {
+      background-image: url("../img/header-bg-girl-mobile.png"), url("../img/header-bg-text-mobile.png"), url("../img/header-bg-city.jpg");
+    }
 
     h1 {
       @include typography(20, 24);

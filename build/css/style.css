@@ -467,16 +467,11 @@ img {
     width: 100%;
     height: 100%;
     border-bottom: 2px dashed #484848; }
-  .page-header__button:hover::before {
-    border-bottom-style: solid; }
 
 @media (max-width: 767px) {
   .page-header {
     padding: 20px 0 21px; }
   .page-header__container {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     width: 94.894%; }
   .page-header__logo {
     -webkit-box-ordinal-group: 0;
@@ -488,7 +483,8 @@ img {
       height: 42px; }
   .page-header__phone {
     font-size: 0.875rem;
-    line-height: 1.0625rem; }
+    line-height: 1.0625rem;
+    margin-top: -23px; }
   .page-header__button {
     font-size: 1.0625rem;
     line-height: 1rem;
@@ -509,10 +505,13 @@ img {
   margin-top: -100px;
   height: 878px;
   background-color: #debb9a;
-  background-image: url("../img/header-bg-girl.png"), url("../img/header-bg-text@2x.png"), url("../img/header-bg-city@2x.jpg");
+  background-image: url("../img/header-bg-girl@2x.png"), url("../img/header-bg-text@2x.png"), url("../img/header-bg-city@2x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom 100%, center 160px, center;
   background-size: cover, 74.5%, cover; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .promo {
+      background-image: url("../img/header-bg-girl.png"), url("../img/header-bg-text.png"), url("../img/header-bg-city.jpg"); } }
   .promo h1 {
     font-size: 1.5rem;
     line-height: 1.8125rem;
@@ -583,7 +582,12 @@ img {
     margin-top: -54px;
     background-image: url("../img/header-bg-girl-mobile@2x.png"), url("../img/header-bg-text-mobile@2x.png"), url("../img/header-bg-city@2x.jpg");
     background-position: center 3px, center 139px, center;
-    background-size: cover, contain, cover; }
+    background-size: cover, contain, cover; } }
+  @media (max-width: 767px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 767px) and (max-resolution: 1.5dppx) {
+    .promo {
+      background-image: url("../img/header-bg-girl-mobile.png"), url("../img/header-bg-text-mobile.png"), url("../img/header-bg-city.jpg"); } }
+
+@media (max-width: 767px) {
     .promo h1 {
       font-size: 1.25rem;
       line-height: 1.5rem;
@@ -840,6 +844,8 @@ img {
     background: linear-gradient(142.39deg, #ffc341 20.46%, #ffd701 65.31%); }
   .form__inner--hovered {
     background-color: rgba(72, 72, 72, 0.4); }
+  .form__inner--valid {
+    background-color: rgba(72, 72, 72, 0.5); }
   .form__inner--error {
     margin-bottom: 20px;
     background-color: #ff0000; }
@@ -895,8 +901,6 @@ img {
     padding: 10px 0; }
     .form--callback {
       padding: 0; }
-      .form--callback input {
-        margin-bottom: 8px; }
     .form input[type="text"],
     .form input[type="tel"] {
       width: 100%; }
@@ -911,7 +915,9 @@ img {
       left: 12px; }
     .form__inner--consent label::after {
       top: 3px;
-      left: 16px; } }
+      left: 16px; }
+  .form__inner--callback {
+    width: 100%; } }
 
 .about {
   margin-bottom: 23px;
@@ -920,6 +926,9 @@ img {
   background-repeat: no-repeat;
   background-position: -3px 176px;
   background-size: 100%; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .about {
+      background-image: url("../img/about-watercolor.png"); } }
 
 .about__container {
   margin-left: auto;
@@ -945,7 +954,9 @@ img {
     line-height: 1.8125rem;
     margin: 0 auto 47px;
     width: 79.5%;
-    text-align: center; }
+    text-align: right;
+    -moz-text-align-last: center;
+         text-align-last: center; }
 
 .about__video {
   position: relative;
@@ -956,6 +967,9 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .about__video {
+      background-image: url("../img/about-video.png"); } }
 
 .about__video-control {
   display: block;
@@ -1044,6 +1058,9 @@ img {
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 50%; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .programms {
+      background-image: url("../img/programms-bg.png"); } }
 
 .programms__container {
   margin: 0 auto;
@@ -1203,6 +1220,9 @@ img {
           flex-grow: 1; }
 
 .tabs__description {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: none;
   padding-top: 16px;
   padding-left: 64px; }
@@ -1244,6 +1264,8 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .tabs__contents {
+    min-height: 407px; }
   .tabs__item {
     margin-bottom: 0;
     padding-left: 61px;
@@ -1295,8 +1317,11 @@ img {
   padding-bottom: 157px;
   background-image: url("../img/girl-flag@2x.png"), url("../img/wantto-bg@2x.png");
   background-repeat: no-repeat;
-  background-size: contain, 11%;
-  background-position: right -2px top -35px, top 100px left; }
+  background-size: 60%, 11%;
+  background-position: right -1px top -33px, top 100px left; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .callback {
+      background-image: url("../img/girl-flag.png"), url("../img/wantto-bg.png"); } }
   .callback h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
@@ -1306,7 +1331,7 @@ img {
     text-transform: uppercase;
     letter-spacing: -0.8px;
     color: #1fc0fc;
-    margin-bottom: 25px; }
+    margin-bottom: 23px; }
     @media (max-width: 1023px) {
       .callback h2 {
         font-size: 2rem;
@@ -1315,19 +1340,20 @@ img {
     font-size: 1.0625rem;
     line-height: 1.8125rem;
     margin: 0;
-    margin-bottom: 63px;
-    width: 85%;
+    margin-bottom: 64px;
+    width: 79%;
     opacity: 0.87; }
 
 .callback__container {
   margin-left: 15.373%;
+  min-width: 400px;
   width: 34.9%; }
   .callback__container button[type="submit"] {
     position: absolute;
     top: 0;
     right: 0;
     margin: 0;
-    padding: 19px 20px 21px;
+    padding: 19px 20px 20px;
     width: 216px; }
 
 @media (max-width: 767px) {
@@ -1346,6 +1372,7 @@ img {
   .callback__container {
     margin-left: auto;
     margin-right: auto;
+    min-width: auto;
     width: 89.375%; }
     .callback__container button[type="submit"] {
       margin-left: auto;
@@ -1357,8 +1384,11 @@ img {
   padding: 156px 135px 120px 51.1%;
   background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.png"), url("../img/howto-bg@2x.png");
   background-repeat: no-repeat;
-  background-position: left 13px top 135px, 20px -53px, right -2px top 342px;
-  background-size: 42%, 92%, 16%; }
+  background-position: left 12px top 126px, 20px -59px, right -2px top 342px;
+  background-size: 42.5%, 92%, 16%; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .howto {
+      background-image: url("../img/howto-img.png"), url("../img/howto-watercolor.png"), url("../img/howto-bg.png"); } }
   .howto h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
@@ -1473,6 +1503,9 @@ img {
     background-repeat: no-repeat;
     background-position: right -2px top 342px;
     background-size: 16%; } }
+  @media (max-width: 1023px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 1023px) and (max-resolution: 1.5dppx) {
+    .howto {
+      background-image: url("../img/howto-bg.png"); } }
 
 @media (max-width: 767px) {
   .howto {
@@ -1520,12 +1553,15 @@ img {
       left: 9px; } }
 
 .features {
-  padding-top: 55px;
+  padding-top: 57px;
   padding-bottom: 158px;
   background-image: url("../img/israel-life-bg@2x.png"), url("../img/israel-life-watercolor@2x.png");
   background-repeat: no-repeat;
   background-size: 6.5%, 100%;
   background-position: right bottom 243px, 0 13px; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .features {
+      background-image: url("../img/israel-life-bg.png"), url("../img/israel-life-watercolor.png"); } }
   .features h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
@@ -1535,7 +1571,7 @@ img {
     text-transform: uppercase;
     letter-spacing: -0.8px;
     color: #1fc0fc;
-    margin: 0 auto 23px;
+    margin: 0 auto 25px;
     padding-right: 11px;
     width: 60%;
     text-align: center; }
@@ -1573,7 +1609,8 @@ img {
     padding-bottom: 27px;
     background: none; }
     .features h2 {
-      width: 100%; }
+      width: 100%;
+      padding-right: 0; }
     .features p {
       font-size: 1rem;
       line-height: 1.625rem;
@@ -1590,7 +1627,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -20px;
+  margin-top: -23px;
   width: 100%; }
 
 .cards__container {
@@ -1630,7 +1667,7 @@ img {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  padding-bottom: 34px;
+  padding-bottom: 33px;
   padding-left: 41px;
   background-repeat: no-repeat;
   background-position: center;
@@ -1646,15 +1683,24 @@ img {
   .cards__img--history {
     width: 100%;
     background-image: url("../img/israel-life-1@2x.png"); }
+    @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+      .cards__img--history {
+        background-image: url("../img/israel-life-1.png"); } }
   .cards__img--language {
     margin-right: 27px;
     padding-left: 22px;
     width: 211px;
     background-image: url("../img/israel-life-2@2x.png"); }
+    @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+      .cards__img--language {
+        background-image: url("../img/israel-life-2.png"); } }
   .cards__img--profession {
     padding-left: 31px;
     width: 61.965%;
     background-image: url("../img/israel-life-3@2x.png"); }
+    @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+      .cards__img--profession {
+        background-image: url("../img/israel-life-3.png"); } }
   .cards__img--projects {
     margin-top: 28px;
     margin-right: 28px;
@@ -1662,6 +1708,9 @@ img {
     padding-bottom: 32px;
     width: 61%;
     background-image: url("../img/israel-life-4@2x.png"); }
+    @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+      .cards__img--projects {
+        background-image: url("../img/israel-life-4.png"); } }
     .cards__img--projects span {
       width: 97%; }
   .cards__img--leadership {
@@ -1670,6 +1719,9 @@ img {
     padding-bottom: 31px;
     width: 32.661%;
     background-image: url("../img/israel-life-5@2x.png"); }
+    @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+      .cards__img--leadership {
+        background-image: url("../img/israel-life-5.png"); } }
 
 .cards__controls {
   display: none; }
@@ -1756,6 +1808,13 @@ img {
       background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); } }
 
 .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   padding: 121px 0 150px;
   margin-bottom: 136px;
   min-height: 583px;
@@ -1764,9 +1823,12 @@ img {
   background-repeat: no-repeat;
   background-position: left center;
   background-size: cover; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .gallery {
+      background-image: url("../img/gallery-img.jpg"); } }
 
 .gallery__inner {
-  margin-left: 58.3%;
+  margin-right: 170px;
   width: 29.282%; }
   .gallery__inner h2 {
     font-size: 2.5rem;
@@ -1843,7 +1905,12 @@ img {
       background-image: url("../img/gallery-img@2x.jpg");
       background-repeat: no-repeat;
       background-size: 200%;
-      background-position: left -71px top -32px; }
+      background-position: left -71px top -32px; } }
+    @media (max-width: 767px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 767px) and (max-resolution: 1.5dppx) {
+      .gallery__inner p {
+        background-image: url("../img/gallery-img.jpg"); } }
+
+@media (max-width: 767px) {
     .gallery__inner br {
       display: block; }
   .gallery__button {
@@ -1860,6 +1927,9 @@ img {
   background-size: 47%, 11.3%, cover;
   background-position: right top, bottom left, center;
   background-repeat: no-repeat; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .faq {
+      background-image: url("../img/faq-img.png"), url("../img/faq-bg.png"), url("../img/faq-watercolor.png"); } }
 
 .faq__container {
   margin-left: auto;
@@ -1882,7 +1952,12 @@ img {
 @media (max-width: 1023px) {
   .faq {
     background-image: url("../img/faq-bg@2x.png");
-    background-position: bottom left; }
+    background-position: bottom left; } }
+  @media (max-width: 1023px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 1023px) and (max-resolution: 1.5dppx) {
+    .faq {
+      background-image: url("../img/faq-bg.png"); } }
+
+@media (max-width: 1023px) {
   .faq__container {
     margin: 0 auto;
     width: 80%; }
@@ -1891,7 +1966,7 @@ img {
 
 @media (max-width: 767px) {
   .faq {
-    padding-bottom: 54px;
+    padding-bottom: 50px;
     background-position: bottom 117px left -5px; }
   .faq__container {
     width: 90%; } }
@@ -1996,7 +2071,6 @@ img {
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-bottom: 17px;
-    padding: 21px 25px 14px 0;
     min-height: 71px; }
     .accordeon__item:last-child h3 {
       width: 79%; }
@@ -2005,15 +2079,15 @@ img {
     .accordeon__item h3 {
       font-size: 1rem;
       line-height: 1.625rem;
-      padding-left: 25px;
+      padding: 19px 24px 17px 25px;
       width: 100%; }
     .accordeon__item p {
       font-size: 0.875rem;
       line-height: 1.375rem;
-      padding-bottom: 0;
+      padding-bottom: 16px;
       width: 100%; }
     .accordeon__item--active h3 {
-      padding-bottom: 18px; }
+      padding-bottom: 21px; }
   .accordeon__button {
     top: 30px;
     right: -2px; } }
@@ -2025,6 +2099,9 @@ img {
   background-repeat: no-repeat;
   background-size: 38%, cover;
   background-position: right 3px top 84px, center; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .testimonials {
+      background-image: url("../img/feedback-bg.png"), url("../img/feedback-watercolor.png"); } }
   .testimonials h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
@@ -2064,6 +2141,9 @@ img {
   background-repeat: no-repeat;
   background-position: left top 7px;
   background-size: 31%; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .testimonials__item {
+      background-image: url("../img/feedback-img.png"); } }
   .testimonials__item--active {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2161,10 +2241,16 @@ img {
 
 @media (max-width: 767px) {
   .testimonials {
+    padding-top: 30px;
     padding-bottom: 30px;
     background-image: url("../img/feedback-bg@2x.png");
     background-size: 130%;
-    background-position: top 63.5% right -133px; }
+    background-position: top 63.5% right -133px; } }
+  @media (max-width: 767px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 767px) and (max-resolution: 1.5dppx) {
+    .testimonials {
+      background-image: url("../img/feedback-bg.png"); } }
+
+@media (max-width: 767px) {
   .testimonials__container {
     position: relative;
     width: 90%; }
@@ -2257,6 +2343,9 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
+    .contacts {
+      background-image: url("..//img/details-watercolor.png"); } }
 
 .contacts__container {
   display: -webkit-box;
@@ -2434,7 +2523,8 @@ img {
 @media (max-width: 767px) {
   .contacts {
     margin-bottom: 53px;
-    padding-top: 27px; }
+    padding-top: 27px;
+    background-image: none; }
   .contacts__container {
     display: block;
     width: 100%; }

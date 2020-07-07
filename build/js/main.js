@@ -90,6 +90,8 @@
     });
   };
 
+  // TODO scroll block
+
   // -------------------------------------- модалки
 
   var closeModal = function (modal) {
@@ -248,7 +250,6 @@
 
   var onInputBlurChangeOutline = function (evt) {
     var container = evt.target.parentElement;
-    window.vendor.onInputFocusUpdateMask();
 
     if (container.classList.contains('form__inner--focused')) {
       container.classList.remove('form__inner--focused');

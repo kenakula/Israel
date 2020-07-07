@@ -46,6 +46,7 @@
   padding-left: 51px;
   width: 230px;
   fill: $white;
+  text-decoration: none;
 
   svg {
     position: absolute;
@@ -103,13 +104,13 @@
       padding: 22% 7% 15.5%;
       width: 100%;
       text-align: left;
-      background-image: url("../img/gallery-img@2x.jpg");
+      background-image: url("../img/gallery-img-mobile@2x.jpg");
       background-repeat: no-repeat;
-      background-size: 200%;
-      background-position: left -71px top -32px;
+      background-size: cover;
+      background-position: center -31px;
 
       @include max-resolution {
-        background-image: url("../img/gallery-img.jpg");
+        background-image: url("../img/gallery-img-mobile.jpg");
       }
     }
 

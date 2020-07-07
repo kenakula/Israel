@@ -580,12 +580,12 @@ img {
   .promo {
     height: 591px;
     margin-top: -54px;
-    background-image: url("../img/header-bg-girl-mobile@2x.png"), url("../img/header-bg-text-mobile@2x.png"), url("../img/header-bg-city@2x.jpg");
+    background-image: url("../img/header-bg-girl-mobile@2x.png"), url("../img/header-bg-text-mobile@2x.png"), url("../img/header-bg-city-mobile@2x.jpg");
     background-position: center 3px, center 139px, center;
     background-size: cover, contain, cover; } }
   @media (max-width: 767px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 767px) and (max-resolution: 1.5dppx) {
     .promo {
-      background-image: url("../img/header-bg-girl-mobile.png"), url("../img/header-bg-text-mobile.png"), url("../img/header-bg-city.jpg"); } }
+      background-image: url("../img/header-bg-girl-mobile.png"), url("../img/header-bg-text-mobile.png"), url("../img/header-bg-city-mobile.jpg"); } }
 
 @media (max-width: 767px) {
     .promo h1 {
@@ -657,7 +657,7 @@ img {
     .modal__inner--success p {
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 31px;
+      margin-bottom: 33px;
       padding: 0;
       width: 78%;
       text-align: center; }
@@ -717,11 +717,12 @@ img {
     .modal__inner h2 {
       font-size: 1.5rem;
       line-height: 1.8125rem;
-      padding-left: 40px;
-      letter-spacing: 0.9px; }
+      margin-bottom: 18px;
+      padding-left: 40px; }
     .modal__inner p {
       font-size: 0.875rem;
       line-height: 1.375rem;
+      margin-bottom: 21px;
       padding: 0;
       text-align: center; }
     .modal__inner br {
@@ -731,6 +732,7 @@ img {
       .modal__inner--success h2 {
         padding: 0; }
       .modal__inner--success p {
+        margin-bottom: 31px;
         width: 95%; }
       .modal__inner--success .modal__button {
         width: 92%; }
@@ -746,10 +748,8 @@ img {
     position: relative;
     padding: 0; }
   .form label {
-    display: none;
+    display: block;
     cursor: pointer; }
-    .form label[for="consent"] {
-      display: block; }
   .form input[type="text"],
   .form input[type="tel"] {
     position: relative;
@@ -907,6 +907,8 @@ img {
     .form button[type="submit"] {
       width: 91.666%;
       margin-top: 24px; }
+    .form--modal .form__inner {
+      width: 100%; }
   .form__inner--consent label {
     padding-left: 37px;
     width: 100%; }
@@ -1032,8 +1034,14 @@ img {
       text-align: left; }
   .about__video {
     min-height: 224px;
-    background-position: -176px -36px;
-    background-size: 181%; }
+    background-image: url("../../img/about-video-mobile@2x.png");
+    background-position: center;
+    background-size: cover; } }
+  @media (max-width: 767px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 767px) and (max-resolution: 1.5dppx) {
+    .about__video {
+      background-image: url("../../img/about-video-mobile.png"); } }
+
+@media (max-width: 767px) {
   .about__video-control {
     top: 41.5%;
     margin-left: -26px;
@@ -1359,7 +1367,8 @@ img {
 @media (max-width: 767px) {
   .callback {
     padding: 32px 0 317px;
-    background-size: 132%, 34%;
+    background-image: url("../img/girl-flag-mobile@2x.png"), url("../img/wantto-bg@2x.png");
+    background-size: 100%, 34%;
     background-position: center bottom 10px, left -7px top -19px; }
     .callback h2 {
       margin-bottom: 24px;
@@ -1418,12 +1427,12 @@ img {
       color: rgba(72, 72, 72, 0.5); }
       .howto p:last-of-type::before {
         content: "";
+        display: block;
         position: absolute;
-        top: 0;
         left: -1px;
         display: block;
         width: 4px;
-        height: 42px;
+        height: 100%;
         background-color: #ffc341; }
   .howto em {
     font-size: 1.0625rem;
@@ -1860,7 +1869,8 @@ img {
   position: relative;
   padding-left: 51px;
   width: 230px;
-  fill: #ffffff; }
+  fill: #ffffff;
+  text-decoration: none; }
   .gallery__button svg {
     position: absolute;
     top: 18px;
@@ -1902,13 +1912,13 @@ img {
       padding: 22% 7% 15.5%;
       width: 100%;
       text-align: left;
-      background-image: url("../img/gallery-img@2x.jpg");
+      background-image: url("../img/gallery-img-mobile@2x.jpg");
       background-repeat: no-repeat;
-      background-size: 200%;
-      background-position: left -71px top -32px; } }
+      background-size: cover;
+      background-position: center -31px; } }
     @media (max-width: 767px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 767px) and (max-resolution: 1.5dppx) {
       .gallery__inner p {
-        background-image: url("../img/gallery-img.jpg"); } }
+        background-image: url("../img/gallery-img-mobile.jpg"); } }
 
 @media (max-width: 767px) {
     .gallery__inner br {
@@ -2058,8 +2068,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  cursor: pointer;
-  outline: none; }
+  cursor: pointer; }
 
 @media (max-width: 1023px) {
   .accordeon {
@@ -2231,8 +2240,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  cursor: pointer;
-  outline: none; }
+  cursor: pointer; }
   .testimonials__button:last-child {
     margin-right: 0; }
   .testimonials__button--left {
@@ -2260,8 +2268,14 @@ img {
       изображение решено не масштабировать под ширину экрана и задать размер в px
     */
     padding: 401px 0 0;
+    background-image: url("../img/feedback-img-mobile@2x.png");
     background-position: center top 24px;
-    background-size: 242px; }
+    background-size: 242px; } }
+  @media (max-width: 767px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 767px) and (max-resolution: 1.5dppx) {
+    .testimonials__item {
+      background-image: url("../img/feedback-img-mobile.png"); } }
+
+@media (max-width: 767px) {
   .testimonials__header {
     margin-bottom: 23px; }
     .testimonials__header p {
@@ -2306,6 +2320,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
@@ -2671,8 +2687,8 @@ img {
     color: rgba(72, 72, 72, 0.5); }
 
 .page-footer__socials {
-  margin-right: 5px;
-  width: 110px; }
+  width: 110px;
+  margin-right: 5px; }
 
 @media (max-width: 767px) {
   .page-footer {

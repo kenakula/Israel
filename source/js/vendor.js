@@ -15744,12 +15744,4 @@
     lazy: true,
   });
 
-  var onInputFocusUpdateMask = function () {
-    mask.updateValue();
-  };
-
-  window.vendor = {
-    onInputFocusUpdateMask: onInputFocusUpdateMask,
-  }
-
 })();

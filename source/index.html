@@ -262,12 +262,12 @@
           и
           путешествиях<br> в Израиле.
         </p>
-        <button class="gallery__button button">
+        <a href="#" class="gallery__button button">
           <svg width="19.2" height="19.2">
             <use xlink:href="#icon-insta"></use>
           </svg>
           смотреть фото
-        </button>
+        </a>
       </div>
     </section>
     <!-- faq -->
@@ -379,7 +379,7 @@
                 <ul class="socials__list">
                   <li class="socials__item socials__item--fb">
                     <a href="#" class="socials__link" aria-label="профиль в фейсбук">
-                      <svg width="24" height="24">
+                      <svg width="11" height="24">
                         <use xlink:href="#icon-fb"></use>
                       </svg>
                     </a>
@@ -431,7 +431,7 @@
                 <ul class="socials__list">
                   <li class="socials__item socials__item--fb">
                     <a href="#" class="socials__link" aria-label="профиль в фейсбук">
-                      <svg width="24" height="24">
+                      <svg width="11" height="24">
                         <use xlink:href="#icon-fb"></use>
                       </svg>
                     </a>
@@ -482,7 +482,7 @@
                 <ul class="socials__list">
                   <li class="socials__item socials__item--fb">
                     <a href="#" class="socials__link" aria-label="профиль в фейсбук">
-                      <svg width="24" height="24">
+                      <svg width="11" height="24">
                         <use xlink:href="#icon-fb"></use>
                       </svg>
                     </a>
@@ -534,7 +534,7 @@
                 <ul class="socials__list">
                   <li class="socials__item socials__item--fb">
                     <a href="#" class="socials__link" aria-label="профиль в фейсбук">
-                      <svg width="24" height="24">
+                      <svg width="11" height="24">
                         <use xlink:href="#icon-fb"></use>
                       </svg>
                     </a>
@@ -586,7 +586,7 @@
                 <ul class="socials__list">
                   <li class="socials__item socials__item--fb">
                     <a href="#" class="socials__link" aria-label="профиль в фейсбук">
-                      <svg width="24" height="24">
+                      <svg width="11" height="24">
                         <use xlink:href="#icon-fb"></use>
                       </svg>
                     </a>
@@ -635,7 +635,7 @@
                 <ul class="socials__list">
                   <li class="socials__item socials__item--fb">
                     <a href="#" class="socials__link" aria-label="профиль в фейсбук">
-                      <svg width="24" height="24">
+                      <svg width="11" height="24">
                         <use xlink:href="#icon-fb"></use>
                       </svg>
                     </a>
@@ -701,7 +701,7 @@
                 <ul class="socials__list">
                   <li class="socials__item socials__item--fb">
                     <a href="#" class="socials__link" aria-label="связаться с куратором в фейсбук">
-                      <svg width="24" height="24">
+                      <svg width="11" height="24">
                         <use xlink:href="#icon-fb"></use>
                       </svg>
                     </a>
@@ -745,12 +745,12 @@
               Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
             </p>
             <div class="form__inner form__inner--name">
-              <label for="contactsName">имя</label>
+              <label class="visually-hidden" for="contactsName">имя</label>
               <input type="text" id="contactsName" placeholder="имя" required>
               <span>Ошибка: слишком короткое имя</span>
             </div>
             <div class="form__inner form__inner--phone">
-              <label for="contactsPhone">телефон</label>
+              <label class="visually-hidden" for="contactsPhone">телефон</label>
               <input type="tel" id="contactsPhone" placeholder="телефон" required>
               <span>Ошибка: неверный формат</span>
             </div>
@@ -773,7 +773,30 @@
         <ul class="socials__list">
           <li class="socials__item socials__item--fb">
             <a href="#" class="socials__link" aria-label="мы в фейсбук">
+              <svg width="11" height="24">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="socials__item socials__item--tw">
+            <a href="#" class="socials__link" aria-label="мы в твиттер">
               <svg width="24" height="24">
+                <use xlink:href="#icon-tw"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="socials__item socials__item--insta">
+            <a href="#" class="socials__link" aria-label="мы в инстаграм">
+              <svg width="24" height="24">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item socials__item--fb">
+            <a href="#" class="socials__link" aria-label="мы в фейсбук">
+              <svg width="11" height="24">
                 <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
@@ -812,12 +835,12 @@
       </p>
       <form class="modal__form form form--modal" action="#">
         <div class="form__inner form__inner--name">
-          <label for="modalName">Имя</label>
+          <label class="visually-hidden" for="modalName">Имя</label>
           <input type="text" name="name" id="modalName" placeholder="имя" required>
           <span>Ошибка: слишком короткое имя</span>
         </div>
         <div class="form__inner form__inner--phone">
-          <label for="modalPhone">Телефон</label>
+          <label class="visually-hidden" for="modalPhone">Телефон</label>
           <input type="tel" name="tel" id="modalPhone" placeholder="телефон" required>
           <span>Ошибка: неверный формат</span>
         </div>
@@ -838,7 +861,7 @@
       <p>
         Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
       </p>
-      <button class="modal__button button" name="closeButton" type="button">Понятно</button>
+      <button class="modal__button button" name="closeButton" type="button">понятно</button>
     </div>
   </section>
 

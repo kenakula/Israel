@@ -44,7 +44,8 @@
 @include max-tablet {
   .callback {
     padding: 32px 0 317px;
-    background-size: 132%, 34%;
+    background-image: url("../img/girl-flag-mobile@2x.png"), url("../img/wantto-bg@2x.png");
+    background-size: 100%, 34%;
     background-position: center bottom 10px, left -7px top -19px;
 
     h2 {

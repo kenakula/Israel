@@ -135,7 +135,6 @@
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  outline: none;
 
   &:last-child {
     margin-right: 0;
@@ -170,8 +169,13 @@
       изображение решено не масштабировать под ширину экрана и задать размер в px
     */
     padding: 401px 0 0;
+    background-image: url("../img/feedback-img-mobile@2x.png");
     background-position: center top 24px;
     background-size: 242px;
+
+    @include max-resolution {
+      background-image: url("../img/feedback-img-mobile.png");
+    }
   }
 
   .testimonials__header {

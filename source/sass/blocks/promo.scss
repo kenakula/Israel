@@ -94,12 +94,12 @@
   .promo {
     height: 591px;
     margin-top: -54px;
-    background-image: url("../img/header-bg-girl-mobile@2x.png"), url("../img/header-bg-text-mobile@2x.png"), url("../img/header-bg-city@2x.jpg");
+    background-image: url("../img/header-bg-girl-mobile@2x.png"), url("../img/header-bg-text-mobile@2x.png"), url("../img/header-bg-city-mobile@2x.jpg");
     background-position: center 3px, center 139px, center;
     background-size: cover, contain, cover;
 
     @include max-resolution {
-      background-image: url("../img/header-bg-girl-mobile.png"), url("../img/header-bg-text-mobile.png"), url("../img/header-bg-city.jpg");
+      background-image: url("../img/header-bg-girl-mobile.png"), url("../img/header-bg-text-mobile.png"), url("../img/header-bg-city-mobile.jpg");
     }
 
     h1 {

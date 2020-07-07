@@ -60,7 +60,7 @@
     p {
       @include push-auto;
 
-      margin-bottom: 31px;
+      margin-bottom: 33px;
       padding: 0;
       width: 78%;
       text-align: center;
@@ -125,13 +125,14 @@
     h2 {
       @include typography(24, 29);
 
+      margin-bottom: 18px;
       padding-left: 40px;
-      letter-spacing: 0.9px;
     }
 
     p {
       @include typography(14, 22);
 
+      margin-bottom: 21px;
       padding: 0;
       text-align: center;
     }
@@ -148,6 +149,7 @@
       }
 
       p {
+        margin-bottom: 31px;
         width: 95%;
       }
 

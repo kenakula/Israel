@@ -120,8 +120,13 @@
 
   .about__video {
     min-height: 224px;
-    background-position: -176px -36px;
-    background-size: 181%;
+    background-image: url("../../img/about-video-mobile@2x.png");
+    background-position: center;
+    background-size: cover;
+
+    @include max-resolution {
+      background-image: url("../../img/about-video-mobile.png");
+    }
   }
 
   .about__video-control {

@@ -359,6 +359,8 @@ body {
   color: #484848;
   background-color: #ffffff;
   overflow-x: hidden; }
+  body .lazy {
+    background-image: none; }
 
 img {
   display: block; }
@@ -924,13 +926,13 @@ img {
 .about {
   margin-bottom: 23px;
   padding: 17px 0 130px;
-  background-image: url("../img/about-watercolor@2x.png");
+  background-image: url("../img/about-watercolor@2x.jpg");
   background-repeat: no-repeat;
   background-position: -3px 176px;
   background-size: 100%; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
     .about {
-      background-image: url("../img/about-watercolor.png"); } }
+      background-image: url("../img/about-watercolor.jpg"); } }
 
 .about__container {
   margin-left: auto;
@@ -1391,13 +1393,13 @@ img {
 
 .howto {
   padding: 156px 135px 120px 51.1%;
-  background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.png"), url("../img/howto-bg@2x.png");
+  background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.jpg"), url("../img/howto-bg@2x.png");
   background-repeat: no-repeat;
   background-position: left 12px top 126px, 20px -59px, right -2px top 342px;
   background-size: 42.5%, 92%, 16%; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
     .howto {
-      background-image: url("../img/howto-img.png"), url("../img/howto-watercolor.png"), url("../img/howto-bg.png"); } }
+      background-image: url("../img/howto-img.png"), url("../img/howto-watercolor.jpg"), url("../img/howto-bg.png"); } }
   .howto h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
@@ -1564,13 +1566,13 @@ img {
 .features {
   padding-top: 57px;
   padding-bottom: 158px;
-  background-image: url("../img/israel-life-bg@2x.png"), url("../img/israel-life-watercolor@2x.png");
+  background-image: url("../img/israel-life-bg@2x.png"), url("../img/israel-life-watercolor@2x.jpg");
   background-repeat: no-repeat;
   background-size: 6.5%, 100%;
   background-position: right bottom 243px, 0 13px; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
     .features {
-      background-image: url("../img/israel-life-bg.png"), url("../img/israel-life-watercolor.png"); } }
+      background-image: url("../img/israel-life-bg.png"), url("../img/israel-life-watercolor.jpg"); } }
   .features h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
@@ -1933,13 +1935,13 @@ img {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 129px;
-  background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png"), url("../img/faq-watercolor@2x.png");
+  background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png"), url("../img/faq-watercolor@2x.jpg");
   background-size: 47%, 11.3%, cover;
   background-position: right top, bottom left, center;
   background-repeat: no-repeat; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
     .faq {
-      background-image: url("../img/faq-img.png"), url("../img/faq-bg.png"), url("../img/faq-watercolor.png"); } }
+      background-image: url("../img/faq-img.png"), url("../img/faq-bg.png"), url("../img/faq-watercolor.jpg"); } }
 
 .faq__container {
   margin-left: auto;
@@ -2146,13 +2148,13 @@ img {
   padding-right: 7.4%;
   min-height: 485px;
   color: rgba(72, 72, 72, 0.74);
-  background-image: url("../img/feedback-img@2x.png");
+  background-image: url("../img/feedback-img@2x.jpg");
   background-repeat: no-repeat;
   background-position: left top 7px;
   background-size: 31%; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
     .testimonials__item {
-      background-image: url("../img/feedback-img.png"); } }
+      background-image: url("../img/feedback-img.jpg"); } }
   .testimonials__item--active {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2268,12 +2270,12 @@ img {
       изображение решено не масштабировать под ширину экрана и задать размер в px
     */
     padding: 401px 0 0;
-    background-image: url("../img/feedback-img-mobile@2x.png");
+    background-image: url("../img/feedback-img-mobile@2x.jpg");
     background-position: center top 24px;
     background-size: 242px; } }
   @media (max-width: 767px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 767px) and (max-resolution: 1.5dppx) {
     .testimonials__item {
-      background-image: url("../img/feedback-img-mobile.png"); } }
+      background-image: url("../img/feedback-img-mobile.jpg"); } }
 
 @media (max-width: 767px) {
   .testimonials__header {

@@ -1,12 +1,12 @@
 .howto {
   padding: 156px 135px 120px 51.1%;
-  background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.png"), url("../img/howto-bg@2x.png");
+  background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.jpg"), url("../img/howto-bg@2x.png");
   background-repeat: no-repeat;
   background-position: left 12px top 126px, 20px -59px, right -2px top 342px;
   background-size: 42.5%, 92%, 16%;
 
   @include max-resolution {
-    background-image: url("../img/howto-img.png"), url("../img/howto-watercolor.png"), url("../img/howto-bg.png");
+    background-image: url("../img/howto-img.png"), url("../img/howto-watercolor.jpg"), url("../img/howto-bg.png");
   }
 
   h2 {

@@ -1,13 +1,13 @@
 .features {
   padding-top: 57px;
   padding-bottom: 158px;
-  background-image: url("../img/israel-life-bg@2x.png"), url("../img/israel-life-watercolor@2x.png");
+  background-image: url("../img/israel-life-bg@2x.png"), url("../img/israel-life-watercolor@2x.jpg");
   background-repeat: no-repeat;
   background-size: 6.5%, 100%;
   background-position: right bottom 243px, 0 13px;
 
   @include max-resolution {
-    background-image: url("../img/israel-life-bg.png"), url("../img/israel-life-watercolor.png");
+    background-image: url("../img/israel-life-bg.png"), url("../img/israel-life-watercolor.jpg");
   }
 
   h2 {

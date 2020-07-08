@@ -39,6 +39,10 @@ body {
   color: $black;
   background-color: $white;
   overflow-x: hidden;
+
+  .lazy {
+    background-image: none;
+  }
 }
 
 img {

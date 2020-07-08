@@ -34,13 +34,13 @@
   padding-right: 7.4%;
   min-height: 485px;
   color: rgba($color: $black, $alpha: 0.74);
-  background-image: url("../img/feedback-img@2x.png");
+  background-image: url("../img/feedback-img@2x.jpg");
   background-repeat: no-repeat;
   background-position: left top 7px;
   background-size: 31%;
 
   @include max-resolution {
-    background-image: url("../img/feedback-img.png");
+    background-image: url("../img/feedback-img.jpg");
   }
 
   &--active {
@@ -169,12 +169,12 @@
       изображение решено не масштабировать под ширину экрана и задать размер в px
     */
     padding: 401px 0 0;
-    background-image: url("../img/feedback-img-mobile@2x.png");
+    background-image: url("../img/feedback-img-mobile@2x.jpg");
     background-position: center top 24px;
     background-size: 242px;
 
     @include max-resolution {
-      background-image: url("../img/feedback-img-mobile.png");
+      background-image: url("../img/feedback-img-mobile.jpg");
     }
   }
 

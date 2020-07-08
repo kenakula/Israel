@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row-reverse;
   padding: 121px 0 150px;
-  margin-bottom: 136px;
+  margin-bottom: 55px;
   min-height: 583px;
   background-color: #c2a1b2;
   background-image: url("../img/gallery-img@2x.jpg");
@@ -80,7 +80,7 @@
 
 @include max-tablet {
   .gallery {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     padding-top: 51px;
     padding-bottom: 20px;
     min-height: auto;

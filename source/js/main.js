@@ -184,7 +184,8 @@
     });
   };
 
-  var onOrderButtonClickShowModal = function () {
+  var onOrderButtonClickShowModal = function (evt) {
+    evt.preventDefault();
     showModal(orderModal);
     orderModal.find('input[type="text"]').focus();
   };

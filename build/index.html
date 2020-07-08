@@ -23,7 +23,7 @@
       <a class="page-header__logo">
         <img src="img/header-logo.svg" width="137" height="48" alt="логотип компании">
       </a>
-      <button class="page-header__button" type="button">заказать звонок</button>
+      <a href="#contactsForm" class="page-header__button">заказать звонок</a>
     </div>
   </header>
   <main class="page-main">
@@ -171,29 +171,29 @@
         </form>
       </div>
     </section>
-    <!-- howto -->
-    <section class="howto lazy">
-      <div class="howto__container">
+    <!-- how-to -->
+    <section class="how-to lazy">
+      <div class="how-to__container">
         <h2>Как поехать</h2>
         <p>
           Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения
           о доступных программах и городах, в которых можете пройти программу.
         </p>
         <em>Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</em>
-        <ul class="howto__list">
-          <li class="howto__item">
+        <ul class="how-to__list">
+          <li class="how-to__item">
             Быть в возрасте от 16 до 30 лет
           </li>
 
-          <li class="howto__item">
+          <li class="how-to__item">
             Иметь оконченное среднее образование
           </li>
 
-          <li class="howto__item">
+          <li class="how-to__item">
             Иметь документально подтверждённые еврейские корни и пройти консульскую проверку
           </li>
 
-          <li class="howto__item">
+          <li class="how-to__item">
             За последние 2 года быть не больше 3х месяцев
             подряд непрерывно в Израиле.
           </li>
@@ -262,7 +262,7 @@
           путешествиях<br> в Израиле.
         </p>
         <a href="#" class="gallery__button button">
-          <svg width="19.2" height="19.2">
+          <svg width="19" height="19">
             <use xlink:href="#icon-insta"></use>
           </svg>
           смотреть фото
@@ -276,7 +276,7 @@
         <div class="faq__accordeon accordeon">
           <ul class="accordeon__list">
             <li class="accordeon__item">
-              <button class="accordeon__button" data-content="0">
+              <button class="accordeon__button" type="button" data-content="0">
                 <span class="visually-hidden">Раскрыть содержимое</span>
               </button>
               <h3 data-content="0">Кто организатор? Какие сроки у программы?</h3>
@@ -287,7 +287,7 @@
             </li>
 
             <li class="accordeon__item">
-              <button class="accordeon__button" data-content="1">
+              <button class="accordeon__button" type="button" data-content="1">
                 <span class="visually-hidden">Раскрыть содержимое</span>
               </button>
               <h3 data-content="1">Что такое грант на обучение?</h3>
@@ -299,7 +299,7 @@
             </li>
 
             <li class="accordeon__item accordeon__item--active">
-              <button class="accordeon__button" data-content="2">
+              <button class="accordeon__button" type="button" data-content="2">
                 <span class="visually-hidden">Раскрыть содержимое</span>
               </button>
               <h3 data-content="2">Как определяется стоимость программы?</h3>
@@ -311,7 +311,7 @@
             </li>
 
             <li class="accordeon__item">
-              <button class="accordeon__button" data-content="3">
+              <button class="accordeon__button" type="button" data-content="3">
                 <span class="visually-hidden">Раскрыть содержимое</span>
               </button>
               <h3 data-content="3">Что такое грант на обучение?</h3>
@@ -322,7 +322,7 @@
             </li>
 
             <li class="accordeon__item accordeon__item--narrow">
-              <button class="accordeon__button" data-content="4">
+              <button class="accordeon__button" type="button" data-content="4">
                 <span class="visually-hidden">Раскрыть содержимое</span>
               </button>
               <h3 data-content="4">Признаётся ли учеба в рамках проекта для дальнейшего обучения?</h3>
@@ -333,7 +333,7 @@
             </li>
 
             <li class="accordeon__item accordeon__item--narrow">
-              <button class="accordeon__button" data-content="5">
+              <button class="accordeon__button" type="button" data-content="5">
                 <span class="visually-hidden">Раскрыть содержимое</span>
               </button>
               <h3 data-content="5">Как выглдядит полный процесс регистрации на программу «Маса»?</h3>
@@ -679,7 +679,7 @@
         <h2>Узнать подробности</h2>
         <div class="contacts__inner contacts__inner--curator">
           <p>
-            Ваш город: <span class="contacts__hometown">новосибирск</span>
+            Ваш город: <button type="button" class="contacts__hometown">новосибирск</button>
           </p>
           <div class="contacts__curator curator">
             <div class="curator__avatar">
@@ -732,10 +732,10 @@
           <picture>
             <source srcset="img/contacts-map.webp 1x, img/contacts-map@2x.webp 2x" type="image/webp">
             <!-- 1x: 702, 2x: 1404 -->
-            <img src="img/contacts-map.png" srcset="img/contacts-map@2x.png 2x" width="702" height="408" alt="карта центра" loading="lazy">
+            <img src="img/contacts-map.png" srcset="img/contacts-map@2x.png 2x" width="702" height="408" alt="Расположение культурного центра Бейт Менахем на карте по адресу: город Новосибирск, ул. Щетинкина 68" loading="lazy">
           </picture>
         </div>
-        <div class="contacts__inner contacts__inner--form">
+        <div class="contacts__inner contacts__inner--form" id="contactsForm">
           <form action="#" class="contacts__form form">
             <p>
               Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
@@ -767,29 +767,6 @@
       <p>Copyright someDesignCompany ©2019</p>
       <div class="page-footer__socials socials">
         <ul class="socials__list">
-          <li class="socials__item socials__item--fb">
-            <a href="#" class="socials__link" aria-label="мы в фейсбук">
-              <svg width="11" height="24">
-                <use xlink:href="#icon-fb"></use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="socials__item socials__item--tw">
-            <a href="#" class="socials__link" aria-label="мы в твиттер">
-              <svg width="24" height="24">
-                <use xlink:href="#icon-tw"></use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="socials__item socials__item--insta">
-            <a href="#" class="socials__link" aria-label="мы в инстаграм">
-              <svg width="24" height="24">
-                <use xlink:href="#icon-insta"></use>
-              </svg>
-            </a>
-          </li>
           <li class="socials__item socials__item--fb">
             <a href="#" class="socials__link" aria-label="мы в фейсбук">
               <svg width="11" height="24">

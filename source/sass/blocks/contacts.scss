@@ -87,14 +87,19 @@
 }
 
 .contacts__hometown {
+  @include button-reset;
+
   position: relative;
+  display: inline;
   margin-left: 13px;
   border-bottom: 1px dashed $blue;
   font-family: $main-medium;
   font-size: rem(19);
   font-variant: small-caps;
   font-weight: 500;
+  color: rgba($color: $black, $alpha: 0.74);
   letter-spacing: 0.4px;
+  cursor: pointer;
 
   &::before {
     @include pseudo;

@@ -1,9 +1,10 @@
 .faq {
   display: flex;
+  padding-top: 80px;
   padding-bottom: 129px;
   background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png"), url("../img/faq-watercolor@2x.jpg");
   background-size: 47%, 11.3%, cover;
-  background-position: right top, bottom left, center;
+  background-position: right top 81px, bottom left, center top;
   background-repeat: no-repeat;
 
   @include max-resolution {
@@ -44,6 +45,7 @@
 
 @include max-tablet {
   .faq {
+    padding-top: 41px;
     padding-bottom: 50px;
     background-position: bottom 117px left -5px;
   }

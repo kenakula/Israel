@@ -1,40 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Fira Sans Regular";
-  src: url("../fonts/fira-sans-regular.woff2") format("woff2"), url("../fonts/fira-sans-regular.woff") format("woff");
-  font-weight: 400;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Fira Sans Medium";
-  src: url("../fonts/fira-sans-medium.woff2") format("woff2"), url("../fonts/fira-sans-500.woff") format("woff");
-  font-weight: 500;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Fira Sans Bold";
-  src: url("../fonts/fira-sans-bold.woff2") format("woff2"), url("../fonts/fira-sans-bold.woff") format("woff");
-  font-weight: 700;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Montserrat Bold";
-  src: url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-700.woff") format("woff");
-  font-weight: 700;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Raleway Extra Bold";
-  src: url("../fonts/raleway-extrabold.woff2") format("woff2"), url("../fonts/ralewayextrabold.woff") format("woff");
-  font-weight: 800;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Raleway Black";
-  src: url("../fonts/raleway-black.woff2") format("woff2"), url("../fonts/ralewayblack.woff") format("woff");
-  font-weight: 800;
-  font-display: swap; }
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -313,6 +277,42 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: "Fira Sans Regular";
+  src: url("../fonts/fira-sans-regular.woff2") format("woff2"), url("../fonts/fira-sans-regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Fira Sans Medium";
+  src: url("../fonts/fira-sans-medium.woff2") format("woff2"), url("../fonts/fira-sans-500.woff") format("woff");
+  font-weight: 500;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Fira Sans Bold";
+  src: url("../fonts/fira-sans-bold.woff2") format("woff2"), url("../fonts/fira-sans-bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-700.woff") format("woff");
+  font-weight: 700;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Raleway Extra Bold";
+  src: url("../fonts/raleway-extrabold.woff2") format("woff2"), url("../fonts/ralewayextrabold.woff") format("woff");
+  font-weight: 800;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Raleway Black";
+  src: url("../fonts/raleway-black.woff2") format("woff2"), url("../fonts/ralewayblack.woff") format("woff");
+  font-weight: 800;
+  font-display: swap; }
+
 html {
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -455,6 +455,7 @@ img {
   font-weight: 500;
   letter-spacing: 0.2px;
   color: #484848;
+  text-decoration: none;
   cursor: pointer; }
   .page-header__button:focus, .page-header__button:hover {
     opacity: 0.7; }
@@ -893,6 +894,9 @@ img {
         border-left: transparent;
         -webkit-transform: rotate(45deg);
                 transform: rotate(45deg); }
+    .form__inner--consent input[type="checkbox"] {
+      left: 69px;
+      top: 21px; }
     .form__inner--consent input[type="checkbox"]:checked + label::after {
       display: block; }
     .form__inner--consent input[type="checkbox"]:focus + label {
@@ -911,6 +915,8 @@ img {
       margin-top: 24px; }
     .form--modal .form__inner {
       width: 100%; }
+  .form__inner--consent input[type="checkbox"] {
+    left: 20px; }
   .form__inner--consent label {
     padding-left: 37px;
     width: 100%; }
@@ -1391,16 +1397,16 @@ img {
       position: relative;
       width: 264px; } }
 
-.howto {
+.how-to {
   padding: 156px 135px 120px 51.1%;
   background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.jpg"), url("../img/howto-bg@2x.png");
   background-repeat: no-repeat;
   background-position: left 12px top 126px, 20px -59px, right -2px top 342px;
   background-size: 42.5%, 92%, 16%; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
-    .howto {
+    .how-to {
       background-image: url("../img/howto-img.png"), url("../img/howto-watercolor.jpg"), url("../img/howto-bg.png"); } }
-  .howto h2 {
+  .how-to h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
     margin: 0;
@@ -1411,23 +1417,23 @@ img {
     color: #1fc0fc;
     margin-bottom: 24px; }
     @media (max-width: 1023px) {
-      .howto h2 {
+      .how-to h2 {
         font-size: 2rem;
         line-height: 2.4375rem; } }
-  .howto p {
+  .how-to p {
     font-size: 0.9375rem;
     line-height: 1.625rem;
     margin: 0;
     margin-bottom: 32px;
     width: 91%;
     color: rgba(72, 72, 72, 0.87); }
-    .howto p:last-of-type {
+    .how-to p:last-of-type {
       position: relative;
       padding-left: 17px;
       width: 100%;
       line-height: 1.3125rem;
       color: rgba(72, 72, 72, 0.5); }
-      .howto p:last-of-type::before {
+      .how-to p:last-of-type::before {
         content: "";
         display: block;
         position: absolute;
@@ -1436,7 +1442,7 @@ img {
         width: 4px;
         height: 100%;
         background-color: #ffc341; }
-  .howto em {
+  .how-to em {
     font-size: 1.0625rem;
     line-height: 1.8125rem;
     display: block;
@@ -1446,7 +1452,7 @@ img {
     font-weight: 500;
     font-style: normal; }
 
-.howto__list {
+.how-to__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1455,7 +1461,7 @@ img {
   padding-right: 70px;
   counter-reset: howto-list; }
 
-.howto__item {
+.how-to__item {
   font-size: 0.9375rem;
   line-height: 1.3125rem;
   position: relative;
@@ -1469,9 +1475,9 @@ img {
   padding-left: 44px;
   min-height: 36px;
   opacity: 0.87; }
-  .howto__item:last-child {
+  .how-to__item:last-child {
     margin-bottom: 0; }
-  .howto__item::before {
+  .how-to__item::before {
     content: counter(howto-list);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1496,7 +1502,7 @@ img {
     -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
             box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
     z-index: 100; }
-  .howto__item:not(:last-child)::after {
+  .how-to__item:not(:last-child)::after {
     content: "";
     display: block;
     position: absolute;
@@ -1508,59 +1514,59 @@ img {
     z-index: 10; }
 
 @media (max-width: 1023px) {
-  .howto {
+  .how-to {
     padding: 165px 15% 120px;
     background-image: url("../img/howto-bg@2x.png");
     background-repeat: no-repeat;
     background-position: right -2px top 342px;
     background-size: 16%; } }
   @media (max-width: 1023px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 1023px) and (max-resolution: 1.5dppx) {
-    .howto {
+    .how-to {
       background-image: url("../img/howto-bg.png"); } }
 
 @media (max-width: 767px) {
-  .howto {
+  .how-to {
     padding: 71px 0 30px; }
-    .howto h2 {
+    .how-to h2 {
       margin-bottom: 25px;
       text-align: center; }
-    .howto p {
+    .how-to p {
       font-size: 0.875rem;
       line-height: 1.375rem;
       margin-bottom: 24px;
       width: 100%; }
-      .howto p:last-of-type {
+      .how-to p:last-of-type {
         padding-left: 8px;
         line-height: 1.375rem; }
-        .howto p:last-of-type::before {
+        .how-to p:last-of-type::before {
           top: -1px;
           left: -6px;
           height: 88px; }
-    .howto em {
+    .how-to em {
       font-size: 1rem;
       line-height: 1.625rem;
       width: 100%;
       margin-bottom: 8px; }
-  .howto__container {
+  .how-to__container {
     margin-left: auto;
     margin-right: auto;
     width: 90%; }
-  .howto__list {
+  .how-to__list {
     margin-bottom: 25px;
     padding-right: 1px; }
-    .howto__list::before {
+    .how-to__list::before {
       left: 10px;
       top: 45px;
       height: 259px; }
-  .howto__item {
+  .how-to__item {
     font-size: 0.875rem;
     line-height: 1.375rem;
     min-height: 66px;
     margin-bottom: 27px; }
-    .howto__item::before {
+    .how-to__item::before {
       top: 15px;
       left: -8px; }
-    .howto__item:not(:last-child)::after {
+    .how-to__item:not(:last-child)::after {
       left: 9px; } }
 
 .features {
@@ -1827,7 +1833,7 @@ img {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   padding: 121px 0 150px;
-  margin-bottom: 136px;
+  margin-bottom: 55px;
   min-height: 583px;
   background-color: #c2a1b2;
   background-image: url("../img/gallery-img@2x.jpg");
@@ -1895,7 +1901,7 @@ img {
 
 @media (max-width: 767px) {
   .gallery {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     padding-top: 51px;
     padding-bottom: 20px;
     min-height: auto;
@@ -1934,10 +1940,11 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 80px;
   padding-bottom: 129px;
   background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png"), url("../img/faq-watercolor@2x.jpg");
   background-size: 47%, 11.3%, cover;
-  background-position: right top, bottom left, center;
+  background-position: right top 81px, bottom left, center top;
   background-repeat: no-repeat; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
     .faq {
@@ -1978,6 +1985,7 @@ img {
 
 @media (max-width: 767px) {
   .faq {
+    padding-top: 41px;
     padding-bottom: 50px;
     background-position: bottom 117px left -5px; }
   .faq__container {
@@ -2440,14 +2448,22 @@ img {
       background-size: contain; }
 
 .contacts__hometown {
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
   position: relative;
+  display: inline;
   margin-left: 13px;
   border-bottom: 1px dashed #1fc0fc;
   font-family: "Fira Sans Medium", "Helvetica", sans-serif;
   font-size: 1.1875rem;
   font-variant: small-caps;
   font-weight: 500;
-  letter-spacing: 0.4px; }
+  color: rgba(72, 72, 72, 0.74);
+  letter-spacing: 0.4px;
+  cursor: pointer; }
   .contacts__hometown::before {
     content: "";
     display: block;

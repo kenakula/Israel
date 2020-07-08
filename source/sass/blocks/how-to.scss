@@ -1,4 +1,4 @@
-.howto {
+.how-to {
   padding: 156px 135px 120px 51.1%;
   background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.jpg"), url("../img/howto-bg@2x.png");
   background-repeat: no-repeat;
@@ -54,7 +54,7 @@
   }
 }
 
-.howto__list {
+.how-to__list {
   @include list-reset;
 
   position: relative;
@@ -63,7 +63,7 @@
   counter-reset: howto-list;
 }
 
-.howto__item {
+.how-to__item {
   @include typography(15, 21);
 
   position: relative;
@@ -109,7 +109,7 @@
 }
 
 @include max-desktop {
-  .howto {
+  .how-to {
     padding: 165px 15% 120px;
     background-image: url("../img/howto-bg@2x.png");
     background-repeat: no-repeat;
@@ -123,7 +123,7 @@
 }
 
 @include max-tablet {
-  .howto {
+  .how-to {
     padding: 71px 0 30px;
 
     h2 {
@@ -157,13 +157,13 @@
     }
   }
 
-  .howto__container {
+  .how-to__container {
     @include push-auto;
 
     width: 90%;
   }
 
-  .howto__list {
+  .how-to__list {
     margin-bottom: 25px;
     padding-right: 1px;
 
@@ -174,7 +174,7 @@
     }
   }
 
-  .howto__item {
+  .how-to__item {
     @include typography(14, 22);
 
     min-height: 66px;

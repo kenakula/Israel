@@ -157,6 +157,11 @@
       }
     }
 
+    input[type="checkbox"] {
+      left: 69px;
+      top: 21px;
+    }
+
     input[type="checkbox"]:checked + label::after {
       display: block;
     }
@@ -192,6 +197,10 @@
 
   .form__inner {
     &--consent {
+      input[type="checkbox"] {
+        left: 20px;
+      }
+
       label {
         padding-left: 37px;
         width: 100%;

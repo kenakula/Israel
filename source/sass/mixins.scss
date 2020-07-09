@@ -91,6 +91,12 @@
   }
 }
 
+@mixin max-pre-mobile {
+  @media (max-width: $pre-mobile) {
+    @content;
+  }
+}
+
 @mixin max-resolution {
   @media (max-resolution: $retina) {
     @content;

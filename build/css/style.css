@@ -487,14 +487,19 @@ img {
   .page-header__phone {
     font-size: 0.875rem;
     line-height: 1.0625rem;
-    margin-top: -23px; }
+    margin-top: 3px; }
   .page-header__button {
     font-size: 1.0625rem;
     line-height: 1rem;
     margin: 0;
     margin-left: auto;
-    margin-top: -16px;
     letter-spacing: 0.4px; } }
+
+@media (max-width: 403px) {
+  .page-header__phone {
+    margin-top: -23px; }
+  .page-header__button {
+    margin-top: -16px; } }
 
 .promo {
   position: relative;
@@ -581,10 +586,10 @@ img {
 
 @media (max-width: 767px) {
   .promo {
-    height: 591px;
-    margin-top: -54px;
+    height: 536px;
+    margin-top: 0;
     background-image: url("../img/header-bg-girl-mobile@2x.png"), url("../img/header-bg-text-mobile@2x.png"), url("../img/header-bg-city-mobile@2x.jpg");
-    background-position: center 3px, center 139px, center;
+    background-position: center -51px, center 85px, center -50px;
     background-size: cover, contain, cover; } }
   @media (max-width: 767px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 767px) and (max-resolution: 1.5dppx) {
     .promo {
@@ -1236,7 +1241,6 @@ img {
           flex-grow: 1; }
 
 .tabs__description {
-  position: absolute;
   left: 0;
   top: 0;
   display: none;
@@ -1904,7 +1908,10 @@ img {
     padding-top: 51px;
     padding-bottom: 20px;
     min-height: auto;
-    background: none; }
+    background-color: transparent;
+    background-image: url("../img/gallery-img-mobile@2x.jpg");
+    background-size: contain;
+    background-position: center; }
   .gallery__inner {
     width: 100%; }
     .gallery__inner h2 {
@@ -1918,16 +1925,7 @@ img {
       margin-bottom: 7px;
       padding: 22% 7% 15.5%;
       width: 100%;
-      text-align: left;
-      background-image: url("../img/gallery-img-mobile@2x.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center -31px; } }
-    @media (max-width: 767px) and (-webkit-max-device-pixel-ratio: 1.5), (max-width: 767px) and (max-resolution: 1.5dppx) {
-      .gallery__inner p {
-        background-image: url("../img/gallery-img-mobile.jpg"); } }
-
-@media (max-width: 767px) {
+      text-align: left; }
     .gallery__inner br {
       display: block; }
   .gallery__button {

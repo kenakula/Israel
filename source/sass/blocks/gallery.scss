@@ -83,7 +83,10 @@
     padding-top: 51px;
     padding-bottom: 20px;
     min-height: auto;
-    background: none;
+    background-color: transparent;
+    background-image: url("../img/gallery-img-mobile@2x.jpg");
+    background-size: contain;
+    background-position: center;
   }
 
   .gallery__inner {
@@ -103,14 +106,6 @@
       padding: 22% 7% 15.5%;
       width: 100%;
       text-align: left;
-      background-image: url("../img/gallery-img-mobile@2x.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center -31px;
-
-      @include max-resolution {
-        background-image: url("../img/gallery-img-mobile.jpg");
-      }
     }
 
     br {

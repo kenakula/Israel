@@ -80,7 +80,7 @@
   .page-header__phone {
     @include typography(14, 17);
 
-    margin-top: -23px;
+    margin-top: 3px;
   }
 
   .page-header__button {
@@ -88,7 +88,16 @@
 
     margin: 0;
     margin-left: auto;
-    margin-top: -16px;
     letter-spacing: 0.4px;
+  }
+}
+
+@include max-pre-mobile {
+  .page-header__phone {
+    margin-top: -23px;
+  }
+
+  .page-header__button {
+    margin-top: -16px;
   }
 }

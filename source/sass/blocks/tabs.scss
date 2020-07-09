@@ -147,10 +147,11 @@
 
   position: relative;
   flex-grow: 1;
+  // overflow: scroll;
 }
 
 .tabs__description {
-  position: absolute;
+  // position: absolute;
   left: 0;
   top: 0;
   display: none;

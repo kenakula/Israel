@@ -92,10 +92,10 @@
 
 @include max-tablet {
   .promo {
-    height: 591px;
-    margin-top: -54px;
+    height: 536px;
+    margin-top: 0;
     background-image: url("../img/header-bg-girl-mobile@2x.png"), url("../img/header-bg-text-mobile@2x.png"), url("../img/header-bg-city-mobile@2x.jpg");
-    background-position: center 3px, center 139px, center;
+    background-position: center -51px, center 85px, center -50px;
     background-size: cover, contain, cover;
 
     @include max-resolution {

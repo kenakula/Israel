@@ -999,21 +999,21 @@ img {
   background-color: #ffffff;
   cursor: pointer;
   z-index: 10;
-  fill: #1fc0fc; }
+  color: #1fc0fc; }
   .about__video-control svg {
     position: absolute;
     top: 22px;
     left: 27px;
-    fill: inherit; }
+    fill: currentColor; }
   .about__video-control:hover {
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-    fill: #63d3fd; }
+    color: #63d3fd; }
   .about__video-control:active {
     background-color: #f4f4f4;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-    fill: #1fc0fc; }
+    color: #1fc0fc; }
   .about__video-control::before {
     content: "";
     display: block;
@@ -1877,7 +1877,6 @@ img {
   position: relative;
   padding-left: 51px;
   width: 230px;
-  fill: #ffffff;
   text-decoration: none; }
   .gallery__button svg {
     position: absolute;
@@ -1885,7 +1884,7 @@ img {
     left: 40px;
     width: 24px;
     height: 24px;
-    fill: inherit; }
+    fill: currentColor; }
 
 @media (max-width: 1023px) {
   .gallery__inner {
@@ -1944,7 +1943,7 @@ img {
   padding-bottom: 129px;
   background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png"), url("../img/faq-watercolor@2x.jpg");
   background-size: 47%, 11.3%, cover;
-  background-position: right top 81px, bottom left, center top;
+  background-position: right top 81px, top 808px left, center top;
   background-repeat: no-repeat; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
     .faq {
@@ -1987,7 +1986,7 @@ img {
   .faq {
     padding-top: 41px;
     padding-bottom: 50px;
-    background-position: bottom 117px left -5px; }
+    background-position: top 701px left -5px; }
   .faq__container {
     width: 90%; } }
 
@@ -2203,13 +2202,13 @@ img {
           align-items: flex-start;
   margin-top: auto;
   min-height: 105px; }
-  .testimonials__footer a {
+  .testimonials__footer a:not(.socials__link) {
     font-size: 1.0625rem;
     line-height: 1.5625rem;
     color: #1fc0fc; }
-    .testimonials__footer a:focus, .testimonials__footer a:hover {
+    .testimonials__footer a:not(.socials__link):focus, .testimonials__footer a:not(.socials__link):hover {
       opacity: 0.7; }
-    .testimonials__footer a:active {
+    .testimonials__footer a:not(.socials__link):active {
       opacity: 0.3; }
 
 .testimonials__socials {
@@ -2348,13 +2347,13 @@ img {
           align-items: center;
   width: 24px;
   height: 24px;
-  fill: #d6d6d6; }
+  color: #d6d6d6; }
   .socials__link:focus, .socials__link:hover {
     opacity: 0.7; }
   .socials__link:active {
     opacity: 0.3; }
   .socials__link svg {
-    fill: inherit; }
+    fill: currentColor; }
 
 @media (max-width: 767px) {
   .socials {

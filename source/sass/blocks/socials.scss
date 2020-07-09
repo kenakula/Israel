@@ -17,10 +17,10 @@
   align-items: center;
   width: 24px;
   height: 24px;
-  fill: $grey;
+  color: $grey;
 
   svg {
-    fill: inherit;
+    fill: currentColor;
   }
 }
 

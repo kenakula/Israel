@@ -62,24 +62,24 @@
   background-color: $white;
   cursor: pointer;
   z-index: 10;
-  fill: $blue;
+  color: $blue;
 
   svg {
     position: absolute;
     top: 22px;
     left: 27px;
-    fill: inherit;
+    fill: currentColor;
   }
 
   &:hover {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-    fill: $blue-hovered;
+    color: $blue-hovered;
   }
 
   &:active {
     background-color: #f4f4f4;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-    fill: $blue;
+    color: $blue;
   }
 
   &::before {

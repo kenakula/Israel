@@ -45,7 +45,6 @@
   position: relative;
   padding-left: 51px;
   width: 230px;
-  fill: $white;
   text-decoration: none;
 
   svg {
@@ -54,7 +53,7 @@
     left: 40px;
     width: 24px;
     height: 24px;
-    fill: inherit;
+    fill: currentColor;
   }
 }
 

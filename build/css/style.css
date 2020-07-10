@@ -357,16 +357,16 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: #484848;
-  background-color: #ffffff;
-  overflow-x: hidden; }
+  background-color: #ffffff; }
   body .lazy {
     background-image: none; }
 
+.no-scroll {
+  position: fixed;
+  overflow-y: scroll; }
+
 img {
   display: block; }
-
-.no-scroll {
-  overflow-y: hidden; }
 
 .page-main {
   -webkit-box-flex: 1;

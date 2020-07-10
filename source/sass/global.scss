@@ -38,17 +38,17 @@ body {
   font-weight: 400;
   color: $black;
   background-color: $white;
-  overflow-x: hidden;
 
   .lazy {
     background-image: none;
   }
 }
 
-img {
-  display: block;
+.no-scroll {
+  position: fixed;
+  overflow-y: scroll;
 }
 
-.no-scroll {
-  overflow-y: hidden;
+img {
+  display: block;
 }

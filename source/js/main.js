@@ -147,8 +147,6 @@
     });
   };
 
-  // TODO scroll block
-
   // -------------------------------------- модалки
 
   var closeModal = function (modal) {

@@ -9,10 +9,6 @@
   overflow: auto;
   background-color: rgba($color: $modal-bg, $alpha: 0.95);
   z-index: 1000;
-
-  &--show {
-    display: block;
-  }
 }
 
 .modal__inner {

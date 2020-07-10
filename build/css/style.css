@@ -615,8 +615,6 @@ img {
   overflow: auto;
   background-color: rgba(235, 235, 235, 0.95);
   z-index: 1000; }
-  .modal--show {
-    display: block; }
 
 .modal__inner {
   margin-left: auto;

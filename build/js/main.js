@@ -13,11 +13,12 @@
   var SWIPE_DIRECTION_RIGHT = 'right';
   var ARROW_DIRECTION_LEFT = 'arrowLeft';
   var ARROW_DIRECTION_RIGHT = 'arrowRight';
+  var FOCUSABLE_ELEMENTS = 'button, [href], input, select, textarea';
 
 
   var orderButton = document.querySelector('.page-header__button');
-  var orderModal = $('.modal--callback');
-  var successModal = $('.modal--success');
+  var orderModal = document.querySelector('.modal--callback');
+  var successModal = document.querySelector('.modal--success');
   var scrollButton = document.querySelector('.promo__scroll');
 
   // объект для ошибок при валидации
@@ -57,7 +58,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     var lazyloadImages;
 
-    if ('IntersectionObserver' in window) {
+    if ('IntersectionObserver' in window) { // проверка на существование IntersectionObserver
       lazyloadImages = document.querySelectorAll('.lazy');
       var imageObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
@@ -147,12 +148,41 @@
     });
   };
 
+  // -------------------------------------- focus trap
+
+  var onTabPressChangeFocus = function (evt) {
+    var isTabPressed = evt.key === 'Tab' || evt.keyCode === 9;
+    var modal = document.querySelector('.modal--opened');
+    var focusableContent = modal.querySelectorAll(FOCUSABLE_ELEMENTS);
+    var firstFocusableElement = focusableContent[0];
+    var lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+    if (!isTabPressed) {
+      return;
+    }
+
+    if (evt.shiftKey) {
+      if (document.activeElement === firstFocusableElement) {
+        evt.preventDefault();
+        lastFocusableElement.focus();
+      }
+    } else {
+      if (document.activeElement === lastFocusableElement) {
+        evt.preventDefault();
+        firstFocusableElement.focus();
+      }
+    }
+
+  };
+
   // -------------------------------------- модалки
 
   var closeModal = function (modal) {
-    modal.fadeOut(200);
+    $(modal).fadeOut(200);
+    $(modal).removeClass('modal--opened');
     $('body').removeClass('no-scroll');
     document.removeEventListener('keydown', onEscButtonPressCloseModal);
+    document.removeEventListener('keydown', onTabPressChangeFocus);
   };
 
   var onEscButtonPressCloseModal = function (evt, modal) {
@@ -171,26 +201,29 @@
   var showModal = function (modal) {
     var closeButton = $(modal).find('button[name="closeButton"]');
 
-    modal.fadeIn(200);
+    $(modal).fadeIn(200);
+    $(modal).addClass('modal--opened');
     $('body').addClass('no-scroll');
 
     closeButton.click(function () {
       closeModal(modal);
     });
 
-    modal.click(function (evt) {
+    $(modal).click(function (evt) {
       onOverlayClickCloseModal(evt, modal);
     });
 
     $(document).bind('keydown', function (evt) {
       onEscButtonPressCloseModal(evt, modal);
     });
+
+    document.addEventListener('keydown', onTabPressChangeFocus);
   };
 
   var onOrderButtonClickShowModal = function (evt) {
     evt.preventDefault();
     showModal(orderModal);
-    orderModal.find('input[type="text"]').focus();
+    $(orderModal).find('input[type="text"]').focus();
   };
 
   // -------------------------------------- формы и валидация

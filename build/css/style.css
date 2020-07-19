@@ -934,14 +934,7 @@ img {
 
 .about {
   margin-bottom: 23px;
-  padding: 17px 0 130px;
-  background-image: url("../img/about-watercolor@2x.jpg");
-  background-repeat: no-repeat;
-  background-position: -3px 176px;
-  background-size: 100%; }
-  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
-    .about {
-      background-image: url("../img/about-watercolor.jpg"); } }
+  padding: 17px 0 130px; }
 
 .about__container {
   margin-left: auto;
@@ -1401,13 +1394,13 @@ img {
 
 .how-to {
   padding: 156px 135px 120px 51.1%;
-  background-image: url("../img/howto-img@2x.png"), url("../img/howto-watercolor@2x.jpg"), url("../img/howto-bg@2x.png");
+  background-image: url("../img/howto-img@2x.png"), url("../img/howto-bg@2x.png");
   background-repeat: no-repeat;
-  background-position: left 12px top 126px, 20px -59px, right -2px top 342px;
-  background-size: 42.5%, 92%, 16%; }
+  background-position: left 12px top 126px, right -2px top 342px;
+  background-size: 42.5%, 16%; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
     .how-to {
-      background-image: url("../img/howto-img.png"), url("../img/howto-watercolor.jpg"), url("../img/howto-bg.png"); } }
+      background-image: url("../img/howto-img.png"), url("../img/howto-bg.png"); } }
   .how-to h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
@@ -1574,13 +1567,13 @@ img {
 .features {
   padding-top: 57px;
   padding-bottom: 158px;
-  background-image: url("../img/israel-life-bg@2x.png"), url("../img/israel-life-watercolor@2x.jpg");
+  background-image: url("../img/israel-life-bg@2x.png");
   background-repeat: no-repeat;
-  background-size: 6.5%, 100%;
-  background-position: right bottom 243px, 0 13px; }
+  background-size: 6.5%;
+  background-position: right bottom 243px; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
     .features {
-      background-image: url("../img/israel-life-bg.png"), url("../img/israel-life-watercolor.jpg"); } }
+      background-image: url("../img/israel-life-bg.png"); } }
   .features h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
@@ -1937,13 +1930,13 @@ img {
   display: flex;
   padding-top: 80px;
   padding-bottom: 129px;
-  background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png"), url("../img/faq-watercolor@2x.jpg");
-  background-size: 47%, 11.3%, 100%;
-  background-position: right top 81px, top 808px left, center top;
+  background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png");
+  background-size: 47%, 11.3%;
+  background-position: right top 81px, top 808px left;
   background-repeat: no-repeat; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
     .faq {
-      background-image: url("../img/faq-img.png"), url("../img/faq-bg.png"), url("../img/faq-watercolor.jpg"); } }
+      background-image: url("../img/faq-img.png"), url("../img/faq-bg.png"); } }
 
 .faq__container {
   margin-left: auto;
@@ -2109,13 +2102,13 @@ img {
 .testimonials {
   padding-top: 28px;
   padding-bottom: 58px;
-  background-image: url("../img/feedback-bg@2x.png"), url("../img/feedback-watercolor@2x.png");
+  background-image: url("../img/feedback-bg@2x.png");
   background-repeat: no-repeat;
-  background-size: 38%, cover;
-  background-position: right 3px top 84px, center; }
+  background-size: 38%;
+  background-position: right 3px top 84px; }
   @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
     .testimonials {
-      background-image: url("../img/feedback-bg.png"), url("../img/feedback-watercolor.png"); } }
+      background-image: url("../img/feedback-bg.png"); } }
   .testimonials h2 {
     font-size: 2.5rem;
     line-height: 3.0625rem;
@@ -2359,14 +2352,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 50px 0 10px;
-  background-image: url("../img/details-watercolor@2x.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-  @media (-webkit-max-device-pixel-ratio: 1.5), (max-resolution: 1.5dppx) {
-    .contacts {
-      background-image: url("..//img/details-watercolor.png"); } }
+  padding: 50px 0 10px; }
 
 .contacts__container {
   display: -webkit-box;

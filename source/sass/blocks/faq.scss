@@ -2,13 +2,13 @@
   display: flex;
   padding-top: 80px;
   padding-bottom: 129px;
-  background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png"), url("../img/faq-watercolor@2x.jpg");
-  background-size: 47%, 11.3%, 100%;
-  background-position: right top 81px, top 808px left, center top;
+  background-image: url("../img/faq-img@2x.png"), url("../img/faq-bg@2x.png");
+  background-size: 47%, 11.3%;
+  background-position: right top 81px, top 808px left;
   background-repeat: no-repeat;
 
   @include max-resolution {
-    background-image: url("../img/faq-img.png"), url("../img/faq-bg.png"), url("../img/faq-watercolor.jpg");
+    background-image: url("../img/faq-img.png"), url("../img/faq-bg.png");
   }
 }
 

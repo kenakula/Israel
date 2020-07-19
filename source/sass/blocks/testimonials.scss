@@ -1,13 +1,13 @@
 .testimonials {
   padding-top: 28px;
   padding-bottom: 58px;
-  background-image: url("../img/feedback-bg@2x.png"), url("../img/feedback-watercolor@2x.png");
+  background-image: url("../img/feedback-bg@2x.png");
   background-repeat: no-repeat;
-  background-size: 38%, cover;
-  background-position: right 3px top 84px, center;
+  background-size: 38%;
+  background-position: right 3px top 84px;
 
   @include max-resolution {
-    background-image: url("../img/feedback-bg.png"), url("../img/feedback-watercolor.png");
+    background-image: url("../img/feedback-bg.png");
   }
 
   h2 {

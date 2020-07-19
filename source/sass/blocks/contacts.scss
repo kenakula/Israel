@@ -1,14 +1,6 @@
 .contacts {
   display: flex;
   padding: 50px 0 10px;
-  background-image: url("../img/details-watercolor@2x.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  @include max-resolution {
-    background-image: url("..//img/details-watercolor.png");
-  }
 }
 
 .contacts__container {

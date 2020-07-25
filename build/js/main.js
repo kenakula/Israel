@@ -9,10 +9,6 @@
   var STORAGE_NAME_VALUE = 'name';
   var STORAGE_PHONE_NUMBER = 'tel';
   var MIN_NAME_CHARS = 2;
-  var SWIPE_DIRECTION_LEFT = 'left';
-  var SWIPE_DIRECTION_RIGHT = 'right';
-  var ARROW_DIRECTION_LEFT = 'arrowLeft';
-  var ARROW_DIRECTION_RIGHT = 'arrowRight';
   var FOCUSABLE_ELEMENTS = 'button, [href], input, select, textarea';
 
 
@@ -37,19 +33,9 @@
   var tabButtons = tabsContainer.querySelectorAll('.tabs__item');
   var tabContents = tabsContainer.querySelectorAll('.tabs__description');
 
-  var israelSlidesContainer = document.querySelector('.cards');
-  var israelSlides = israelSlidesContainer.querySelectorAll('.cards__img');
-  var israelSlidesBullets = israelSlidesContainer.querySelectorAll('.cards__bullet');
-
   var accordeon = document.querySelector('.accordeon');
   var accordeonButtons = accordeon.querySelectorAll('.accordeon__button');
   var accordeonHeaders = accordeon.querySelectorAll('.accordeon__item h3');
-
-  var testimonialsContainer = document.querySelector('.testimonials__container');
-  var testimonials = testimonialsContainer.querySelectorAll('.testimonials__item');
-  var currentPageIndicator = testimonialsContainer.querySelector('#testimonialsCurrent');
-  var totalPagesIndicator = testimonialsContainer.querySelector('#testimonialsTotal');
-  var testimonialsArrows = testimonialsContainer.querySelectorAll('.testimonials__button');
 
   document.body.classList.remove('no-js');
 
@@ -429,7 +415,12 @@
 
   var onTabButtonClickContentShow = function (evt) {
     var activeTabIndex = getActiveTab(tabsContainer).dataset.tab;
-    var newTabIndex = evt.currentTarget.dataset.tab;
+
+    if (isTouchCapable) {
+      var newTabIndex = evt.targetTouches[0].target.dataset.tab;
+    } else {
+      newTabIndex = evt.currentTarget.dataset.tab;
+    }
 
     setNewTab(activeTabIndex, newTabIndex, tabButtons, tabContents);
     centerNewTab(evt);
@@ -446,134 +437,6 @@
     tabsList.style.left = shift + 'px';
   };
 
-  // -------------------------------------- слайдеры
-  // -------------------------------------- israel slider
-
-  // получает активный слайд
-  var getActiveIsraelSlide = function (container) {
-    return $(container).find('.cards__img--active');
-  };
-
-  // получает активную кнопку контрола
-  var getActiveBullet = function (container) {
-    return $(container).find('.cards__bullet--active');
-  };
-
-  // меняет слайд
-  var changeIsraelSlide = function (newIndex, slides) {
-    var activeSlide = getActiveIsraelSlide(israelSlidesContainer);
-    activeSlide.toggleClass('cards__img--active');
-    $(slides).eq(newIndex).toggleClass('cards__img--active');
-    $(israelSlidesBullets).eq(newIndex).toggleClass('cards__bullet--active');
-  };
-
-  // обработчик клика по контролу
-  var onBulletClickChangeIsraelSlide = function (evt) {
-    var currentBullet = getActiveBullet(israelSlidesContainer);
-    var newIndex = $(evt.target).data('index');
-    currentBullet.toggleClass('cards__bullet--active');
-
-    changeIsraelSlide(newIndex, israelSlides);
-  };
-
-  // свайп
-
-  // проверяет на валидность новый индекс
-  var validateNewIndex = function (index, slides) {
-    var slidesInSlider = slides.length - 1;
-
-    if (index > slidesInSlider) {
-      index = 0;
-    } else if (index < 0) {
-      index = slidesInSlider;
-    }
-
-    return index;
-  };
-
-  // изменяет индекс в зависимости от направления свайпа
-  var changeIndexByDirection = function (newIndex, currentIndex, direction) {
-
-    if (direction === SWIPE_DIRECTION_LEFT || direction === ARROW_DIRECTION_RIGHT) {
-      newIndex = currentIndex + 1;
-    } else if (direction === SWIPE_DIRECTION_RIGHT || direction === ARROW_DIRECTION_LEFT) {
-      newIndex = currentIndex - 1;
-    }
-
-    return newIndex;
-  };
-
-  // скрипт свайпа
-  var onSwipeChangeIsraelSlide = function (event, direction) {
-    var currentBullet = getActiveBullet(israelSlidesContainer);
-    var currentSlideIndex = getActiveBullet(israelSlidesContainer).data('index');
-    var newIndex = changeIndexByDirection(newIndex, currentSlideIndex, direction);
-
-    currentBullet.toggleClass('cards__bullet--active');
-    changeIsraelSlide(validateNewIndex(newIndex, israelSlides), israelSlides);
-  };
-
-  // инициализация jquery touch swipe
-  $(israelSlidesContainer).swipe({
-    swipe: onSwipeChangeIsraelSlide
-  });
-
-  // отключает работу скрипта свайпа при увеличении размера окна
-  $(window).resize(function () {
-    if (window.matchMedia('(min-width: 768px)').matches) {
-      $(israelSlidesContainer).swipe('disable');
-    } else {
-      $(israelSlidesContainer).swipe('enable');
-    }
-  });
-
-  // -------------------------------------- testimonials slider
-
-  $(totalPagesIndicator).text(testimonials.length);
-
-  // получает текущий активный слайд
-  var getActiveTestimonialSlide = function (container) {
-    return $(container).find('.testimonials__item--active');
-  };
-
-  // меняет индикатор текущего слайда
-  var changeCurrentPageIndicator = function (indicator, index) {
-    $(indicator).text(index + 1);
-  };
-
-  // меняет слайды
-  var changeTestimonialSlide = function (currentSlide, newIndex, slides) {
-    currentSlide.removeClass('testimonials__item--active');
-    $(slides).eq(newIndex).addClass('testimonials__item--active');
-  };
-
-  // меняет слайды при использовании стрелок
-  var onArrowClickChangeTestimonialSlide = function (evt) {
-    var currentSlide = getActiveTestimonialSlide(testimonialsContainer);
-    var direction = evt.target.id;
-    var index = changeIndexByDirection(index, currentSlide.data('slide'), direction);
-    var newIndex = validateNewIndex(index, testimonials);
-
-    changeTestimonialSlide(currentSlide, newIndex, testimonials);
-    changeCurrentPageIndicator(currentPageIndicator, newIndex);
-  };
-
-  // скрипт свайпа
-  var onSwipeChangeTestimonialsSlider = function (event, direction) {
-    var currentSlide = getActiveTestimonialSlide(testimonialsContainer);
-    var currentSlideIndex = currentSlide.data('slide');
-    var newIndex = changeIndexByDirection(newIndex, currentSlideIndex, direction);
-    newIndex = validateNewIndex(newIndex, testimonials);
-
-    changeTestimonialSlide(currentSlide, newIndex, testimonials);
-    changeCurrentPageIndicator(currentPageIndicator, newIndex);
-  };
-
-  // инициализация jquery touch swipe
-  $(testimonialsContainer).swipe({
-    swipe: onSwipeChangeTestimonialsSlider
-  });
-
   // -------------------------------------- accordeon
 
   // разворачивает контент таба
@@ -585,10 +448,6 @@
 
   // -------------------------------------- действия
 
-  testimonialsArrows.forEach(function (it) {
-    it.addEventListener('click', onArrowClickChangeTestimonialSlide);
-  });
-
   accordeonButtons.forEach(function (it) {
     it.addEventListener('click', onAccordeonButtonClickToggleContent);
   });
@@ -597,12 +456,9 @@
     it.addEventListener('click', onAccordeonButtonClickToggleContent);
   });
 
-  israelSlidesBullets.forEach(function (it) {
-    it.addEventListener('click', onBulletClickChangeIsraelSlide);
-  });
-
   tabButtons.forEach(function (it) {
     it.addEventListener('click', onTabButtonClickContentShow);
+    it.addEventListener('touchstart', onTabButtonClickContentShow);
   });
 
   scrollButton.addEventListener('click', onScrollButtonClickDocumentScroll);

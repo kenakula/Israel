@@ -1,34 +1,9 @@
-.cards {
-  display: flex;
-  margin-top: -23px;
-  width: 100%;
-}
-
-.cards__container {
-  display: flex;
-}
-
-.cards__inner {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: 16px;
-  width: 41.41%;
-  min-height: 736px;
-
-  &:last-child {
-    flex-grow: 1;
-    margin-right: 0;
-    padding-top: 68px;
-
-    .cards__img {
-      height: 318px;
-    }
-  }
-}
-
-.cards__row {
-  display: flex;
-  width: 100%;
+.cards__wrapper {
+  display: grid;
+  grid-template-columns: 41.84% 1fr 1fr 1fr;
+  grid-auto-rows: 366px;
+  grid-row-gap: 30px;
+  grid-column-gap: 10px;
 }
 
 .cards__img {
@@ -36,6 +11,8 @@
   flex-direction: column-reverse;
   padding-bottom: 33px;
   padding-left: 41px;
+  width: auto;
+  height: auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -45,13 +22,12 @@
 
     width: 71%;
     font-family: $title-extra;
-    font-weight: 800;
     color: $white;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   }
 
   &--history {
-    width: 100%;
+    grid-row: span 2;
     background-image: url("../img/israel-life-1@2x.png");
 
     @include max-resolution {
@@ -60,9 +36,8 @@
   }
 
   &--language {
-    margin-right: 27px;
+    margin-top: 32px;
     padding-left: 22px;
-    width: 211px;
     background-image: url("../img/israel-life-2@2x.png");
 
     @include max-resolution {
@@ -71,8 +46,9 @@
   }
 
   &--profession {
+    grid-column: span 2;
+    margin-top: 32px;
     padding-left: 31px;
-    width: 61.965%;
     background-image: url("../img/israel-life-3@2x.png");
 
     @include max-resolution {
@@ -81,11 +57,9 @@
   }
 
   &--projects {
-    margin-top: 28px;
-    margin-right: 28px;
+    grid-column: span 2;
     padding-left: 31px;
     padding-bottom: 32px;
-    width: 61%;
     background-image: url("../img/israel-life-4@2x.png");
 
     @include max-resolution {
@@ -98,10 +72,8 @@
   }
 
   &--leadership {
-    margin-top: 28px;
     padding-left: 25px;
     padding-bottom: 31px;
-    width: 32.661%;
     background-image: url("../img/israel-life-5@2x.png");
 
     @include max-resolution {
@@ -110,64 +82,37 @@
   }
 }
 
-.cards__controls {
-  display: none;
-}
-
 @include max-desktop {
-  .cards__container {
-    flex-direction: column;
+  .cards__wrapper {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .cards__inner {
-    margin: 0;
-    width: 100%;
+  .cards__img {
+    grid-column: span 1;
+    background-position: center;
 
-    &:last-child {
-      margin-bottom: 30px;
+    &--history {
+      grid-column: span 2;
     }
-  }
 
-  .cards__row {
-    justify-content: center;
-  }
-
-  .cards__img span {
-    @include typography(19, 23);
+    span {
+      @include typography(19, 23);
+    }
   }
 }
 
 @include max-tablet {
-  .cards {
-    flex-direction: column;
-  }
-
-  .cards__container {
-    margin-bottom: 12px;
-  }
-
-  .cards__inner {
-    justify-content: center;
-    align-items: center;
-    min-height: auto;
-
-    &:last-child {
-      margin: 0;
-      padding: 0;
-    }
+  .cards__wrapper {
+    display: flex;
+    grid-gap: 0;
   }
 
   .cards__img {
-    display: none;
     margin: 0;
-    padding-left: 0;
-    padding-bottom: 24px;
-    width: 91%;
+    padding: 0;
+    width: 100%;
+    padding-bottom: 20px;
     min-height: 400px;
-
-    &--active {
-      display: flex;
-    }
 
     span {
       @include typography(18, 21);
@@ -177,31 +122,211 @@
       text-align: center;
     }
   }
-
-  .cards__controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 15px;
-  }
-
-  .cards__bullet {
-    display: block;
-    margin-right: 8px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: rgba($color: $black, $alpha: 0.2);
-    cursor: pointer;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &--active {
-      width: 8px;
-      height: 8px;
-      background: linear-gradient(108.42deg, $yellow 20.46%, $light-yellow 65.31%);
-    }
-  }
 }
+
+// .cards {
+//   display: flex;
+//   margin-top: -23px;
+//   width: 100%;
+// }
+
+// .cards__container {
+//   display: flex;
+// }
+
+// .cards__inner {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-right: 16px;
+//   width: 41.41%;
+//   min-height: 736px;
+
+//   &:last-child {
+//     flex-grow: 1;
+//     margin-right: 0;
+//     padding-top: 68px;
+
+//     .cards__img {
+//       height: 318px;
+//     }
+//   }
+// }
+
+// .cards__row {
+//   display: flex;
+//   width: 100%;
+// }
+
+// .cards__img {
+//   display: flex;
+//   flex-direction: column-reverse;
+//   padding-bottom: 33px;
+//   padding-left: 41px;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+
+//   span {
+//     @include typography(21, 25);
+
+//     width: 71%;
+//     font-family: $title-extra;
+//     font-weight: 800;
+//     color: $white;
+//     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+//   }
+
+//   &--history {
+//     width: 100%;
+//     background-image: url("../img/israel-life-1@2x.png");
+
+//     @include max-resolution {
+//       background-image: url("../img/israel-life-1.png");
+//     }
+//   }
+
+//   &--language {
+//     margin-right: 27px;
+//     padding-left: 22px;
+//     width: 211px;
+//     background-image: url("../img/israel-life-2@2x.png");
+
+//     @include max-resolution {
+//       background-image: url("../img/israel-life-2.png");
+//     }
+//   }
+
+//   &--profession {
+//     padding-left: 31px;
+//     width: 61.965%;
+//     background-image: url("../img/israel-life-3@2x.png");
+
+//     @include max-resolution {
+//       background-image: url("../img/israel-life-3.png");
+//     }
+//   }
+
+//   &--projects {
+//     margin-top: 28px;
+//     margin-right: 28px;
+//     padding-left: 31px;
+//     padding-bottom: 32px;
+//     width: 61%;
+//     background-image: url("../img/israel-life-4@2x.png");
+
+//     @include max-resolution {
+//       background-image: url("../img/israel-life-4.png");
+//     }
+
+//     span {
+//       width: 97%;
+//     }
+//   }
+
+//   &--leadership {
+//     margin-top: 28px;
+//     padding-left: 25px;
+//     padding-bottom: 31px;
+//     width: 32.661%;
+//     background-image: url("../img/israel-life-5@2x.png");
+
+//     @include max-resolution {
+//       background-image: url("../img/israel-life-5.png");
+//     }
+//   }
+// }
+
+// .cards__controls {
+//   display: none;
+// }
+
+// @include max-desktop {
+//   .cards__container {
+//     flex-direction: column;
+//   }
+
+//   .cards__inner {
+//     margin: 0;
+//     width: 100%;
+
+//     &:last-child {
+//       margin-bottom: 30px;
+//     }
+//   }
+
+//   .cards__row {
+//     justify-content: center;
+//   }
+
+//   .cards__img span {
+//     @include typography(19, 23);
+//   }
+// }
+
+// @include max-tablet {
+//   .cards {
+//     flex-direction: column;
+//   }
+
+//   .cards__container {
+//     margin-bottom: 12px;
+//   }
+
+//   .cards__inner {
+//     justify-content: center;
+//     align-items: center;
+//     min-height: auto;
+
+//     &:last-child {
+//       margin: 0;
+//       padding: 0;
+//     }
+//   }
+
+//   .cards__row {
+//     flex-direction: column;
+//   }
+
+//   .cards__img {
+//     margin: 0;
+//     padding-left: 0;
+//     padding-bottom: 24px;
+//     width: 100%;
+//     min-height: 400px;
+
+//     span {
+//       @include typography(18, 21);
+
+//       margin: 0 auto;
+//       width: 90%;
+//       text-align: center;
+//     }
+//   }
+
+//   .cards__controls {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     min-height: 15px;
+//   }
+
+//   .cards__bullet {
+//     display: block;
+//     margin-right: 8px;
+//     width: 6px;
+//     height: 6px;
+//     border-radius: 50%;
+//     background-color: rgba($color: $black, $alpha: 0.2);
+//     cursor: pointer;
+
+//     &:last-child {
+//       margin-right: 0;
+//     }
+
+//     &--active {
+//       width: 8px;
+//       height: 8px;
+//       background: linear-gradient(108.42deg, $yellow 20.46%, $light-yellow 65.31%);
+//     }
+//   }
+// }

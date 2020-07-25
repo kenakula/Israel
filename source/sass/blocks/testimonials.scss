@@ -20,6 +20,7 @@
 .testimonials__container {
   margin: 0 auto;
   width: 85.651%;
+  overflow: hidden;
 }
 
 .testimonials__list {
@@ -27,8 +28,7 @@
 }
 
 .testimonials__item {
-  display: none;
-  flex-direction: column;
+  box-sizing: border-box;
   padding-top: 47px;
   padding-left: 34.5%;
   padding-right: 7.4%;
@@ -41,10 +41,6 @@
 
   @include max-resolution {
     background-image: url("../img/feedback-img.jpg");
-  }
-
-  &--active {
-    display: flex;
   }
 }
 
@@ -106,9 +102,11 @@
 }
 
 .testimonials__controls {
+  position: relative;
   display: flex;
   margin-top: -23px;
   padding-left: 34.5%;
+  z-index: 100;
 }
 
 .testimonials__pages {

@@ -212,43 +212,29 @@
           Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой
           культурно-исторической жизнью Израиля и его жителей.
         </p>
-        <div class="features__cards cards">
-          <div class="cards__container">
-            <div class="cards__inner">
-              <div class="cards__img cards__img--history cards__img--active lazy" data-slide="0">
-                <span>Экскурсии по Израилю<br> и знакомство с его историей</span>
-              </div>
+        <div class="features__cards cards swiper-container" id="israelSlider">
+          <div class="cards__wrapper swiper-wrapper">
+            <div class="cards__img cards__img--history lazy swiper-slide">
+              <span>Экскурсии по Израилю<br> и знакомство с его историей</span>
             </div>
-            <div class="cards__inner">
-              <div class="cards__row">
-                <div class="cards__img cards__img--language lazy" data-slide="1">
-                  <span>Изучение иврита</span>
-                </div>
 
-                <div class="cards__img cards__img--profession lazy" data-slide="2">
-                  <span>Обучение современным навыкам и профессиям</span>
-                </div>
-              </div>
+            <div class="cards__img cards__img--language lazy swiper-slide">
+              <span>Изучение иврита</span>
+            </div>
 
-              <div class="cards__row">
-                <div class="cards__img cards__img--projects lazy" data-slide="3">
-                  <span>Совместные творческие проекты с израильской молодёжью</span>
-                </div>
+            <div class="cards__img cards__img--profession lazy swiper-slide">
+              <span>Обучение современным навыкам и профессиям</span>
+            </div>
 
-                <div class="cards__img cards__img--leadership lazy" data-slide="4">
-                  <span>Развитие лидерства</span>
-                </div>
-              </div>
+            <div class="cards__img cards__img--projects lazy swiper-slide">
+              <span>Совместные творческие проекты с израильской молодёжью</span>
+            </div>
+
+            <div class="cards__img cards__img--leadership lazy swiper-slide">
+              <span>Развитие лидерства</span>
             </div>
           </div>
-
-          <div class="cards__controls">
-            <span class="cards__bullet cards__bullet--active" data-index="0"></span>
-            <span class="cards__bullet" data-index="1"></span>
-            <span class="cards__bullet" data-index="2"></span>
-            <span class="cards__bullet" data-index="3"></span>
-            <span class="cards__bullet" data-index="4"></span>
-          </div>
+          <div class="cards__pagination swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -351,9 +337,9 @@
     <!-- testimonials -->
     <section class="testimonials lazy">
       <h2>Отзывы</h2>
-      <div class="testimonials__container">
-        <ul class="testimonials__list">
-          <li class="testimonials__item lazy" data-slide="0">
+      <div class="testimonials__container" id="testimonialsSlider">
+        <ul class="testimonials__list swiper-wrapper">
+          <li class="testimonials__item swiper-slide lazy">
             <header class="testimonials__header">
               <h3>Артемий Ольгович</h3>
               <p>
@@ -404,7 +390,7 @@
             </footer>
           </li>
 
-          <li class="testimonials__item lazy" data-slide="1">
+          <li class="testimonials__item swiper-slide lazy">
             <header class="testimonials__header">
               <h3>Йоланда Хани-Банни</h3>
               <p>
@@ -456,7 +442,7 @@
             </footer>
           </li>
 
-          <li class="testimonials__item testimonials__item--active lazy" data-slide="2">
+          <li class="testimonials__item swiper-slide lazy">
             <header class="testimonials__header">
               <h3>Ольга Михайлова</h3>
               <p>
@@ -507,7 +493,7 @@
             </footer>
           </li>
 
-          <li class="testimonials__item lazy" data-slide="3">
+          <li class="testimonials__item swiper-slide lazy">
             <header class="testimonials__header">
               <h3>Мистер Пинк</h3>
               <p>
@@ -559,7 +545,7 @@
             </footer>
           </li>
 
-          <li class="testimonials__item lazy" data-slide="4">
+          <li class="testimonials__item swiper-slide lazy">
             <header class="testimonials__header">
               <h3>Миа Марселлас</h3>
               <p>
@@ -611,7 +597,7 @@
             </footer>
           </li>
 
-          <li class="testimonials__item lazy" data-slide="5">
+          <li class="testimonials__item swiper-slide lazy">
             <header class="testimonials__header">
               <h3>Джанго Фримен</h3>
               <p>
@@ -661,9 +647,7 @@
           </li>
         </ul>
         <div class="testimonials__controls">
-          <div class="testimonials__pages">
-            <span id="testimonialsCurrent"><span class="visually-hidden">текущий слайд</span>3</span> / <span id="testimonialsTotal"><span class="visually-hidden">текущий слайд</span>6</span>
-          </div>
+          <div class="testimonials__pages"></div>
           <div class="testimonials__arrows">
             <button class="testimonials__button testimonials__button--left" id="arrowLeft" type="button">Листать
               влево</button>
